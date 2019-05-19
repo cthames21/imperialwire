@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="jquery.js"></script>
+		<script src="parallax.js"></script>
+	</head>
+	<body>
+		<div class="colorbar"></div>
+		<div class="page-container">
+			<header class="toggle">
+			<!--
+				<div class="toggle" id="partone">I</div>
+				<div class="toggle" id="parttwo">W</div>
+				<div class="toggle" id="logo">
+					Imperial Wire
+				</div>
+			-->
+				<div class="toggle" id="slogan">
+					Custom Retail Fixtures and Point of Purchase Displays
+				</div>
+				<div class="imperialwire">
+					<div class="toggle" id="imperial">
+						Imperial
+					</div>
+					<div class="toggle" id="wire">
+						Wire
+					</div>
+				</div>
+				<g class="menuicon">
+					<svg id="hamburgermenu" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+
+					<div class="menucontainer">
+						<a id="menuoption1" href="home.html">Home</a>
+						<a id="menuoption2" href="services.html">Solutions</a>
+						<a id="menuoption3" href="">Our Pledge</a>
+						<a id="menuoption4" href="">Contact</a>
+						<div id="solutionsdropdown">
+							<div id="solutionsdropdownitem1">
+								Design
+							</div>
+							<div id="solutionsdropdownitem2">
+								Manufacturing
+							</div>
+							<div id="solutionsdropdownitem3">
+								Blah
+							</div>
+						</div>
+					</div>
+				</g>
+			</header>
+
+			<div class="placeholder1" data-parallax="scroll" data-image-src="photos/placeholder1-2.jpg" data-speed=".05"></div>
+
+			<div class="section1">
+				<div id="okay" class="section1left">
+					<img src="photos/popdisplay.jpg">
+
+				</div>
+				<div class="section1right">
+					<div class="section1rightheader">
+						Solving your challenges
+					</div>
+					<div class="section1rightbody">
+						Imperial has become well know to provide fast solutions in retail fixtures and point of purchase displays. When others say it can’t be done call Imperial! We rise to the occasion and the opportunity to show you our dedication and commitment to your success. 
+					</div>
+				</div>
+			</div>
+			<div class="section2">
+				<div class="section2header">
+					Devoted to Our Customers
+				</div>
+				<div class="section2body">
+					Imperial has moved to greatly expanded facilities to increase overall capacity and implement new manufacturing processes. All this is designed to continue to rise to the challenges of the evolving retail industry. Imperials pledge is to support our customer base with expedient design and timely fulfillment of their display or fixture orders.
+				</div>
+			</div>
+		</div>
+		<script>
+			
+			$(window).on("scroll touchmove", function() {
+				$('.toggle').toggleClass("small", $(document).scrollTop() > 5);
+			});
+			
+			$(document).ready(function() {
+				$('.menuicon').mouseover(function() {
+					$('.menucontainer').css("display","block");
+					setTimeout(function() {
+						$('#menuoption1').css("opacity","1")
+					}, 100);
+					setTimeout(function() {
+						$('#menuoption2').css("opacity","1")
+					}, 200);
+					setTimeout(function() {
+						$('#menuoption3').css("opacity","1")
+					}, 300);
+					setTimeout(function() {
+						$('#menuoption4').css("opacity","1")
+					}, 400);
+/* Menu 1 */
+
+/* Menu 2 */
+					$('#menuoption2').mouseover(function() {
+						$('#solutionsdropdown').css("display","block");
+						setTimeout(function() {
+							$('#solutionsdropdownitem1')
+								.css("opacity","1")
+								.css("transform","translate(-30px,-30px)")
+						}, 100);
+						setTimeout(function() {
+							$('#solutionsdropdownitem2')
+								.css("opacity","1")
+								.css("transform","translate(-40px,0px)")
+						}, 200);
+						setTimeout(function() {
+							$('#solutionsdropdownitem3')
+								.css("opacity","1")
+								.css("transform","translate(-30px,30px)")
+						}, 300);
+					})
+
+					$('#menuoption2').mouseleave(function() {
+						setTimeout(function() {
+							$('#solutionsdropdownitem1')
+								.css("opacity","0")
+								.css("transform","translate(-30px,-30px)")
+						}, 100);
+						setTimeout(function() {
+							$('#solutionsdropdownitem2')
+								.css("opacity","0")
+								.css("transform","translate(-40px,0px)")
+						}, 200);
+						setTimeout(function() {
+							$('#solutionsdropdownitem3')
+								.css("opacity","0")
+								.css("transform","translate(-30px,30px)")
+						}, 300);
+						setTimeout(function() {
+							$('#solutionsdropdown').css("display","none");
+						}, 600);
+					})
+/*Menu 3,4*/
+				})
+
+				$('.menuicon').mouseleave(function() {
+						setTimeout(function() {
+							$('#menuoption4')
+								.css("opacity","0")
+						}, 100);
+						setTimeout(function() {
+							$('#menuoption3')
+								.css("opacity","0")
+						}, 150);
+						setTimeout(function() {
+							$('#menuoption2')
+								.css("opacity","0")
+						}, 200);
+						setTimeout(function() {
+							$('#menuoption1')
+								.css("opacity","0")
+						}, 250);
+						setTimeout(function() {
+							$('.menucontainer').css("display","none");
+						}, 750);
+				})
+			})
+
+				// init controller
+				var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+				// build scenes
+				new ScrollMagic.Scene({triggerElement: "#test1"})
+								.setTween("#test1 > div", {y: "80%"})
+								.addIndicators()
+								.addTo(controller);
+
+		</script>
+		<footer>
+			<div id="tester" style="max-width: 1200px">
+			<div class="footertop">
+				<div class="footertop1">
+					<div class="footertop1header">
+						About
+					</div>
+					<div class="footertop1body">
+						Imperial Wire was founded in  sfj jsf ijs dd d jklsd saoihoauehtuskdfngkajs nasujnask jfnaifn sdfn sf asoif jskmrli s fsdf sdf 
+					</div>
+				</div>
+				<div class="footertop2">
+					<div class="footertop2header">
+						Contact
+					</div>
+					<div class="footertop2body">
+						<p>21050 Commerce Blvd, Rogers, MN 55374</p>
+						<p>763-391-7798</p>
+						<p>Shop: 7:00AM to 2:30AM (CST)</p>
+						<p>Office: 7:00AM to 4:30PM (CST)</p>
+					</div>
+				</div>
+				<div class="footertop3">
+					<div class="footertop3header">
+						Quick Inquiry
+					</div>
+					<div class="footertop3body">
+						Sign up for our mailing list to stay up to date on our latest offerings and specials
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="footerbottom">
+				© 2019 ImperialWire. All Rights Reserved. - Address - Clients
+			</div>
+		</footer>
+	</body>
+</html>

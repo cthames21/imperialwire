@@ -1,0 +1,114 @@
+/* CSS Document */
+
+body {font-family: Arial,Helvetica,Verdana,Geneva,sans-serif; line-height: 1.2; 
+letter-spacing: 1.1; padding: 0 0 30px 0;}
+body {background: transparent url(../../assets/sitegraphics/bodygradient.jpg) repeat-x scroll 0 0;
+ background-color: #000;}
+ 
+
+
+h1, h2, h3 {color: #0066CC; padding: 10px 0 5px 0;}
+h1 {font-size: 175%;}
+h2 {font-size: 145%;}
+h3 {font-size: 115%;}
+p {padding: 10px 0;}
+
+ul {padding: 5px 5px 5px 35px; }
+
+/*  LINKS  */
+a {color: #0066CC; }
+a:hover {color: #0066CC;}
+a:active {color; #0066CC;}
+
+
+ul, ol {padding: 10px 25px;}
+ul li {list-style-type: disc; }
+ol li {list-style-type: decimal; }
+
+img {border: solid 1px #bbb;}
+.imageright {float: right; margin: 5px 0 5px 10px;}
+.imageleft {float: left; margin: 5px 10px 5px 0;}
+.bluetext {color: #0066CC; font-weight: bold;}
+.calloutbox {width: 325px; border: 1px solid #bbb; float: right; margin: 15px 0 5px 10px; padding: 0 10px 10px 10px;}
+
+#footer a {color: #fff; font-size: 90%;}
+#footer a:hover {color: #000;}
+
+/*    */
+
+#wrapper {border: 1px solid #000; width: 900px; margin: 30px auto 30px; position: relative;}
+#wrapper {background: transparent url(../../assets/sitegraphics/backgroundgradient.png) repeat-y scroll 0 0;
+ background-color: #E8E8E8;}
+
+
+#header { padding: 30px 40px 80px; }
+#header {background: transparent url(../../assets/sitegraphics/headerbackground--.jpg) repeat-x scroll 0 0;
+ background-color: #0B406C;}
+#header a {text-decoration: none;}
+#header h1 {font-size: 325%; color: #fff; }
+#header h2 {font-size: 165%; color: #fff;}
+#header h3 {font-size: 145%; color: #fff; }
+#header em {color: #fff;}
+
+#logobox {margin: 0 10px 30px 0; float: left; border: solid 1px #bbb;}
+#logobox h1 {padding: 5px 10px;}
+#logobox h1 a {color: #fff;}
+#logobox h2 {background-color: #000; text-align: center;padding: 8px; clear: left;
+background: transparent url(../../assets/sitegraphics/menugradient.jpg) repeat-x scroll 0 0px;
+background-color: #000; }
+#tagline2 {margin: 10px 20px; clear: left; text-align: center; text-transform: capitalize;}
+
+#telephone {margin: 0 0 0 500px; text-align: center;}
+
+
+
+#horizontalmenu {width: 100%; position: absolute; top: 17.1em; left: 0px; border-top: 1px solid #bbb; border-bottom: 1px solid #ddd; border-left: 0px; border-right: 0px;}
+#horizontalmenu { margin: 0; 
+background: transparent url(../../assets/sitegraphics/menugradient.jpg) repeat-x scroll 0 0px;
+background-color: #000; }
+#horizontalmenu ul { padding: 0px 0px 0px 30px; }
+#horizontalmenu li { margin: 0; padding: 0px 0px; list-style-type: none; float: left; display: inline;}
+#horizontalmenu a {color: white; text-decoration: none; display: block; padding: 19px 15px;}
+#horizontalmenu a:hover {color:#0066CC; background-color: #444;}
+#horizontalmenu a:active {color:#0066CC; background-color: #444;}
+
+#content { padding: 40px; }
+#content {background: transparent url(../../assets/sitegraphics/contentgradienttop.jpg) repeat-x scroll 0 0; }
+#contentouter { background: transparent url(../../assets/sitegraphics/contentgradientbottom.jpg) repeat-x scroll 0 bottom;}
+#contentinner {padding: 20px 35px; border: 1px solid #bbb; background-color: #f5f5f5;}
+#homepagecontent h1,#homepagecontent h2, #homepagecontent h3 {margin-top: 30px;}
+
+
+#homepagebox {border: solid 1px #bbb; padding: 15px; background-color: #E8E8E8; margin-bottom: 50px;}
+#homepagebox h1, #homepagebox h2, #homepagebox h3, #homepagebox p {padding-left: 195px; margin-top: 0; padding-top: 0;} 
+#homepagebox img {border: solid 1px #bbb; width: 175px; float: left; margin: 5px 0 5px 5px;}
+
+/*  Home Page */  
+#imagegallery {width: 525px; float: right; margin:-10px -20px 10px 10px;}
+#imagegallery img {/* width: 150px; height: 150px; */ margin: 0 20px 20px 0; border: 1px solid #bbb;}
+
+#imgallery {width: 100%; margin:10px 20px 10px 10px;}
+#imgallery img {max-width: 130px; max-height: 130px; margin: 25px 25px 25px 25px; border: 1px solid #bbb;}
+
+/* Slide Show */
+.jdGallery {float: right; margin: 15px 0 10px 10px; border: 1px solid #bbb;}
+
+#contactinfo {width:468px; float: right;}
+#contactinfo div { margin: 10px 0 20px 10px; padding: 15px; border: 1px solid #bbb;}
+#map {float: right; margin: 0px 0 20px 20px; border: solid 1px #bbb;}
+#map small a {color: #666; padding: 3px 10px;}
+a#rmiLink.gmnoprint {color: #666;}
+/*
+#footer ul {padding: 0; margin: auto; width: 880px;}
+#footer li { margin: 0; list-style-type: none;  display: inline;}  */
+
+
+
+
+#footer {width: 100%; clear: both; border-top: 1px solid #ddd;}
+#footer p {text-align: center; padding: 15px 0; color: #fff; font-size: 90%;}
+#footer {background: transparent url(../../assets/sitegraphics/footergradient.jpg) repeat-x scroll 0 0;
+background-color: #0B406C;}
+
+#ampagebox {border: solid 1px #bbb; padding: 15px; background-color: #E8E8E8; margin-bottom: 20px;}
+#ampagebox h1, #ampagebox h2, #ampagebox h3, #ampagebox p {padding-left: 5px; margin-top: 0; padding-top: 0;} 
