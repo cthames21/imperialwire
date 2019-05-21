@@ -1,0 +1,236 @@
+header {
+	height: 100px;
+	transition: 1s;
+	grid-template-columns: 40% 45%;
+	background-color: rgba(255,255,255,.95);
+}
+
+.headerlinkcontainer {
+	grid-row: 2;
+	grid-column: 1 / span 3;
+	margin: 0;
+	transition: 0s;
+}
+
+#slogan {
+	display: inline-flex;
+	grid-row: 1;
+	font-size: 22px;
+	text-align: center;
+	align-items: center;
+	justify-self: center;
+	grid-column: 2;
+}
+
+#imperial {
+	transition: 1s;
+	transform: translate(-420px,-60px);
+	font-size: 56px;
+	padding-top:20px;
+}
+
+.imperialwire {
+	height: 200px;
+	transition: 0s;
+}
+
+.title {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 65px;
+	margin: 20px;
+}
+
+.process {
+	position: absolute;
+	top:600px;
+	height: 7000px;
+	width:100vw;
+}
+
+.processheader {
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	margin: 40px 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 38px;
+}
+
+.steps {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: repeat(5,400px);
+	grid-gap: 30px;
+	position: absolute;
+	top: 100px;
+	width: 100vw;
+	height: 2000px;
+	align-items: center;
+}
+
+#step1left,#step2left,#step3left,#step4left {
+	justify-self: end;
+	width:70%;
+	height: 100%;
+	margin-right:500px;
+	opacity: 0;
+	transition: 1s;
+}
+
+#step1left.slide,#step2left.slide,#step3left.slide,#step4left.slide {
+	margin-right:0px;
+	opacity: 1;
+	transition: 1.5s;
+}
+
+
+#step1right,#step2right,#step3right,#step4right {
+	justify-self:start;
+	width:50%;
+	height: 80%;
+	margin-left:500px;
+	justify-self:start;
+	opacity: 0;
+	transition: 1s;
+}
+
+#step1right.slide,#step2right.slide,#step3right.slide,#step4right.slide {
+	margin-left: 0;
+	opacity: 1;
+	transition: 2.5s;
+}
+
+
+#step1left,#step2left,#step3left,#step4left {
+	grid-column: 1;
+}
+
+
+#step1right,#step2right,#step3right,#step4right {
+	grid-column: 2;
+}
+
+
+div[id^="step1"] {
+	grid-row: 1;
+}
+
+
+div[id^="step2"] {
+	grid-row: 2;
+}
+
+div[id^="step3"] {
+	grid-row: 3;
+}
+
+div[id^="step4"] {
+	grid-row: 4;
+}
+
+#step2left.slide,#step4left.slide {
+	transition: 2.5s;
+}
+
+#step2right.slide,#step4right.slide {
+	transition: 1.5s;
+}
+
+
+.image img {
+	width: auto;
+	height: 100%;
+}
+
+
+.number {
+	width:100%;
+	height: 150px;
+	font-size: 100px;
+	text-align: center;
+}
+
+.number img {
+	width:auto;
+	height: 100%;
+}
+
+.details {
+	width:100%;
+	height: 150px;
+	padding: 20px;
+	top:100px;
+	font-size: 24px;
+}
+
+.shakinghands {
+	display: grid;
+	position: absolute;
+	grid-template-columns: repeat(2,1fr);
+	width: 100%;
+	height: 300px;
+	top: 250px;
+}
+
+.righthand {
+	width: 100%;
+	height: 100%;
+	margin-left: 40%;
+	grid-column: 2;
+	opacity: 0;
+	transition: 2s;
+	background: url(photos/shakinghandleft.png);
+	background-repeat: no-repeat;
+}
+
+.lefthand {
+	grid-row: 1;
+	width: 100%;
+	height: 100%;
+	margin-right: 40%;
+	grid-column: 1;
+	opacity: 0;
+	transition: 2s;
+	background: url(photos/shakinghand.png);
+	background-repeat: no-repeat;
+	justify-self: end;
+}
+
+.righthand.post {
+	margin-left: -20%;
+	opacity: .8;
+	transition: 2s;
+}
+
+.lefthand.post {
+	margin-right: -50%;
+	opacity: .8;
+	transition: 2s;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
