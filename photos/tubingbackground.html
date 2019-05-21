@@ -1,0 +1,495 @@
+
+<!DOCTYPE html><html lang="en"><head><style>@charset "UTF-8";a img{border:0 none}.clearfix{display:inline-block}.clearfix::after{content:'.';display:block;height:0;clear:both;visibility:hidden}.clearfix{display:block}html,body,div,span,iframe,h1,h2,p,a,img,ul,li,form{margin:0;padding:0;border:0;outline:rgb(0,0,0);font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}ul{list-style:none}:focus{outline:none}html{height:100%}#box{min-height:100%;position:relative;background-color:rgb(255,255,255);background-position:initial initial;background-repeat:initial initial}.box_content{background-color:rgb(255,255,255);background-position:initial initial;background-repeat:initial initial}body{font-size:87.5%;width:100%;margin:0 auto;font-family:Helvetica,Arial,'Verdana sans-serif';color:rgb(40,40,40)}a:link{color:rgb(5,154,240);text-decoration:none}h1{font-size:1.423em;color:rgb(47,61,72);line-height:28px;font-weight:400}h2{font-size:1.429em;color:rgb(47,61,72);line-height:21px;font-weight:400}@font-face{font-family:Oxygen;font-style:normal;font-weight:300;src:local(Oxygen Light),local(Oxygen-Light),url(/assets/oxygen-v6-latin-300-ab34d4249b156869987e63f5a258cff7aaca8104e0dbf686755528a4a216f5bd.eot?#iefix) format('embedded-opentype'),url(/assets/oxygen-v6-latin-300-e65ccbcab753fddcf1c6acb4b87316a2732cf281dfc5abbd644cea93d386218f.woff2) format('woff2'),url(/assets/oxygen-v6-latin-300-38afebed856a216e31e985d0f8d46e12dd3aa9c2e7d623cebb91731c44696ec1.woff) format('woff'),url(/assets/oxygen-v6-latin-300-af1221581637c5a298dac875a3c66cd45f2f1a2e1112ee3681ae8b4071c2309a.ttf) format('truetype'),url(/assets/oxygen-v6-latin-300-0a7dbb4a736245d926366c478fc7b92d3ef0edca828744a9d4a4022fc2da2c86.svg#Oxygen) format('svg')}@font-face{font-family:Oxygen;font-style:normal;font-weight:400;src:local(Oxygen Regular),local(Oxygen-Regular),url(/assets/oxygen-v6-latin-regular-8adc3bd23ac180d91218951e4bc9f9c7fb9afa96cf8f39cf09200f879e73b284.eot?#iefix) format('embedded-opentype'),url(/assets/oxygen-v6-latin-regular-006a95415c04172fecb478c880fe312f579028615c7d8b51df0363c817b6cf85.woff2) format('woff2'),url(/assets/oxygen-v6-latin-regular-c7fafbac2ea64774c583e7f9cc3ebc661b623f69f6d685129fc83986a5cc1df7.woff) format('woff'),url(/assets/oxygen-v6-latin-regular-892391b157dc77fac210771d2877a634759cf3439fa90517c5a58da5c2a446c3.ttf) format('truetype'),url(/assets/oxygen-v6-latin-regular-bd1ff51ee4cc2e57ccad159045acdd694de147abbc5e545247348bb125def976.svg#Oxygen) format('svg')}@font-face{font-family:Oxygen;font-style:normal;font-weight:700;src:local(Oxygen Bold),local(Oxygen-Bold),url(/assets/oxygen-v6-latin-700-254122ac4ffd12eb1a8541758c6a780a4c3692482b1aea70b5fd268da1eee1b6.eot?#iefix) format('embedded-opentype'),url(/assets/oxygen-v6-latin-700-4c99d8b8f43e2bde151bb38400520cfb7bf660c375c3b1225d9f61fa458f453f.woff2) format('woff2'),url(/assets/oxygen-v6-latin-700-d41fa7540dd61c7a204336dbaa7dc0d3688d9fc24303796c9663055b9516ad09.woff) format('woff'),url(/assets/oxygen-v6-latin-700-ef2bc8bee5f5183ee0ee2e77e3570872c84be19eea0cbc1c2fc2a23ee12c9bbe.ttf) format('truetype'),url(/assets/oxygen-v6-latin-700-b9d7a330d0beac476fcd53a33e8593c462a192b393fab604e29a0bcde047f018.svg#Oxygen) format('svg')}@font-face{font-family:Oswald;font-style:normal;font-weight:200;src:local(Oswald ExtraLight),local(Oswald-ExtraLight),url(/assets/oswald-v14-latin-200-80bab1bfb7601e77dcc8b6465bf1a8cc1b10e5456b6a0acaa00d8b7b2ce0de1a.eot?#iefix) format('embedded-opentype'),url(/assets/oswald-v14-latin-200-9316fecbfc5d142f27ec051ec64b513313efe475f1502dccad872d73fe439f19.woff2) format('woff2'),url(/assets/oswald-v14-latin-200-0f551d47ab21fb17916f7091c85e01bfd5694c8f38a26a85eeffd54b506b6bf6.woff) format('woff'),url(/assets/oswald-v14-latin-200-984d3f3573c0e8de9ddc46ff0c13d8bb7d3c498c7d33f969bf296b7c1b96eb73.ttf) format('truetype'),url(/assets/oswald-v14-latin-200-999fff30ae5ee2b075461c84b15a79bbb879d36b39dd59edc75f48fce9bdf26c.svg#Oswald) format('svg')}@font-face{font-family:Oswald;font-style:normal;font-weight:300;src:local(Oswald Light),local(Oswald-Light),url(/assets/oswald-v14-latin-300-d074e14c8b28408f24a66d039c9902cf3a33d9725d32c61cc20fdaddeb45e512.eot?#iefix) format('embedded-opentype'),url(/assets/oswald-v14-latin-300-3221a7630f0200da903df0dc9ef46d199fe894545d73ac2b868aa2cd00c09f35.woff2) format('woff2'),url(/assets/oswald-v14-latin-300-8dde7aa4efbd82bfe51b33191a1638ac4f03700edb44067a01c1b699213f130d.woff) format('woff'),url(/assets/oswald-v14-latin-300-19cd1e30d2dee37ac712dfcdcb1a4f766ed90a8cc081277b7a13c98fd2a73a9e.ttf) format('truetype'),url(/assets/oswald-v14-latin-300-a11797be30ec209f7cb655e1c09b9873cb3fc631ade1b887f93ea83d4c8c0016.svg#Oswald) format('svg')}@font-face{font-family:Oswald;font-style:normal;font-weight:400;src:local(Oswald Regular),local(Oswald-Regular),url(/assets/oswald-v14-latin-regular-4ddac70e6d135aff3af358633a0a8d338fae0206de5f66032c1fcb227fa08b6f.eot?#iefix) format('embedded-opentype'),url(/assets/oswald-v14-latin-regular-7d2d71a37b3b4cdc1e63cea793d01abaec9cbc90c81e4771741e27925204214a.woff2) format('woff2'),url(/assets/oswald-v14-latin-regular-1018f6c6e463db9125b987b08593399c5bc4f4b9c49aa6217a15d20dc09f2b1f.woff) format('woff'),url(/assets/oswald-v14-latin-regular-c7927a80de01d3b6855b7ff14cedaffa67de3439171f1cecb0db92ddd135b2c5.ttf) format('truetype'),url(/assets/oswald-v14-latin-regular-c6cb52b9bcb23b68c7c0d14ba059a580742699188f2a450f7deff7cf5c54ae9b.svg#Oswald) format('svg')}@font-face{font-family:Oswald;font-style:normal;font-weight:500;src:local(Oswald Medium),local(Oswald-Medium),url(/assets/oswald-v14-latin-500-ef3b2f287a358a55a42bb1707595926c6fd83b4f959418d6dd66281ef0b340ca.eot?#iefix) format('embedded-opentype'),url(/assets/oswald-v14-latin-500-f9e8b85404d15197d1f57495893d6e609636a94839a3dbcacf516a131bc8ff66.woff2) format('woff2'),url(/assets/oswald-v14-latin-500-8930a919b731fb0d8210fd37bb3873046fe08f21e91946ed12bd313e7c25291b.woff) format('woff'),url(/assets/oswald-v14-latin-500-efb8031034403c819308c7f893344dd889daa7aed1c3d4923ed74a48fde88664.ttf) format('truetype'),url(/assets/oswald-v14-latin-500-303a8bee664bf2caddd9b936bbef1967aefb459676165d00b17ccf12eaa8b73c.svg#Oswald) format('svg')}@font-face{font-family:Oswald;font-style:normal;font-weight:600;src:local(Oswald SemiBold),local(Oswald-SemiBold),url(/assets/oswald-v14-latin-600-afa66646dea36f68a575aa3a018c65e8bb410913e0e37b2892e31a53c9a9fedd.eot?#iefix) format('embedded-opentype'),url(/assets/oswald-v14-latin-600-aad7f0697724576765937cefe6909f64fe07388b05a9faa96600429a50bd2798.woff2) format('woff2'),url(/assets/oswald-v14-latin-600-6c6926eacd4b412e0cd049484a96f8fa7fbe12d9828aa6acd73573100adadfc6.woff) format('woff'),url(/assets/oswald-v14-latin-600-34b0d0aa15d3027c55d714e17ab12b82c411f855c11bd4e7517654a55710f660.ttf) format('truetype'),url(/assets/oswald-v14-latin-600-c03e8f7ad102ced8394b83c6c138e77dc4d173731c4bc8d8f1ae2ab4a833e9e1.svg#Oswald) format('svg')}@font-face{font-family:Oswald;font-style:normal;font-weight:700;src:local(Oswald Bold),local(Oswald-Bold),url(/assets/oswald-v14-latin-700-de298d728f21c6a89cfd2d7fce25be263f8ebd40ab7673bd451b9b3d0486baea.eot?#iefix) format('embedded-opentype'),url(/assets/oswald-v14-latin-700-a2ebd8bf2111781f6e849b508aba8b1db02211625bb2129de59eedac010416c3.woff2) format('woff2'),url(/assets/oswald-v14-latin-700-73d65a3ada7de13fad012b6a640e5d2bcd59c4ef69422938e011d557b714b2bf.woff) format('woff'),url(/assets/oswald-v14-latin-700-824343c7c269215db8590fcb95f15a4d28f96f075171c0dc1d7fe69e2be9758b.ttf) format('truetype'),url(/assets/oswald-v14-latin-700-3872a18a0e5bd2c7d9081df2f32e6a3e228c834c6c382e3898d48595ba2cb2cc.svg#Oswald) format('svg')}.clearfix::after{content:'.';display:block;clear:both;visibility:hidden;line-height:0;height:0}.clearfix{display:inline-block}.masthead_box{margin:10px 0 15px}.branding_box .bv_logo{float:left;font-size:1em}.branding_box span a{display:inline-block;text-indent:-9999px;width:297px;height:57px;background-image:url(/assets/redesign/logo_bobvila-9fa6e917879126280ff74b7895d0269549ccab102ee202c9b44ddca6146a9333.png);background-position:0 0;background-repeat:no-repeat no-repeat}.branding_box{padding:46px 0 0;margin:0 auto;width:980px}.masthead_after{clear:both}.nav_search_box{background-color:rgb(51,51,51);clear:both;width:100%;background-position:initial initial;background-repeat:initial initial}#nav{background-color:rgb(51,51,51);margin:0 auto;overflow:hidden;width:980px;max-height:45px;background-position:initial initial;background-repeat:initial initial}.nav_main{float:left;padding:12px 0 0;list-style:none;margin-left:0}.nav_main li{float:left}.nav_main a{border-left-width:1px;border-left-style:solid;border-left-color:rgb(114,114,114);border-right-width:1px;border-right-style:solid;border-right-color:rgb(30,30,30);color:rgb(255,255,255);display:block;font-family:Oswald,sans-serif;font-weight:400;font-size:16px;line-height:1.3;padding:0 18px;text-align:center;text-transform:uppercase}.nav_main .nav-howto a{border-left-style:none;padding-left:0}.nav_main .nav-tv a{border-right-width:1px;border-right-style:solid;border-right-color:rgb(114,114,114)}.nav_main .nav-cta{max-width:170px}.nav_main .nav-cta a{font-size:11px;font-family:Oxygen,sans-serif;border-right-style:none;border-left-style:none;margin-top:-3px;text-align:left;text-transform:none}.nav_main a:link{color:rgb(255,255,255);text-decoration:none}.tagline{color:rgb(205,205,205);display:inline-block;font-family:Oxygen,sans-serif;font-size:16px;line-height:1.25;vertical-align:bottom}#service_nav{float:right;margin-top:33px}#service_nav .service_nav_item{float:left}#service_nav .service_nav_item:nth-child(2){border-left-width:1px;border-left-style:dotted;border-left-color:rgb(196,196,196);border-right-width:1px;border-right-style:dotted;border-right-color:rgb(196,196,196)}#service_nav .service_nav_item a{font-family:Oxygen,sans-serif;font-weight:400;font-size:12px;color:rgb(51,51,51);padding:0 9px;line-height:3;display:block}#search{float:right;padding:8px 0 7px}.search_inner{background-image:url(/assets/redesign/icon_search-a6c67f1fc75ad62046190006773bb71086c820f7eea9c241c46f0b5592d73f17.png);background-color:rgb(95,95,95);width:273px;background-position:246px 50%;background-repeat:no-repeat no-repeat}#search_input{font-family:Arial,Helvetica,sans-serif;font-size:16px;color:rgb(255,255,255);width:236px;background-color:rgb(95,95,95);height:20px;margin:5px;padding:0;border:none;background-position:initial initial;background-repeat:initial initial}#content::after{content:'.';display:block;height:0;clear:both;visibility:hidden}.article{margin:0 auto;width:970px}.article::after{content:'.';display:block;height:0;clear:both;visibility:hidden}.social{height:34px;position:relative}.social li{width:55px;padding:5px 5px 0 0}.social .addthis_social_buttons{padding-right:0;width:auto}.bread_crumbs{margin-bottom:15px;font-size:.786em;font-weight:700}.bread_crumbs li{display:inline}.home{width:970px;margin:5px auto 0}.article_head{position:relative;border-bottom-width:1px;border-bottom-color:rgb(220,220,220);border-bottom-style:solid;padding-bottom:7px;margin-bottom:15px}.article .article_head{border-bottom-width:0;padding-bottom:0;margin-bottom:0}.article h1{font-family:Oxygen,sans-serif;font-size:34px;font-weight:400;color:rgb(51,51,51);width:100%;line-height:40px}.article .short_description{font-family:Arial,sans-serif;font-size:18px;color:rgb(102,102,102);line-height:21px;margin:5px 0;width:100%}.article .author{font-size:.786em;color:rgb(160,160,160);line-height:1.286em}.article .author span{color:rgb(0,0,0)}.article .author a{color:rgb(0,181,59)}.article #author_social_cont{width:415px;height:28px}.article #author_social_cont .author{float:left;margin-right:10px;margin-top:5px;font-size:.7857em}.article .tags_and_social_cont #ss_social_cont{float:right}#ss_social_cont .social{height:auto}.expandable_ad{width:970px;margin:0 auto;overflow:visible}#brandscape_wrapper{margin-left:auto;margin-right:auto;position:relative}#div-gpt-brandscape{height:0;width:0}.nav_main{position:relative}html,body,div,span,iframe,h1,h2,p,a,img,ul,li,form{margin:0;padding:0;border:0;outline:rgb(0,0,0);font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}ul{list-style:none}:focus{outline:none}html{height:100%}body{font-size:87.5%;width:100%;margin:0 auto;font-family:Helvetica,Arial,'Verdana sans-serif';color:rgb(40,40,40)}h1{font-size:1.423em;color:rgb(47,61,72);line-height:28px;font-weight:400}h2{font-size:1.429em;color:rgb(47,61,72);line-height:21px;font-weight:400}.masthead_box{margin:10px 0 25px}.expandable_ad{width:970px;margin:0 auto;overflow:visible}.masthead_after{clear:both}.nav_main .nav-cta{max-width:170px}.nav_main .nav-cta a{font-size:11px;font-family:Oxygen,sans-serif;border-right-style:none;border-left-style:none;margin-top:-3px;text-align:left;text-transform:none}#content::after{content:'.';display:block;height:0;clear:both;visibility:hidden}.article{margin:0 auto;width:970px}.article::after{content:'.';display:block;height:0;clear:both;visibility:hidden}.article_head{border-bottom-width:0;padding-bottom:0;margin-bottom:0;position:relative}.article_content{width:650px}.social{height:34px;position:relative}.social li{width:55px;padding:5px 5px 0 0}.social .addthis_social_buttons{padding-right:0}.bread_crumbs{margin-bottom:15px;font-size:.786em;font-weight:700}.bread_crumbs li{display:inline;color:rgb(121,121,121);font-family:Helvetica,Arial,'Verdana sans-serif';font-size:12px;font-style:normal;font-weight:400}.bread_crumbs li a{color:rgb(0,181,59);font-family:Helvetica,Arial,'Verdana sans-serif';font-size:12px;font-style:normal}.home{width:970px;margin:40px auto 0}.article h1{font-family:Oxygen,Arial,sans-serif;font-weight:100;font-size:44px;line-height:1.1;margin-bottom:.25em;color:rgb(52,52,52)}.article .short_description{font-family:Oxygen,Arial,sans-serif;font-size:23px;font-weight:100;color:rgb(53,53,53);line-height:40px;margin:5px 0;text-transform:none}.article .author{font-size:.786em;color:rgb(0,0,0);line-height:1.286em}.article .author a{color:rgb(0,181,59)}.article .author_social_wrapper{display:inline-block;width:100%;margin:0 0 15px}.article #author_social_cont{width:415px;height:42px}.article #author_social_cont .author{float:left;margin:0 10px 0 0;font-size:13px;line-height:42px}.article .tags_and_social_cont{overflow:hidden;float:right}.article .tags_and_social_cont #ss_social_cont{float:right}#ss_social_cont .social{height:auto}.post .entry div.wp-caption.aligncenter{width:auto}#content{float:left;width:640px}.post{margin-right:12px}.post .entry{margin-top:4px;margin-bottom:4px;font-family:Arial;font-size:17px}.aligncenter{clear:both;display:block;margin-left:auto;margin-right:auto}.clearfix::before,.clearfix::after{content:' ';display:table}.clearfix::after{clear:both}.entry .wp-caption:first-child{display:inline-block}.entry img:first-child{display:inline-block;max-width:970px}</style><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1"><link href="//www.googletagservices.com" rel="dns-prefetch"><link href="//www.googletagservices.com" rel="preconnect" crossorigin><link href="//adservice.google.com" rel="dns-prefetch"><link href="//adservice.google.com" rel="preconnect" crossorigin><link href="//securepubads.g.doubleclick.net" rel="dns-prefetch"><link href="//securepubads.g.doubleclick.net" rel="preconnect" crossorigin><link href="//pagead2.googlesyndication.com" rel="dns-prefetch"><link href="//pagead2.googlesyndication.com" rel="preconnect" crossorigin><link href="//tpc.googlesyndication.com" rel="dns-prefetch"><link href="//tpc.googlesyndication.com" rel="preconnect" crossorigin><link href="//ad.doubleclick.net" rel="dns-prefetch"><link href="//ad.doubleclick.net" rel="preconnect" crossorigin><link href="//lightboxapi1.azurewebsites.net" rel="dns-prefetch"><link href="//lightboxapi1.azurewebsites.net" rel="preconnect" crossorigin><link href="//ap.lijit.com" rel="dns-prefetch"><link href="//ap.lijit.com" rel="preconnect" crossorigin><link href="//ib.adnxs.com" rel="dns-prefetch"><link href="//ib.adnxs.com" rel="preconnect" crossorigin><meta name="google-site-verification" content="Rfz4fAMNA1NLQv0SaT4PT6c0uQOWWGuOyMda8_3-tYg" /><meta property="fb:admins" content="133713533363276" /><meta name="twitter:site" content="@bobvila" /><meta name="twitter:card" content="summary_large_image" /><meta property="og:article:published_time" content="2016-12-08T15:00:47+00:00" /><link rel="shortcut icon" href="/favicon.ico" type="image/ico" /> <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie6.css" /><![endif]--> <!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie7.css" /><![endif]--> <!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie8.css" /><![endif]--> <script type="text/javascript">var _gaq = _gaq || [];
+
+      _gaq.push(['_setAccount', 'UA-19848333-1']);
+  
+  _gaq.push(['_setCustomVar', 2, 'Section', 'Blogs']);
+      _gaq.push(['_setCustomVar', 1, 'Month Published', "December 2016"]);
+    _gaq.push(['_setCustomVar', 4, 'Author', "Bob Vila"]);
+
+        _gaq.push(['_setCustomVar', 3, 'Category', "How To's & Quick Tips"]);
+    
+        _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>  <script>var sz_300x250 = [
+  [300, 250]
+];
+
+var sz_300x600 = [
+  [300, 600]
+];
+
+var PREBID_TIMEOUT = 1100;
+var MAX_RETRIES = 30;
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function () {
+  googletag.pubads().disableInitialLoad();
+});
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+pbjs.retries = 0;
+
+// pbjs.initAdserver will be called either when all bids are back, or
+// when the timeout is reached.
+function initAdserver() {
+  if (pbjs.initAdserverSet) return;
+
+  // we don't want to call DFP before it is ready
+  if(!googletag.pubadsReady && pbjs.retries <= MAX_RETRIES) {
+    setTimeout(initAdserver, 1000); // poll ms can be adjusted as desired.
+    pbjs.retries++;
+    return;
+  }
+
+  googletag.cmd.push(function () {
+    pbjs.que.push(function () {
+      pbjs.setTargetingForGPTAsync();
+    });
+    // Commented out to refresh an article ad only when it's in the viewport
+    // googletag.pubads().refresh();
+  });
+
+  pbjs.initAdserverSet = true;
+}
+
+// load GPT when timeout is reached.
+//setTimeout(initAdserver, PREBID_TIMEOUT);
+
+// load the Prebid JavaScript Library Async. We recommend loading it 
+// immediately after the initAdserver() and setTimeout functions.
+(function () {
+  var d = document;
+  var pbs = d.createElement('script');
+  pbs.async = true;
+  pbs.type = 'text/javascript';
+  pbs.src = '/articles/wp-content/themes/bv/js/prebid.js';
+  var target = d.getElementsByTagName('head')[0];
+  target.insertBefore(pbs, target.firstChild);
+})();
+
+// Load GPT library Async here
+(function () {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+            '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+})();
+
+pbjs.que.push(function() {
+
+  // Ref: https://github.com/prebid/Prebid.js/issues/2648#issuecomment-413397957
+  pbjs.setConfig({
+    userSync: {
+      syncsPerBidder: 50,
+      filterSettings: {
+        iframe: {
+          bidders: '*',
+          filter: 'include'
+        }
+      }
+    },
+    maxRequestsPerOrigin: 1,
+    timeoutBuffer: 400,
+    priceGranularity: "dense",
+    disableAjaxTimeout: true,
+    enableSendAllBids: false, // Default will be 'true' as of 1.0
+    publisherDomain: "https://www.bobvila.com/" // Used for SafeFrame creative.
+  });
+
+  // Log when Prebid wins the ad server auction
+  pbjs.onEvent('bidWon', function(data) {
+    console.log(data.bidderCode + ' won the ad server auction for ad unit ' + data.adUnitCode + ' at ' + data.cpm + ' CPM');
+  });
+
+  /* 1. Register bidder tag Ids
+
+  Registers the bidder tags for your ad units. Once the prebid.js
+  library loads, it reads the pbjs.adUnits object and sends out
+  bid requests. Find the complete reference on bidders at
+  http://prebid.org/bidders.html.
+
+  code:  Your GPT slot’s ad unit path. If they don’t match, prebid.js
+  would not be able to set targeting correctly
+  sizes: All sizes your ad unit accepts. They should match with GPT.
+
+  */
+  var adUnits = [
+   /*{
+      code: 'div-gpt-pushdown',
+      mediaTypes: {
+            banner: {
+                sizes: [
+                    [970, 60],
+                    [970, 90],
+                    [970, 250]
+                ]
+            }
+      },
+      bids: [{
+                 bidder: 'sovrn',
+                 params: {tagid: '568314'}
+            },{
+                bidder: 'ix',
+                params: {
+                    siteId: '208067',
+                    size: [970, 90]
+                }
+            },
+                bidder: 'appnexus',
+                params: {placementId: '12717087'}
+            }]
+  },*/{
+      code: 'div-rectad1',
+      mediaTypes: {
+            banner: {
+                sizes: sz_300x250
+            }
+      },
+      bids: [{
+                bidder: 'sovrn',
+                params: {tagid: '568312'}
+            },{
+                bidder: 'gumgum',
+                params: {inSlot: '14641'}
+            },{
+                bidder: 'appnexus',
+                params: {placementId: '11486585'}
+            },{
+                bidder: 'gourmetads',
+                params: {placementId: '13946332'}
+            },{
+                bidder: 'onedisplay',
+                params: {placement: "5041417", network: "11626.1"}
+            },{
+                bidder: 'lockerdome',
+                params: {
+                  adUnitId: 11102427378297446
+                }
+            },{
+                bidder: 'ix',
+                params: {
+                    siteId: '208069',
+                    size: [300, 250]
+                }
+            },{
+                bidder: 'synacormedia',
+                params: {
+                    seatId: 'vila',
+                    placementId: '83185'
+                }
+            },{
+                bidder: 'conversant',
+                params: {
+                    site_id: '124208',
+                    secure: 1
+                }
+            }]
+    },{
+      code: 'div-rectad2',
+      mediaTypes: {
+            banner: {
+                sizes: sz_300x250
+            }
+      },
+      bids: [{
+                bidder: 'sovrn',
+                params: { tagid: '568312'}
+            },{
+                bidder: 'gumgum',
+                params: {inSlot: '14641'}
+            },{
+                bidder: 'appnexus',
+                params: {placementId: '11486585'}
+            },{
+                bidder: 'gourmetads',
+                params: {placementId: '13946332'}
+            },{
+                bidder: 'onedisplay',
+                params: {placement: "5041417", network: "11626.1"}
+            },{
+                bidder: 'lockerdome',
+                params: {
+                  adUnitId: 11102427378297446
+                }
+            },{
+                bidder: 'ix',
+                params: {
+                    siteId: '208069',
+                    size: [300, 250]
+                }
+            },{
+                bidder: 'synacormedia',
+                params: {
+                    seatId: 'vila',
+                    placementId: '83185'
+                }
+            },{
+                bidder: 'conversant',
+                params: {
+                    site_id: '124208',
+                    secure: 1
+                }
+            }]
+            },{
+      code: 'div-rectad2c',
+      mediaTypes: {
+            banner: {
+                sizes: sz_300x250
+            }
+      },
+      bids: [{
+                bidder: 'sovrn',
+                params: {tagid: '568312'}
+            },{
+                bidder: 'gumgum',
+                params: {inSlot: '14641'}
+            },{
+                bidder: 'appnexus',
+                params: {placementId: '11486585'}
+            },{
+                bidder: 'gourmetads',
+                params: {placementId: '13946332'}
+            },{
+                bidder: 'onedisplay',
+                params: {placement: "5041417", network: "11626.1"}
+            },{
+                bidder: 'lockerdome',
+                params: {
+                  adUnitId: 11102427378297446
+                }
+            },{
+                bidder: 'ix',
+                params: {
+                    siteId: '208069',
+                    size: [300, 250]
+                }
+            },{
+                bidder: 'synacormedia',
+                params: {
+                    seatId: 'vila',
+                    placementId: '83185'
+                }
+            },{
+                bidder: 'conversant',
+                params: {
+                    site_id: '124208',
+                    secure: 1
+                }
+            }]
+  }];
+
+  // Add the adUnits
+  pbjs.addAdUnits(adUnits);
+
+  /* Request bids for the added ad units. If adUnits or adUnitCodes are
+   not specified, the function will request bids for all added ad units.
+   */
+  //pbjs.requestBids({
+      /* The bidsBack function will be called when either timeout is
+       reached, or when all bids come back, whichever happens sooner.
+       */
+  //    bidsBackHandler: initAdserver,
+  //    timeout: PREBID_TIMEOUT
+  //});
+});
+
+function refreshSlots(slotsArray, slotElementIdsArray) {
+  pbjs.que.push(function() {
+    pbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnitCodes: slotElementIdsArray,
+      bidsBackHandler: function() {
+        pbjs.setTargetingForGPTAsync(slotElementIdsArray);
+        googletag.pubads().refresh(slotsArray);
+      }
+    });
+  });
+}</script> 
+ <script>(function(){
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    window.lazySizesConfig.loadMode = 1;
+    window.lazySizesConfig.throttleDelay = 180;
+  })();</script> <script type="text/javascript">//
+var AUTH_TOKEN = "t1OSg6cIzKjmWxODCIUw9MzVqC3rPitmuhx3I1yNUBU=";
+//</script> <script type="text/javascript">//
+var DATA_TYPE = ''
+//</script> <script type="text/javascript">var STapiKey = "2c23bc7804d46fab79a4f7ede6ddc6b156bc0d5c";</script> <script>var STglobalSettings = {initialState: "closed"};</script> <!--[if IE 6]><script src="/javascripts/ie6.js" type="text/javascript"></script><![endif]--> <script type="text/javascript">//sbi_morpheus.register('div-leaderboard-ad', '9c47e97df97bd1906272');
+        //sbi_morpheus.register('div-rectad1', '8a89a2d88c200cd0d578');
+        //sbi_morpheus.register('div-gpt-billboard', 'c971464449ca73289d43');</script> <script>// var slotLeaderboard;
+  // var slotFooter;
+
+  var slotBrandscape;
+  //var slotPushdown;
+  var slotRectad1;
+  var slotRectad2;
+  var slotRectad2c;
+
+      
+  
+  googletag.cmd.push(function() {
+
+    // Declare ad slots initially present on the page
+    slotBrandscape = googletag.defineSlot('/11043633/blogs_3x3', [3, 3], 'div-gpt-brandscape').
+      addService(googletag.pubads());
+    //slotLeaderboard = googletag.defineSlot('/11043633/blogs_728x90', [728,90], 'div-leaderboard-ad').addService(googletag.pubads());
+    //slotPushdown = googletag.defineSlot('/11043633/blogs_970x60', [[970, 60], [970, 90], [970, 250]], 'div-gpt-pushdown').addService(googletag.pubads());
+    slotRectad1 = googletag.defineSlot('/11043633/blogs_300x250a', [300, 250], 'div-rectad1').
+      addService(googletag.pubads()).setTargeting("pos", "1");
+
+            slotRectad2 = googletag.defineSlot('/11043633/blogs_300x250b', [300, 250], 'div-rectad2').
+      addService(googletag.pubads());
+    
+    
+    
+    
+    slotRectad2c = googletag.defineSlot('/11043633/blogs_300x250c', [300, 250], 'div-rectad2c').
+        addService(googletag.pubads());
+
+    //slotFooter = googletag.defineSlot('/11043633/blogs_728x90c', [728,90], 'div-footer-ad').addService(googletag.pubads());
+
+
+    // Endless scroll requires SRA
+    // googletag.pubads().enableSingleRequest();
+
+    // Disable initial load, will use refresh() to fetch ads.
+    // Calling this function means that display() calls just
+    // register the slot as ready, but do not fetch ads for it.
+    // googletag.pubads().disableInitialLoad();
+
+    googletag.enableServices();
+    googletag.pubads().setTargeting("BVcat", "how-tos-quick-tips");
+    googletag.pubads().setTargeting("BVsubcat", "");
+    googletag.pubads().setTargeting("BVcid", "84891");
+    googletag.pubads().setTargeting("BVtype", "Article");
+    googletag.pubads().setTargeting("BVtag", ["how-to","paint"]);
+    googletag.pubads().setTargeting("BVmode", "async");
+    googletag.pubads().setTargeting("BVenv", "production");
+  });</script> <link type="text/css" media="all" href="https://www.bobvila.com/articles/wp-content/cache/autoptimize/css/autoptimize_02e9311ef680222f7d20952f2657c49d.css" rel="stylesheet" /><title>How to Paint PVC - Bob Vila</title><meta name="description" content="While PVC comes in a spectrum of brights, you&#039;ll still want to learn how to paint PVC if you’ve got a more sophisticated palette in mind. Here, the steps for a coat that sticks."/><meta name="robots" content="noodp"/><link rel="canonical" href="https://www.bobvila.com/articles/how-to-paint-pvc-pipe/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="How to Paint PVC - Bob Vila" /><meta property="og:description" content="While PVC comes in a spectrum of brights, you&#039;ll still want to learn how to paint PVC if you’ve got a more sophisticated palette in mind. Here, the steps for a coat that sticks." /><meta property="og:url" content="https://www.bobvila.com/articles/how-to-paint-pvc-pipe/" /><meta property="og:site_name" content="Bob Vila" /><meta property="article:author" content="https://www.facebook.com/bobvila" /><meta property="article:section" content="How To&#039;s &amp; Quick Tips" /><meta property="article:published_time" content="2016-12-08T15:00:47-04:00" /><meta property="article:modified_time" content="2018-09-12T13:30:57-04:00" /><meta property="og:updated_time" content="2018-09-12T13:30:57-04:00" /><meta property="og:image" content="https://s3-production.bobvila.com/articles/wp-content/uploads/2016/12/PVC-pipe.jpg" /><meta property="og:image" content="https://s3-production.bobvila.com/articles/wp-content/uploads/2016/12/paint-pvc.jpg" /><link rel='dns-prefetch' href='//s.w.org' /> <script>var MP3jPLAYLISTS = [];
+var MP3jPLAYERS = [];</script> <link rel="alternate" type="application/rss+xml" title="Bob Vila &raquo; How To: Paint PVC Pipe Comments Feed" href="https://www.bobvila.com/articles/how-to-paint-pvc-pipe/feed/" /> <script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.bobvila.com\/articles\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);</script> <style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style> <script type='text/javascript' src='https://www.bobvila.com/articles/wp-content/themes/bv/js/jquery.min.js?ver=1.12.4'></script> <link rel='https://api.w.org/' href='https://www.bobvila.com/articles/wp-json/' /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.bobvila.com/articles/xmlrpc.php?rsd" /><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.bobvila.com/articles/wp-includes/wlwmanifest.xml" /><meta name="generator" content="WordPress 4.7.3" /><link rel='shortlink' href='https://www.bobvila.com/articles/?p=84891' /><link rel="alternate" type="application/json+oembed" href="https://www.bobvila.com/articles/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bobvila.com%2Farticles%2Fhow-to-paint-pvc-pipe%2F" /><link rel="alternate" type="text/xml+oembed" href="https://www.bobvila.com/articles/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bobvila.com%2Farticles%2Fhow-to-paint-pvc-pipe%2F&#038;format=xml" /> <style type="text/css">#iubenda-cs-banner{top:0px!important;left:0px!important;position:fixed!important;width:100%!important;z-index:99999998!important;background-color:black}.iubenda-cs-content{display:block;text-align:center;margin:0 auto;padding:8px;width:auto;font-family:Helvetica,Arial,FreeSans,sans-serif;font-size:14px;background:#000;color:#fff}.iubenda-cs-rationale{max-width:900px;position:relative;margin:0 auto}.iubenda-banner-content>p{font-family:Helvetica,Arial,FreeSans,sans-serif;line-height:1.5}.iubenda-cs-close-btn{visibility:hidden;margin:0;color:#000;text-decoration:none;font-size:10px;position:absolute;top:0;right:0}.iubenda-cs-cookie-policy-lnk{text-decoration:none;color:#000;font-size:0px;font-weight:900}</style><script type="text/javascript">var _iub=_iub||[];_iub.csConfiguration={"cookiePolicyInOtherWindow":!0,"priorConsent":!1,"consentOnDocument":!0,"enableCMP":false,"lang":"en","siteId":1134436,"cookiePolicyId":50499779,"banner":{"slideDown":!1,"prependOnBody":!1,"applyStyles":!1,"position":"top","content":"By continuing to browse BobVila.com, you agree to the site's use of cookies. <a href=\"https://www.iubenda.com/privacy-policy/50499779/legal\" style=\"text-decoration:none; color:green;\" target=\"_blank\">Tap for more information.</a></span>"}};</script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script> <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "Article",     
+      "datePublished": "2016-12-08T15:00:47+00:00",
+      "dateModified": "2018-09-12T00:00:00+00:00",
+      "headline": "How to Paint PVC - Bob Vila",
+        
+      "articleSection": "How To's & Quick Tips",
+      "author": { "@type": "Person","name":  "Bob Vila"},      
+      "publisher": { "@type": "Organization","name": "Bobvila.com", "logo": {"@type": "ImageObject", "url": "https://s3-production.bobvila.com/articles/wp-content/uploads/2018/11/bob-vila-amp-logo.png","height": 60,"width": 326}},      
+	  "url": "https://www.bobvila.com/articles/how-to-paint-pvc-pipe/",
+            "description": "Tough and durable yet easy to cut, polyvinyl chloride piping (PVC)—originally developed for plumbing—is ideal for use in a variety of do-it-yourself projects, from wall-mounted organizers and funky herb planters to wine racks and even lighting fixtures. While the piping comes in a spectrum of brights these days, you’ll still want to learn how to paint […]",
+      "image": [ "https://s3-production.bobvila.com/articles/wp-content/uploads/2016/12/PVC-pipe.jpg"]
+    }</script> </head><body><div id="div-gpt-brandscape"> <script>googletag.cmd.push(function() {
+          googletag.display("div-gpt-brandscape");
+          window.setTimeout(function(){googletag.pubads().refresh([slotBrandscape]);}, 10000);
+        });</script> </div><div id='brandscape_wrapper'><div id="box"><div class="box_content"> <!--[if IE 6]><div id="upgrade"><p>This site does not support Internet Explorer 6 or lower. Please consider updating your browser to the latest version of <a style="color: #fff; text-decoration: underline;" href="http://www.microsoft.com/windows/internet-explorer/">Internet Explorer</a> or <a href="http://www.google.com/chrome">Google Chrome</a>.</p></div> <![endif]--><div id="masthead"><div class="branding_box"> <span class="bv_logo"> <a href="/" title="Home">Expert advice from Bob Vila, the most trusted name in home improvement, home remodeling, home repair, and DIY.</a> <span class="tagline">Tried, True, Trustworthy Home Advice</span> </span><div id="service_nav"><div class="service_nav_item"> <a href="/newsletters/new">Newsletters</a></div><div class="service_nav_item"> <a href="/find-a-contractor">Find a Pro</a></div><div class="service_nav_item"> <a href="/academy">Bob Vila Academy</a></div></div></div><div class="nav_search_box"><div id="nav"><ul class="nav_main"><li class="nav-howto"> <a href="/how-to-center">How-To Center</a></li><li> <a href="/get-ideas">Get Ideas</a></li><li> <a href="/find-info">Find Info</a></li><li> <a href="/forum">Discuss It</a></li><li class="nav-tv"> <a href="/projects">Watch TV</a></li><li class="nav-cta"> <a href='https://www.bobvila.com/articles/laundry-day-energy-star/'>Enter Bob Vila's Laundry Sweeps!</a></li></ul><div id="search"><div class="search_inner"><form accept-charset="UTF-8" action="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div> <input id="search_input" name="q" type="text" value=" " /></form></div></div></div></div></div><div class="masthead_after"></div><div class="home"><div id="js-article-wrapper" class="js-article js-main-article"><div class="right-rail-and-content clearfix"><div id="content"><div id="post-84891" class="article post-84891 post type-post status-publish format-standard hentry category-how-to-s-quick-tips"><ul class="bread_crumbs"><li><a href="/categories/how-tos-quick-tips">How To's &amp; Quick Tips</a></li></ul><div class="article_head"><h1>How To: Paint PVC Pipe</h1><h2 class="short_description">Why settle for off-the-shelf shades? Now you can spray a coat of longwearing color on this easy-to-use material for all sorts of DIY projects.</h2><div class="author_social_wrapper"><div id="author_social_cont" style="float: left"><p class="author">By <span><a href="../../authors/Bob-Vila"> Bob	                                        Vila </a></span></p></div><div class="tags_and_social_cont" id="blue_tags"><div id="ss_social_cont"><ul class="social"><li class="addthis_social_buttons"><div> <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.bobvila.com/articles/how-to-paint-pvc-pipe/" target="_blank" rel="noopener"><img src="/assets/redesign/social/icon-facebook.jpg" width="32" height="32" alt="Facebook" /></a> <a href="https://twitter.com/intent/tweet?text=How To: Paint PVC Pipe&url=https://www.bobvila.com/articles/how-to-paint-pvc-pipe/" target="_blank" rel="noopener"><img src="/assets/redesign/social/icon-twitter.jpg" width="32" height="32" alt="Twitter" /></a> <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true"><img src="/assets/redesign/social/icon-pin.jpg" width="32" height="32" alt="Pinterest" /></a> <a href="mailto:somebody@email.address?subject=How To: Paint PVC Pipe&body=https://www.bobvila.com/articles/how-to-paint-pvc-pipe/"><img src="/assets/redesign/social/icon-mail.jpg" width="32" height="32" alt="Email" /></a></div></li></ul></div></div></div></div><div class="entry regular"><div class="article_content"><div class="article_content_wrapper"> <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <?xml encoding="utf-8"><html><body><div id="attachment_84898" style="width: 660px" class="wp-caption aligncenter"><noscript><img class="size-full wp-image-84898" title="How to Paint PVC Pipe" src="https://s3-production.bobvila.com/articles/wp-content/uploads/2016/12/PVC-pipe.jpg" alt="How to Paint PVC Pipe" width="650" height="450"></noscript><img class="size-full wp-image-84898 lazyload" title="How to Paint PVC Pipe" alt="How to Paint PVC Pipe" width="650" height="450" data-src="https://s3-production.bobvila.com/articles/wp-content/uploads/2016/12/PVC-pipe.jpg"><p class="wp-caption-text">Photo: istockphoto.com</p></div><p>Tough and durable yet easy to cut, polyvinyl chloride piping (<a title="PVC Pipe" href="http://www.bobvila.com/slideshow/pipe-dreams-10-inspiring-diy-projects-with-pvc-47568" target="_blank">PVC</a>)&mdash;originally&nbsp;developed for plumbing&mdash;is ideal for use in a variety of do-it-yourself projects, from wall-mounted organizers and funky herb planters to wine racks and even lighting fixtures.</p><p>While the piping comes in a spectrum of brights these days, you&rsquo;ll still want to learn how to paint PVC if you&rsquo;ve got a more sophisticated palette in mind. Except there&rsquo;s one hitch: Due to a molecular makeup that prevents most liquids from bonding to its surface, paint on PVC has always been likely to flake, bubble, or rub right off.</p><p>Fortunately, recently developed spray paints that chemically bond with all kinds of plastics make it possible for determined DIYers to paint PVC pipe. Just keep in mind that while some plastic-rated paints purport not to require special&nbsp;preparation, we advise that you follow the prep steps here for the best possible results.</p><p><strong>MATERIALS AND TOOLS <span class="sm_amazon">Available on Amazon</span></strong><br> &ndash; <a href="/asearch?q=220grit%20sandpaper&amp;mobile=F" target="_blank" title="220grit sandpaper" rel="nofollow">220grit sandpaper</a><br> &ndash; <a href="/asearch?q=Acetone%20&amp;mobile=F" target="_blank" title="Acetone (not nail polish remover)" rel="nofollow">Acetone (not nail polish remover)</a><br> &ndash; <a href="/asearch?q=Rubber%20gloves%20&amp;mobile=F" target="_blank" title="Rubber gloves (not latex, as acetone degrades latex)" rel="nofollow">Rubber gloves (not latex, as acetone degrades latex)</a><br> &ndash; <a href="/asearch?q=Drop%20cloths%20&amp;mobile=F" target="_blank" title="Drop cloths (or old newspaper or plastic sheeting)" rel="nofollow">Drop cloths (or old newspaper or plastic sheeting)</a><br> &ndash; <a href="/asearch?q=Plasticrated%20spray%20paint&amp;mobile=F" target="_blank" title="Plasticrated spray paint" rel="nofollow">Plasticrated spray paint</a></p><div class='code-block code-block-2' style='margin: 8px auto; text-align: center; clear: both;'><div class="article-ad-from-inserter"><h5 class="advertise">Advertisement</h5><div data-ad="slotRectad2" id="div-rectad2" class="bv-ad bv-body-ad lazyload" style="height: 252px; width: 302px; margin:0 auto;"> <script type="text/javascript">googletag.cmd.push(function() {
+  			googletag.display('div-rectad2');
+	  	});</script> </div></div></div><h3>STEP 1: Prepare your work area</h3><p>Plan to paint PVC on a low-humidity day, ideally between 50 and 85 degrees Fahrenheit. Choose a well-ventilated yet wind-free area to work in, such as a garage with doors and windows open for airflow. Note that acetone is extremely flammable, so it should be used and stored away from heat sources. Do not smoke while working with acetone, and wash up well after use.</p><h3>STEP 2: Sand the pipe</h3><p>Lightly scour the PVC pipe&rsquo;s exterior by hand with 220-grit sandpaper. Skip the electric sander, as such a tool&nbsp;can wear down the pipe too much, too fast. Sand in all directions to avoid straight-line striations that can create an undesirable grooved surface. Be gentle, so you won&rsquo;t weaken the pipe, but be&nbsp;thorough enough to avoid creating&nbsp;uneven surfaces. Have plenty of sandpaper on hand, because the waxes in PVC pipe will come off on the paper, causing it to lose roughness.</p><div id="attachment_84897" style="width: 310px" class="wp-caption alignright"><noscript><img class="size-full wp-image-84897" title="How to Paint PVC Pipe" src="https://s3-production.bobvila.com/articles/wp-content/uploads/2016/12/paint-pvc.jpg" alt="How to Paint PVC Pipe" width="300" height="450"></noscript><img class="size-full wp-image-84897 lazyload" title="How to Paint PVC Pipe" alt="How to Paint PVC Pipe" width="300" height="450" data-src="https://s3-production.bobvila.com/articles/wp-content/uploads/2016/12/paint-pvc.jpg"><p class="wp-caption-text">Photo: wikihow.com</p></div><h3>STEP 3: Clean the pipe</h3><p>Don rubber gloves, dampen a clean rag with acetone, and then wipe the surface of the PVC pipe. Allow to dry for 20 to 30 minutes. The acetone will remove all sanding dust while swelling the surface of the PVC to make it more porous for painting.</p><h3>STEP 4: Protect against splatter</h3><p>Lay drop cloths, plastic sheeting, or old newspapers over the floors or walls that could be subject to splatter or overspray, then arrange the pipe for spraying. If painting long pieces, protect a wall, ladder, or chair from spray and prop the pipes against it. Or consider standing long pieces on a sturdy dowel for support so you can access all sides at once. Short pieces of PVC may be able to stand without additional support, making it simpler to get an all-over coat of paint.</p><h3>STEP 5: Apply spray paint</h3><p>Now, grab your plastic-rated spray paint. Krylon Fusion is a consumer favorite that&rsquo;s widely available; you can pick up a can&nbsp;on&nbsp;Amazon&nbsp;for about $5). Shake thoroughly for 15 to 20 seconds. In a side-to-side sweeping motion, spray-paint the pipe, starting from the top and working your way down to the bottom. Paint PVC in thin, consistent layers, overlapping the paint as you move down the pipe, to avoid any drips.</p><h3>STEP 6: Apply second coat</h3><p>Allow paint to dry per manufacturer&rsquo;s instructions 20 to 30 minutes, before applying a second coat. If you had to lay the piping down to paint, wait until the first side is dry and then turn it over to access the other side. Avoid overlapping spray on areas you&rsquo;ve already painted to achieve a nice, even coat. As in all spray-painting jobs, you&rsquo;ll need to apply several coats in thin layers until the &ldquo;true color&rdquo; is reached.</p><h3>STEP 7: Let dry for 24 hours</h3><p>Allow paint to air-dry and cure for at least 24 hours before using it in your project. For projects that could scrape or nick the pipe&rsquo;s new coat of paint in the process, consider waiting a full week. If you&rsquo;re uncertain, check the paint can for specific manufacturer-recommended drying times. Once your project is complete, keep painted pipes clean by wiping gently with a water-dampened rag.</p></body></html></div></div><div id="sidebar-right"><div id="right-rail-ad-wrapper"><div id="sticky-anchor"></div><div id="sticky-ad-wrapper"><div id="sticky-ad1" class="bv-ad"><h5 class="advertise">Advertisement</h5><div data-ad="slotRectad1" id="div-rectad1" class="lazyload"> <script>googletag.cmd.push(function() {
+                            googletag.display('div-rectad1');
+                        });</script> </div></div></div> <script>function sticky_relocate() {
+            var $stickyAd1 = $('#sticky-ad1');
+            var stickyAd1Height = Math.round($stickyAd1.height());
+            // 100px padding between the sticky-ads
+            var stickyAdPadding = 100;
+
+            var $stickyAd2 = $('#sticky-ad2');
+            var stickyAd2Height = Math.round($stickyAd2.height());
+
+            var articleHeight = Math.round($(".article_content").height());
+            var articleMidpoint = Math.round(articleHeight / 2);
+
+            var sidebarHeight = Math.round($("#sidebar-right").innerHeight());
+            var bottomAdHeight = Math.round($('.bottom-ad-wrapper').height());
+
+            // 20 = 20px margin-top on .footer_tags div
+            var footerTagsHeight = Math.round($(".footer_tags").height() + 20);
+            var windowTop = $(window).scrollTop();
+            var stickyAnchorTop = Math.round($('#sticky-anchor').offset().top);
+            var divLeft = Math.round($('#sidebar-right').offset().left);
+
+            var stickOffset = 0;
+
+            var ad1StopPosition = $stickyAd2.length ? (articleMidpoint - stickyAdPadding) : (sidebarHeight + footerTagsHeight);
+            var ad1Diff = ad1StopPosition - stickyAd1Height;
+
+            if ( (ad1StopPosition + footerTagsHeight) < windowTop ) {
+                $stickyAd1.css({ position: 'absolute', top: ad1Diff, left: 0 });
+            } else if (windowTop > (stickyAnchorTop + stickyAdPadding) ) {
+                $stickyAd1.css({ position: 'fixed', top: stickOffset, left: divLeft });
+            } else {
+                $stickyAd1.css({ position: 'static' });
+            }
+
+            if ($stickyAd2.length) {
+                // initial position of sticky-ad2 is the midpoint of the article content
+                $stickyAd2.css({ position: 'absolute', top: articleMidpoint });
+
+                                    // 300x250 sticky ad should stop at the bottom of .content_tags
+                    var ad2StopPosition = (sidebarHeight + footerTagsHeight);
+                                var ad2Diff = ad2StopPosition - stickyAd2Height;
+
+                if ( (ad2StopPosition + footerTagsHeight) < windowTop ){
+                    $stickyAd2.css({ position: 'absolute', top: ad2Diff, left: 0 });
+                } else if ( windowTop > (articleMidpoint + stickyAd1Height + stickyAd2Height + stickyAdPadding) ) {
+                    $stickyAd2.css({ position: 'fixed', top: stickOffset, left: divLeft });
+                } else {
+                    $stickyAd2.css({ position: 'absolute', top: articleMidpoint, left: 0 });
+                }
+            }
+        }
+
+        $(document).ready(function(){
+            // invoke sticky_relocate at most once per every 120 milliseconds
+            $(window).on('scroll', _.throttle(function(){
+                sticky_relocate();
+            }, 120));
+        });</script> </div></div><div class="pagination_links"></div></div><div class="footer_tags"><div class="disclosure_text"><p>Disclosure: BobVila.com participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for publishers to earn fees by linking to Amazon.com and affiliated sites.</p></div><div class="content_tags"><div class="tag_title">TAGS:</div><div class="content_tag"> <a href="/tags/how-to">HOW TO</a></div><div class="content_tag"> <a href="/tags/paint">PAINT</a></div></div></div></div><br /></div></div><div class="ad-and-iframes"><div class='see-more-wrapper'> <script>$(document).ready(function(){
+    $(".see_more_content .links .link .see_more_thumb").each(function(){
+      if (this.href.indexOf("slideshow") > -1) {
+        var content = $(this);
+        $(content).addClass('slideshow');
+      }
+    });
+  });</script> <div class='see_more'><div class='see_more_content'><div class='see_more_title'> More From Bob Vila</div><div class='links'><div class='link' id='first'> <a class='see_more_thumb js-tracking-link' href='https://www.bobvila.com/slideshow/10-toolbox-hacks-for-your-next-diy-project-47916?bv=sm'> <img class="lazyload blur-up" title="10 Toolbox Hacks for Your Next DIY Project" alt="10 Toolbox Hacks for Your Next DIY Project" data-src="https://s3-production.bobvila.com/pages/47916/landscape/hammer_magnet.jpg?1439913698" data-pin-no-hover="true" src="/assets/1pixel-4e0705327480ad2323cb03d9c450ffcae4a98bf3a5382fa0c7882145ed620e49.gif" /> </a><div class='link-content'><div class='link-header'> <a class="yml_link link-title js-tracking-link" href="https://www.bobvila.com/slideshow/10-toolbox-hacks-for-your-next-diy-project-47916?bv=sm">10 Toolbox Hacks for Your Next DIY Project</a></div></div></div><div class='link' id='second'> <a class='see_more_thumb js-tracking-link' href='/articles/diy-pvc-pipe-mirror/?bv=sm'> <img src="/assets/bv_footer_logo-cba07804de7b3e27702e408d53d00c498966780cc548fe8668900027a0b0be83.png" alt="Bv footer logo" /> </a><div class='link-content'><div class='link-header'> <a class="yml_link link-title js-tracking-link" href="/articles/diy-pvc-pipe-mirror/?bv=sm">DIY PVC Pipe Mirror</a></div></div></div><div class='link ad'><div class='ad lazyload' data-ad='slotRectad2c' data-expand='-125' id='div-rectad2c'> <script>googletag.cmd.push(function() {
+    googletag.display("div-rectad2c");
+    
+  });</script> </div><h5 class='advertise'> Advertisement</h5></div><div class='link' id=''> <a class='see_more_thumb js-tracking-link' href='/articles/diy-pvc-pipe-wine-rack/?bv=sm'> <img src="/assets/bv_footer_logo-cba07804de7b3e27702e408d53d00c498966780cc548fe8668900027a0b0be83.png" alt="Bv footer logo" /> </a><div class='link-content'><div class='link-header'> <a class="yml_link link-title js-tracking-link" href="/articles/diy-pvc-pipe-wine-rack/?bv=sm">DIY PVC Pipe Wine Rack</a></div></div></div><div class='link' id='fourth-article'> <a class='see_more_thumb js-tracking-link' href='/articles/diy-kids-chairs-pvc-pipe/?bv=sm'> <img src="/assets/bv_footer_logo-cba07804de7b3e27702e408d53d00c498966780cc548fe8668900027a0b0be83.png" alt="Bv footer logo" /> </a><div class='link-content'><div class='link-header'> <a class="yml_link link-title js-tracking-link" href="/articles/diy-kids-chairs-pvc-pipe/?bv=sm">DIY Kids Chairs with PVC Pipe</a></div></div></div><div class='link' id=''> <a class='see_more_thumb js-tracking-link' href='/articles/diy-planters-pvc-pipe/?bv=sm'> <img src="/assets/bv_footer_logo-cba07804de7b3e27702e408d53d00c498966780cc548fe8668900027a0b0be83.png" alt="Bv footer logo" /> </a><div class='link-content'><div class='link-header'> <a class="yml_link link-title js-tracking-link" href="/articles/diy-planters-pvc-pipe/?bv=sm">DIY PVC Pipe Planter</a></div></div></div><div class='link' id='last'> <a class='see_more_thumb js-tracking-link' href='/articles/2462-how-to-make-a-sandbox/?bv=sm'> <img src="/assets/bv_footer_logo-cba07804de7b3e27702e408d53d00c498966780cc548fe8668900027a0b0be83.png" alt="Bv footer logo" /> </a><div class='link-content'><div class='link-header'> <a class="yml_link link-title js-tracking-link" href="/articles/2462-how-to-make-a-sandbox/?bv=sm">How To: Make a Sandbox</a></div></div></div><div class='link' id=''> <a class='see_more_thumb js-tracking-link' href='/articles/diy-concrete-candle-holders/?bv=sm'> <img src="/assets/bv_footer_logo-cba07804de7b3e27702e408d53d00c498966780cc548fe8668900027a0b0be83.png" alt="Bv footer logo" /> </a><div class='link-content'><div class='link-header'> <a class="yml_link link-title js-tracking-link" href="/articles/diy-concrete-candle-holders/?bv=sm">DIY Concrete Candle Holders</a></div></div></div></div></div></div></div></div></div><div id="js-footer-content" class="footer-content"><div class='footer_box_cols'><div class='footer_col footer_col_explore'><h4 class='explore_hdr'>Explore</h4><ul class='explore_nav'><li><a href="/how-to-center">How To Center</a></li><li><a href="/get-ideas">Get Ideas</a></li><li><a href="/find-info">Find Info</a></li><li><a href="/forum">Discuss It</a></li><li><a href="/projects">Watch Bob Vila TV</a></li><li><a href="/shop">Shop</a></li><li><a href="/articles/bob-vila-toolbox-app/">Mobile</a></li></ul></div><div class='footer_col footer_col_connect'><h4 class='connect_hdr'>Connect</h4><ul class='connect_social'><li class='connect_flipboard'><a href="https://flipboard.com/@BobVilacom">Bob Vila - Flipboard</a></li><li class='connect_fb'><a href="http://www.facebook.com/pages/BobVila/133713533363276">Bob Vila on Facebook</a></li><li class='connect_tw'><a href="http://www.twitter.com/bobvila/">Bob Vila on Twitter</a></li><li class='connect_pin'><a href="http://pinterest.com/bobvilahome">Bob Vila on Pinterest</a></li><li class='connect_rss'><a href="/rss.xml">Subscribe</a></li></ul><form action='/newsletters' class='connect_newsletter' method='post'><h5> <label for='connect_signup'>Sign Up Now to Receive Bob Vila's Newsletter</label></h5><p> <input id='connect_signup' name='newsletter[email]' placeholder='Enter Email Address' size='30' type='email'> <input name='newsletter[latest_newsletter]' type='hidden' value='1'> <input name='newsletter[signup_source]' type='hidden' value='desktop_footer'> <input name='from_iframe' type='hidden' value> <input name='authenticity_token' type='hidden' value='FAbkCgUohyWtMd7TvXfu9StDP10i7PbtOxuGG2OrxI1pzZOkaipzE3NYtnyUOIln2+Jj4E2kVVpoIj2bea5NtA=='></p><p> <input alt="Btn signup" type="image" src="/assets/redesign/btn_signup-6bbcdcc166cff855830fd89482c47c37aca7794bf6c8a2cc3f502fda54341044.png" /></p><p class='connect_privacy_policy'> <a href='/pages/privacy-policy'>Privacy Policy</a></p></form><h5 class='connect_appstore_hdr'>Bob Vila's Toolbox app</h5> <a href='https://itunes.apple.com/us/app/bob-vilas-toolbox/id655180614?mt=8'> <img alt="Download on the App Store" width="167" height="40" src="/assets/redesign/btn_appstore-a584fc81a353c26c70817d9116472142bbd6fa299fb0c310bdcf5ffa529a8af1.png" /> </a></div><div class='footer_col footer_col_bva'><h4 class='bva_hdr'>Bob Vila Academy</h4><h5>Make Things. We'll Help.</h5> <a href='/academy'> <img alt="Bob Vila Academy - Exclusive Video E-courses" width="148" height="148" data-pin-no-hover="true" class="bva_promo_badge" src="/assets/redesign/bva_promo_badge-d95a33703c01b0cf6370f2e04417505056467bc5969689c128dff7fdd0929325.png" /> </a><p>Enroll now and learn DIY basics from the next generation of home improvement experts</p> <a class='btn_browse_courses' href='/academy'> <img alt="Browse All Video Courses" width="210" height="39" src="/assets/redesign/btn_browse_courses-1a7452eb6076bfd68e8ce837b92614cebe76eb825617bbbd3d3083ed34fe129b.png" /> </a></div><div class='footer_col footer_col_contactinfo'><h4 class='contactinfo_hdr'>Contact / Info</h4><ul class='contactinfo_nav'><li><a href="/pages/about-bob">About Bob</a></li><li><a href="/pages/advertise-with-us">Advertise with Us</a></li><li><a href="/news">Press Info</a></li><li><a href="/contacts">Contact Us</a></li><li><a href="/pages/privacy-policy">Privacy Policy</a></li><li><a href="https://www.iubenda.com/privacy-policy/50499779/cookie-policy">Cookie Policy</a></li><li><a class="nav_last" href="/pages/terms-of-use">Terms of Use</a></li></ul><p class='contactinfo_branding'> <a href='/'> <img width="162" height="32" src="/assets/redesign/footer_logo_bobvila-55200c814801ac58c93fbe33c38382504638093a889b3f0df5032bbbbadb7bcf.png" alt="Footer logo bobvila" /> </a></p></div><div class='copyright'>Copyright &copy; 2019 Vila Media, LLC. All rights reserved</div></div></div><noscript id="deferred-styles"><link href="/articles/wp-content/themes/bv/style.min.css" media="screen" rel="stylesheet" type="text/css" /> </noscript> <script>var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement)
+    addStylesNode.parentElement.removeChild(addStylesNode);
+  };
+  var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+  else window.addEventListener('load', loadDeferredStyles);</script>  <script async data-pin-tall="64" data-pin-shape="round" data-pin-hover="true" defer src="//assets.pinterest.com/js/pinit.js"></script> <script type='text/javascript' src='https://www.bobvila.com/articles/wp-content/themes/bv/js/lazysizes.min.js?ver=4.1.6'></script> <script type='text/javascript' src='https://www.bobvila.com/articles/wp-content/themes/bv/js/lodash.custom.min.js?ver=4.17.5'></script> <script type='text/javascript' src='https://www.bobvila.com/articles/wp-includes/js/wp-embed.min.js?ver=4.7.3'></script> </div></div></div></div> <script>document.addEventListener('lazybeforeunveil', function(e) {
+        var adSlot = e.target.getAttribute('data-ad');
+        var adElementId = e.target.id;
+        if (adSlot) {
+          refreshSlots([window[adSlot]], [adElementId]);
+        }
+      });</script>  <script type="text/javascript">window.lightboxjs || function (c) { function g(b, d) { d && (d += (/\?/.test(d) ? "&" : "?") + "lv=1"); c[b] || function () { var i = window, h = document, j = b, g = h.location.protocol, l = "load", k = 0; (function () { function b() { a.P(l); a.w = 1; c[j]("_load") } c[j] = function () { function m() { m.id = e; return c[j].apply(m, arguments) } var b, e = ++k; b = this && this != i ? this.id || 0 : 0; (a.s = a.s || []).push([e, b, arguments]); m.then = function (b, c, h) { var d = a.fh[e] = a.fh[e] || [], j = a.eh[e] = a.eh[e] || [], f = a.ph[e] = a.ph[e] || []; b && d.push(b); c && j.push(c); h && f.push(h); return m }; return m }; var a = c[j]._ = {}; a.fh = {}; a.eh = {}; a.ph = {}; a.l = d ? d.replace(/^\/\//, (g == "https:" ? g : "http:") + "//") : d; a.p = { 0: +new Date }; a.P = function (b) { a.p[b] = new Date - a.p[0] }; a.w && b(); i.addEventListener ? i.addEventListener(l, b, !1) : i.attachEvent("on" + l, b); var q = function () { function b() { return ["<head></head><", c, ' onload="var d=', n, ";d.getElementsByTagName('head')[0].", d, "(d.", g, "('script')).", i, "='", a.l, "'\"></", c, ">"].join("") } var c = "body", e = h[c]; if (!e) return setTimeout(q, 100); a.P(1); var d = "appendChild", g = "createElement",
+    i = "src", k = h[g]("div"), l = k[d](h[g]("div")), f = h[g]("iframe"), n = "document", p; k.style.display = "none"; e.insertBefore(k, e.firstChild).id = o + "-" + j; f.frameBorder = "0"; f.id = o + "-frame-" + j; /MSIE[ ]+6/.test(navigator.userAgent) && (f[i] = "javascript:false"); f.allowTransparency = "true"; l[d](f); try { f.contentWindow[n].open() } catch (s) { a.domain = h.domain, p = "javascript:var d=" + n + ".open();d.domain='" + h.domain + "';", f[i] = p + "void(0);" } try { var r = f.contentWindow[n]; r.write(b()); r.close() } catch (t) { f[i] = p + 'd.write("' + b().replace(/"/g, String.fromCharCode(92) + '"') + '");d.close();' } a.P(2) }; a.l && q() })() }(); c[b].lv = "1"; return c[b] } var o = "lightboxjs", k = window[o] = g(o); k.require = g; k.modules = c }({});</script><script type="text/javascript">window.lightboxlib = lightboxjs.require("lightboxlib", "//www.lightboxcdn.com/vendor/70ac1b3c-5c5c-439c-bd29-1975463950b2/lightbox.js?mb=" + (new Date().getTime()));</script> </body></html>
