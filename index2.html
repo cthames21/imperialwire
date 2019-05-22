@@ -7,6 +7,7 @@
 		<script src="parallax.js"></script>
 	</head>
 	<body>
+
 		<div class="colorbar"></div>
 		<div class="page-container">
 			<header class="toggle">
@@ -20,7 +21,7 @@
 				</div>
 				<div class="headerlinkcontainer">
 					<div class="headerlink">
-						<a href="home.html">Home</a>
+						<a href="test.php">Home</a>
 					</div>
 					<div class="headerlink">
 						<a href="services.html">Solutions</a>
@@ -42,15 +43,13 @@
 				<div class="toggle" id="slogan">
 					Custom Retail Fixtures and Point of Purchase Displays
 				</div>
-				<div class="imperialwire">
-					<div class="toggle" id="imperial">
+				<div class="toggle" id="imperialwire">
 						Imperial Wire
-					</div>
 				</div>
 				<g class="toggle" id="menuicon">
 					<svg id="hamburgermenu" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ><path class="path" stroke="white" stroke-width="1" stroke-miterlimit="10" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
 
-					<div class="menucontainer">
+					<div class="toggle" id="menucontainer">
 						<a id="menuoption1" href="home.html">Home</a>
 						<a id="menuoption2" href="services.html">Solutions</a>
 						<a id="menuoption3" href="howitworks.html">How it Works</a>
@@ -81,8 +80,8 @@
 						Solving your challenges
 					</div>
 					<div class="section1rightbody">
-						Imperial has become well know to provide fast solutions in retail fixtures and point of purchase displays. When others say it can’t be done call Imperial! We rise to the occasion and the opportunity to show you our dedication and commitment to your success. 
-					</div>
+<?php
+require($DOCUMENT_ROOT . "test.php");	>				</div>
 				</div>
 			</div>
 			<div class="section2">
@@ -102,7 +101,7 @@
 			});
 			
 			$(document).ready(function() {
-				$('.imperialwire').css("opacity", "1");
+				$('#imperialwire').css("opacity", "1");
 
 				setTimeout(function() {
 					$('.headerlinkcontainer').slideDown();
@@ -138,8 +137,8 @@
 				})
 				
 
-				$('.menuicon').mouseover(function() {
-					$('.menucontainer').css("display","block");
+				$('#menuicon').mouseover(function() {
+					$('#menucontainer').css("display","block");
 					setTimeout(function() {
 						$('#menuoption1').css("opacity","1")
 					}, 100);
@@ -197,7 +196,7 @@
 /*Menu 3,4*/
 				})
 
-				$('.menuicon').mouseleave(function() {
+				$('#menuicon').mouseleave(function() {
 						setTimeout(function() {
 							$('#menuoption4')
 								.css("opacity","0")
@@ -215,7 +214,7 @@
 								.css("opacity","0")
 						}, 250);
 						setTimeout(function() {
-							$('.menucontainer').css("display","none");
+							$('#menucontainer').css("display","none");
 						}, 750);
 				})
 			})
