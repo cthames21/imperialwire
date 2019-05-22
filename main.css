@@ -11,6 +11,7 @@ body {
 header {
 	display: grid;
 	position: fixed;
+	grid-template-columns: 15% 70% 15%;
 	width: 100vw;
 	height: 225px;
 	margin:10px 0;
@@ -26,8 +27,26 @@ header {
 header.small {
 	height: 125px;
 	transition: 1s;
-	grid-template-columns: 40% 45%;
+	grid-template-columns: 15% 35% 40% 10%;
 	background-color: rgba(255,255,255,.95);
+}
+
+main {
+	padding-bottom: 250px;
+}
+
+.page-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+}
+
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 250px;
 }
 
 #externallinks {
@@ -36,17 +55,20 @@ header.small {
 	grid-gap: 15px;
 	width: 100px;
 	height: 40px;
-	margin: 50px;
+	margin: 40px;
 	z-index: 10;
 	align-items: center;
+	grid-column: 1;
 }
 
 #externallinks.small {
+	/*
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(3,1fr);
 	margin: 5px 20px;
 	height: 100%;
 	grid-gap: 0px;
+	*/
 }
 
 #externallinks svg {
@@ -66,14 +88,19 @@ header.small {
 	align-self: end;
 	z-index: 1;
 	opacity: 1;
-	transition: ease-out 1s ;
+	transition: ease-out 1.5s ;
+	grid-row: 2;
+	grid-column: 1 / span 4;
+	white-space: nowrap;
 }
 
 .headerlinkcontainer.small {
 	width: 5%;
-	transform: translate(45vw,-40px);
+	transform: translate(45vw,-35px);
 	opacity: 0;
-	transition: ease-in 1s;
+	transition: 1s;
+	white-space: unset;
+
 }
 
 .headerlink {
@@ -94,56 +121,6 @@ header.small {
 	cursor: pointer;
 }
 
-footer {
-	display: grid;
-	grid-template-rows: 270px 30px;
-	bottom: 0;
-	margin: 0;
-	width: 100vw;
-	height: 300px;
-	justify-content: center;
-}
-
-.footertop {
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-	background-color: slategray;
-	color: white;
-	padding: 0 40px;
-	width: 100vw;
-	grid-row: 1;
-}
-
-.footertop1, .footertop2, .footertop3 {
-	text-align: center;
-	margin:20px 40px;
-}
-
-.footertop1 {
-	grid-column: 1;
-}
-
-.footertop1header,.footertop2header,.footertop3header {
-	font-size: 28px;
-	font-weight: bold;
-	padding-bottom:10px;
-}
-
-.footertop2 {
-	grid-column: 2;
-}
-
-.footertop3 {
-	grid-column: 3;
-}
-
-.footerbottom {
-	color: black;
-	text-align: center;
-	width: 100vw;
-	grid-row: 2;
-}
-
 .colorbar {
 	position: fixed;
 	top:0;
@@ -153,12 +130,10 @@ footer {
 	z-index: 10;
 }
 
-.page-container {
-	margin: 0 auto;
-}
-
 #slogan {
 	display: none;
+	grid-column: ;
+	grid-row: 1;
 }
 
 #slogan.small {
@@ -167,7 +142,8 @@ footer {
 	text-align: center;
 	align-items: center;
 	justify-self: center;
-	grid-column: 2;
+	grid-column: 3;
+
 }
 
 #partone, #parttwo {
@@ -186,25 +162,31 @@ footer {
 	font-family: Arial;
 }
 
-.imperialwire {
-	display: grid;
-	width: 100vw;
-	height: 225px;
-	position: fixed;
+#imperialwire {
+	display: flex;
+	width: 100%;
+	height: 100%;
 	opacity: 0;
 	transition: 1s;
-}
-
-#imperial {
+	grid-column: 2;
+	grid-row: 1;
 	font-size: 100px;
 	font-style: italic;
 	font-weight: 500;
 	letter-spacing: .06em;
-	width: 100%;
-	text-align: center;
-	align-self: center;
+	align-items: center;
+	justify-content: center;
 	opacity: 1;
 	transition: 2s;
+	white-space: nowrap;
+}
+
+	
+#imperialwire.small {
+	transition: 1s;
+	font-size: 48px;
+}
+
  /*
  	width: 0;
 
@@ -224,40 +206,37 @@ animation: type 2s steps(60, end) forwards;
 }
 */
 
-}
-
-#imperial.small {
-	transition: 1s;
-	transform: translate(-420px,-60px);
-	font-size: 56px;
-	margin-top: 25px;
-}
 
 #menuicon {
-	position: fixed;
-	top: 44px;
-	right: 50px;
-	width: 50px;
-	height: 50px;
+	display: flex;
 	z-index: 5;
-	opacity: 0;
+	opacity: 1;
 	transition: 1s;
+	grid-row: 1;
+	grid-column: 3;
+	align-items: center;
+	justify-self: center;
 }
 
 #menuicon.small {
 	opacity: 1;
 	transition: 1s;
+	grid-column: 4;
 }
 
-.menucontainer {
+#menucontainer {
 	display: none;
 	position: fixed;
-	top:35px;
-	right:55px;
+	top:150px;
+	right:60px;
 	width: 120px;
 	height:175px;
-	padding-top: 50px;
-	z-index: 3;
+	z-index: 30;
+}
+
+#menucontainer.small {
+	top:100px;
+	right: 35px;
 }
 
 #menuoption1,#menuoption2,#menuoption3,#menuoption4 {
@@ -298,16 +277,12 @@ animation: type 2s steps(60, end) forwards;
 }
 
 #hamburgermenu {
-	position: absolute;
-	width: 40px;
-	height: 40px;
 	fill: gray;
-	margin: 10px;
 }
+
 #hamburgermenu:hover {
 	fill: crimson;
 }
-
 
 path {
 	z-index: -1;

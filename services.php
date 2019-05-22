@@ -246,9 +246,11 @@
 				</div>
 			</div>
 			</div>
+			<footer style="position: relative; bottom: 0px;">
+<?php require("footer.php");?>	
+			</footer>
 			</div>
 			<script>
-
 				$(window).on("load", function() {
 					$('div [class^="servicescapabilitiesbody"] li:nth-child(1)').show(100)
 					$('div [class^="servicescapabilitiesbody"] li:nth-child(2)').show(300)
