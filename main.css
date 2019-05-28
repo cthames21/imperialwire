@@ -6,282 +6,46 @@
 
 body {
 	margin:0;
-}
-
-header {
-	display: grid;
-	position: fixed;
-	grid-template-columns: 15% 70% 15%;
-	width: 100vw;
-	height: 225px;
-	margin:10px 0;
-	top:0;
-	left:0;
-	align-items: center;
-	transition: 1s;
-	background-color: rgba(255,255,255,1);
-	z-index: 5;
-	box-shadow: 0px 3px 10px 0px gray;
-}
-
-header.small {
-	height: 125px;
-	transition: 1s;
-	grid-template-columns: 15% 35% 40% 10%;
-	background-color: rgba(255,255,255,.95);
+	/*background: url(photos/twistedwirebackground-2.jpg) fixed  center no-repeat;*/
 }
 
 main {
+	position: relative;
+	height: 100%;
 	padding-bottom: 250px;
+	padding-top:125px;
+
 }
 
-.page-container {
- min-height: 100vh; /* will cover the 100% of viewport */
- overflow: hidden;
- display: block;
- position: relative;
+header {
+	position: fixed;
+	transition: 1s;
+	z-index: 5;
+	height: 225px;
+}
+
+header.small {
+	height: 100px;
+	transition: 1s;
+	background-color: rgba(255,255,255,.95);
 }
 
 footer {
- position: absolute;
- bottom: 0;
- width: 100%;
- height: 250px;
-}
-
-#externallinks {
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-	grid-gap: 15px;
-	width: 100px;
-	height: 40px;
-	margin: 40px;
-	z-index: 10;
-	align-items: center;
-	grid-column: 1;
-}
-
-#externallinks.small {
-	/*
-	grid-template-columns: 100%;
-	grid-template-rows: repeat(3,1fr);
-	margin: 5px 20px;
-	height: 100%;
-	grid-gap: 0px;
-	*/
-}
-
-#externallinks svg {
-	display: none;
-	fill: slategray;
-}
-
-
-.headerlinkcontainer {
-	display: none;
 	position: absolute;
-	width: 50%;
-	height: 25px;
-	margin: 15px;
-	justify-self: center;
-	text-align: center;
-	align-self: end;
-	z-index: 1;
-	opacity: 1;
-	transition: ease-out 1.5s ;
-	grid-row: 2;
-	grid-column: 1 / span 4;
-	white-space: nowrap;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
 }
 
-.headerlinkcontainer.small {
-	width: 5%;
-	transform: translate(45vw,-35px);
-	opacity: 0;
-	transition: 1s;
-	white-space: unset;
-
+#home {
+	padding-top:255px;	
 }
 
-.headerlink {
-	display: inline;
-	height: 25px;
-	padding: 0 20px;
-	text-align: center;
-	white-space: nowrap;
+.page-container {
+	min-height: 100vh; /* will cover the 100% of viewport */
 	overflow: hidden;
-}
-
-.headerlink a {
-	text-decoration: none;
-}
-
-.headerlink a:hover {
-	color: crimson;
-	cursor: pointer;
-}
-
-.colorbar {
-	position: fixed;
-	top:0;
-	height:13px;
-	width: 100vw;
-	background-color: #393939;
-	z-index: 10;
-}
-
-#slogan {
-	display: none;
-	grid-column: ;
-	grid-row: 1;
-}
-
-#slogan.small {
-	display: inline-flex;
-	font-size: 22px;
-	text-align: center;
-	align-items: center;
-	justify-self: center;
-	grid-column: 3;
-
-}
-
-#partone, #parttwo {
-	display: flex;
-	position: absolute;
-	width: 125px;
-	height: 200px;
-	margin-left: 110px;
-	font-weight: bold;
-	text-align: center;
-	justify-content: center;
-	justify-self: center;
-	align-items:center;
-	opacity: 1;
-	transition: 2s;
-	font-family: Arial;
-}
-
-#imperialwire {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: 1s;
-	grid-column: 2;
-	grid-row: 1;
-	font-size: 100px;
-	font-style: italic;
-	font-weight: 500;
-	letter-spacing: .06em;
-	align-items: center;
-	justify-content: center;
-	opacity: 1;
-	transition: 2s;
-	white-space: nowrap;
-}
-
-	
-#imperialwire.small {
-	transition: 1s;
-	font-size: 48px;
-}
-
- /*
- 	width: 0;
-
- 	opacity: 0;
-
-animation: type 2s steps(60, end) forwards;
-
-
-@keyframes type {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    width: 30em;
-    opacity: 1;
-  }
-}
-*/
-
-
-#menuicon {
-	display: flex;
-	z-index: 5;
-	opacity: 1;
-	transition: 1s;
-	grid-row: 1;
-	grid-column: 3;
-	align-items: center;
-	justify-self: center;
-}
-
-#menuicon.small {
-	opacity: 1;
-	transition: 1s;
-	grid-column: 4;
-}
-
-#menucontainer {
-	display: none;
-	position: fixed;
-	top:150px;
-	right:60px;
-	width: 120px;
-	height:175px;
-	z-index: 30;
-}
-
-#menucontainer.small {
-	top:100px;
-	right: 35px;
-}
-
-#menuoption1,#menuoption2,#menuoption3,#menuoption4 {
 	display: block;
-	height: 30px;
-	font-weight: bold;
-	text-align: right;
-	padding:5px 0;
-	text-decoration: none;
-	color: gray;
-	opacity: 0;
-	transition: .5s;
-	z-index: 4;
-}
-
-#menuoption1:hover,#menuoption2:hover,#menuoption3:hover,#menuoption4:hover {
-	color: black;
-}
-
-#solutionsdropdown {
-	display: none;
-	position: fixed;
-	top:120px;
-	right:110px;
-	width: 100px;
-	height:30px;
-	z-index: 5;
-}
-
-#solutionsdropdownitem1,#solutionsdropdownitem2,#solutionsdropdownitem3  {
-	position: absolute;
-	width: 100%;
-	height: 30px;
-	text-align: right;
-	opacity: 0;
-	transition: .5s;
-	z-index: 6;
-}
-
-#hamburgermenu {
-	fill: gray;
-}
-
-#hamburgermenu:hover {
-	fill: crimson;
+	position: relative;
 }
 
 path {
@@ -291,7 +55,7 @@ path {
 circle:hover {
 	display: flex;
 }
-
+/*
 .title {
 	position: absolute;
 	top:150px;
@@ -304,13 +68,61 @@ circle:hover {
 	text-align: center;
 	margin:0 auto;
 }
+*/
+
+#requestquote {
+	display: grid;
+	grid-template-columns: 80% 20%;
+	position: fixed;
+	top: 270px;
+	left: 0px;
+	width: 400px;
+	height: 50px;
+	background-color: white;
+	border: 1px solid crimson;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	opacity: .8;
+	transition: 2s;
+	text-align: center;
+	font-size: 26px;
+	z-index: 5;
+}
+
+#requestquote.small {
+	grid-template-columns: 20% 80%;
+	width: 110px;
+	opacity: .6;
+	transition: 2s;
+}
+
+#tellmore {
+	grid-column: 1;
+	opacity: 1;
+	transition: 1s;
+	white-space: nowrap;
+	margin: 0;
+	align-self: center;
+	transition: 1s;
+}
+
+#tellmore.small {
+	font-size: 14px;
+	opacity: 0;
+	transition: 1s;
+}
+
+#quotearrows {
+	grid-column: 2;
+	margin: 0;
+	align-self: center;
+}
 
 .placeholder1 {
-	left:0px;
 	width: 100vw;
 	height: 400px;
 	z-index: -2;
-	margin:125px 0 50px 0px;
+	margin:-50px 0 50px 0px;
 	background: transparent;
 }
 
@@ -340,8 +152,14 @@ circle:hover {
 .section1right {
 	display: grid;
 	grid-template-rows: 30% 70%;
-	height: 100%;
+	width: 90%;
+	height: 80%;
 	grid-column: 2;
+	background-color: white;
+	justify-self: center;
+	align-self: center;
+	box-shadow: 0px 6px 10px 0 rgba(0,0,0,0.2);
+
 }
 
 .section1rightheader {
@@ -367,7 +185,7 @@ circle:hover {
 	margin: 125px auto;
 	justify-content: center;
 	box-shadow: 0px 6px 10px 0 rgba(0,0,0,0.2);
-
+	background-color: white;
 }
 
 .section2header {
@@ -377,7 +195,6 @@ circle:hover {
 	grid-row: 1;
 	color: #0A406C;
 	align-self: end;
-
 }
 
 .section2body {
@@ -385,7 +202,6 @@ circle:hover {
 	padding: 40px;
 	font-size: 20px;
 	grid-row: 2;
-
 }
 
 

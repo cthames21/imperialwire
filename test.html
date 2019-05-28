@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="jquery.js"></script>
+		<script src="parallax.js"></script>
+
+	<style>
+	#menuicon {
+		grid-row: 1;
+		grid-column: 4;
+		justify-self: center;
+		opacity: 1;
+		transition: 1s;
+	}
+
+	#menucontainer {
+		display: none;
+		position: absolute;
+		width: 120px;
+		height:175px;
+		padding: 5px;
+		background-color: rgba(0,0,0,.4);
+	}
+
+	#menuicon:hover #menucontainer {
+		display: block;
+	}
+
+
+	#menuoption1,#menuoption2,#menuoption3,#menuoption4 {
+		display: block;
+		height: 30px;
+		font-weight: bold;
+		text-align: right;
+		padding:5px 0;
+		text-decoration: none;
+		color: white;
+		opacity: 1;
+		transition: .5s;
+	}
+
+	#menuoption1:hover,#menuoption2:hover,#menuoption3:hover,#menuoption4:hover {
+		color: black;
+
+	}
+
+
+	#solutionsdropdown {
+		display: none;
+		width: 100px;
+		height:30px;
+	}
+
+	#menuoption1:hover #solutionsdropdown {
+				background-color: red;
+
+	}
+
+	#solutionsdropdownitem1,#solutionsdropdownitem2,#solutionsdropdownitem3  {
+		width: 100%;
+		height: 30px;
+		text-align: right;
+		opacity: 1;
+		transition: .5s;
+		z-index: 6;
+	}
+
+	#hamburgermenu {
+		fill: gray;
+	}
+
+	#hamburgermenu:hover {
+		fill: crimson;
+	}
+
+	</style>
+
+	</head>
+	<body>
+		<div style="position: absolute; top:100px; left:100px">
+			<g class="toggle" id="menuicon">
+				<svg id="hamburgermenu" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" ><path class="path" stroke="white" stroke-width="1" stroke-miterlimit="10" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+
+				<div id="menucontainer">
+					<div id="menuoption1">Home</div>
+					<div id="menuoption2">Solutions</div>
+					<div id="menuoption3">How it Works</div>
+					<div id="menuoption4">Contact</div>
+					<div id="solutionsdropdown">
+						<div id="solutionsdropdownitem1">
+							Design
+						</div>
+						<div id="solutionsdropdownitem2">
+							Manufacturing
+						</div>
+						<div id="solutionsdropdownitem3">
+							Blah
+						</div>
+					</div>
+				</div>
+			</g>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
