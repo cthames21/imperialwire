@@ -1,39 +1,4 @@
-header {
-	height: 100px;
-	transition: 1s;
-	grid-template-columns: 40% 45%;
-	background-color: rgba(255,255,255,.95);
-}
-
-
-.headerlinkcontainer {
-	grid-row: 2;
-	grid-column: 1 / span 3;
-	margin: 0;
-	transition: 0s;
-}
-
-#slogan {
-	display: inline-flex;
-	grid-row: 1;
-	font-size: 22px;
-	text-align: center;
-	align-items: center;
-	justify-self: center;
-	grid-column: 2;
-}
-
-#imperial {
-	transition: 1s;
-	transform: translate(-420px,-60px);
-	font-size: 56px;
-	padding-top:20px;
-}
-
-.imperialwire {
-	height: 200px;
-	transition: 0s;
-}
+.external
 
 .title {
 	display: block;
@@ -44,38 +9,50 @@ header {
 }
 
 .process {
-	position: absolute;
-	top:450px;
-	height: 900px;
-	width:100vw;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-top: 10px;
 }
 
 .processheader {
-	position: absolute;
 	width: 100%;
 	height: 60px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 38px;
+	padding: 10px 0;
+	margin: 50px 0;
 }
 
 .steps {
 	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: repeat(5,400px);
+	grid-template-columns: 700px 700px;
+	grid-template-rows: repeat(6,400px);
 	grid-gap: 30px;
-	position: absolute;
-	top: 100px;
 	width: 100vw;
 	height: 2000px;
 	align-items: center;
+	justify-content: center;
 }
 
 #step1left,#step2left,#step3left,#step4left {
+	position: relative;
 	justify-self: end;
 	width:70%;
-	height: 100%;
+	height: 80%;
 	margin-right:500px;
+	opacity: 0;
+	transition: 1s;
+
+}
+
+#step1right,#step2right,#step3right,#step4right {
+	position: relative;
+	justify-self: start;
+	width:70%;
+	height: 80%;
+	margin-left:500px;
 	opacity: 0;
 	transition: 1s;
 }
@@ -83,24 +60,13 @@ header {
 #step1left.slide,#step2left.slide,#step3left.slide,#step4left.slide {
 	margin-right:0px;
 	opacity: 1;
-	transition: 1.5s;
-}
-
-
-#step1right,#step2right,#step3right,#step4right {
-	justify-self:start;
-	width:50%;
-	height: 80%;
-	margin-left:500px;
-	justify-self:start;
-	opacity: 0;
-	transition: 1s;
+	transition: 2s;
 }
 
 #step1right.slide,#step2right.slide,#step3right.slide,#step4right.slide {
 	margin-left: 0;
 	opacity: 1;
-	transition: 2.5s;
+	transition: 2s;
 }
 
 
@@ -111,6 +77,19 @@ header {
 
 #step1right,#step2right,#step3right,#step4right {
 	grid-column: 2;
+}
+
+#step2left {
+	align-self: start;
+}
+
+#step2right {
+	align-self: center;
+
+}
+
+#step3left.slide {
+	margin: 40px 100px 0 0;
 }
 
 
@@ -132,11 +111,11 @@ div[id^="step4"] {
 }
 
 #step2left.slide,#step4left.slide {
-	transition: 2.5s;
+	transition: 1.5s;
 }
 
 #step2right.slide,#step4right.slide {
-	transition: 1.5s;
+	transition: .75s;
 }
 
 
@@ -145,92 +124,176 @@ div[id^="step4"] {
 	height: 100%;
 }
 
-
 .number {
 	width:100%;
-	height: 150px;
+	height: 400px;
+	margin-top: -40px;
+	padding:10% 0 0 0;
 	font-size: 100px;
 	text-align: center;
+	opacity: 0;
+	transition: 2s;
+	z-index: 3;
+}
+
+.number.show {
+	opacity: 1;
+	padding: 0 0 10% 0;
+	overflow: visible;
+}
+
+#number1 {
+	transform: scale(2);
+	grid-row: 1;
+}
+
+#number1.show {
+	transform: scale(1);
+	transition-delay: .5s;
+}
+
+#number2 {
+	grid-row: 2;
+	grid-column: 2;
+	height: 175px;
+	padding: 0 0 0 0;
+}
+
+#number2.show {
+	transition: 1s;
+}
+
+#number3 {
+	transform: scale(1.5);
+	grid-row: 3;
+	grid-column: 1 / span 2;
+	height: 275px;
+	padding: 0;
+}
+
+#number2.show {
+	transition: 1s;
 }
 
 .number img {
-	width:auto;
-	height: 100%;
+	width: 150px;
+	height: 150px;
+	margin: auto 0;
 }
 
 .details {
 	width:100%;
-	height: 150px;
-	padding: 20px;
-	top:100px;
+	height: 400px;
+	margin-top: 30px;
+	padding:10% 20%;
 	font-size: 24px;
-}
-
-.shakinghands {
-	display: grid;
-	position: absolute;
-	grid-template-columns: repeat(2,1fr);
-	width: 100%;
-	height: 300px;
-	top: 550px;
-}
-
-.righthand {
-	width: 100%;
-	height: 100%;
-	margin-left: 40%;
-	grid-column: 2;
+	text-align: center;
+	line-height: 30px;
+	grid-row: 1;
+	z-index: 1;
 	opacity: 0;
-	transition: 2s;
+	background-color: rgba(255,255,255,0);
+	text-shadow: 0 2px 8px slategray;
+	transition: 1.5s;
+}
+
+#details2 {
+	position: absolute;
+	grid-row: 2;
+	grid-column: 2;
+	height: 200px;
+	padding:10px 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+#details3 {
+	grid-row: 3 / span 2;
+	grid-column: 1 / span 2;
+	width:100%;
+	height: 800px;
+	padding-top: 225px;
+}
+
+.details.show {
+	background-color: rgba(255,255,255,.7);
+	opacity: 1;
+	transition: background-color 6s;
+	transition: opacity 2s;
+	transition-delay: 1.5s;
+}
+
+#righthand, #lefthand {
+	position: absolute;
+	top:0;
+	grid-row: 1;
+	height: 100%;
+	width: 600px;
+}
+
+#righthand {
+	margin-left: -190px;
+	grid-column: 2;
+	background: url(photos/shakinghandright.png);
+	background-repeat: no-repeat;
+	justify-content: start;
+	transition: 3s;
+}
+
+#lefthand {
+	margin-left: 160px;
+	grid-column: 1;
 	background: url(photos/shakinghandleft.png);
 	background-repeat: no-repeat;
+	transition: 3s;
 }
 
-.lefthand {
-	grid-row: 1;
-	width: 100%;
-	height: 100%;
-	margin-right: 40%;
-	grid-column: 1;
-	opacity: 0;
-	transition: 2s;
-	background: url(photos/shakinghand.png);
-	background-repeat: no-repeat;
-	justify-self: end;
+#righthand.small {
+	transform: rotate(-15deg); 
+	transition delay: 3s;
 }
 
-.righthand.post {
-	margin-left: -20%;
-	opacity: .8;
+#lefthand.small {
+	transform: rotate(12deg); 
 	transition: 2s;
-}
+	transition delay: 3s;
 
-.lefthand.post {
-	margin-right: -50%;
-	opacity: .8;
-	transition: 2s;
 }
 
 .drawing {
-	position: absolute;
-	top:800px;
-	left:31vw;
+	grid-row: 2;
+	grid-column: 1 / span 2;
+	justify-self: center;
+	opacity: 0;
+	transition: 4s;
+}
+
+.drawing.show {
+	opacity: .9;
+	transition: 4s;
 }
 
 .path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s linear alternate infinite;
+	stroke-dasharray: 750;
+	stroke-dashoffset: 10;
+	animation: dash 4s linear alternate infinite;
 }
+
 
 @keyframes dash {
   from {
-    stroke-dashoffset: 1000;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 0;
+
   }
   to {
-    stroke-dashoffset: 0;
+    stroke-dasharray: 750;
+     stroke-dashoffset: 0;
+
   }
 }
+
+
 
 
 
