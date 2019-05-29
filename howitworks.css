@@ -1,18 +1,49 @@
-.external
-
-.title {
-	display: block;
+#scrolldiv {
 	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--color-5);
+	z-index:4;
+	transition: 2s;
+	overflow: hidden;
+}
+
+#scrolldiv.scroll {
+	height: 0vw;
+	transition: 2s;
+}
+
+.scrolldivbody {
+	display: flex;
+	width: 100vw;
+	height: 300px;
+	margin-top: 30vw;
+	font-size: 28px;
+	text-align: center;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	background-color: var(--color-1);
+}
+
+.scrolldivarrows {
+	display: flex;
+	position: sticky;
 	width: 100%;
-	height: 65px;
-	margin: 20px;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-end;
+	height: 100px;
+	color: var(--alt-txt-color);
+	background-color: var(--color-0);
 }
 
 .process {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 100px;
 }
 
 .processheader {
@@ -192,8 +223,7 @@ div[id^="step4"] {
 	grid-row: 1;
 	z-index: 1;
 	opacity: 0;
-	background-color: rgba(255,255,255,0);
-	text-shadow: 0 2px 8px slategray;
+	text-shadow: 0 2px 8px var(--main-shadow);
 	transition: 1.5s;
 }
 
@@ -216,7 +246,7 @@ div[id^="step4"] {
 }
 
 .details.show {
-	background-color: rgba(255,255,255,.7);
+	background-color: rgba(49,64,73,.7);
 	opacity: 1;
 	transition: background-color 6s;
 	transition: opacity 2s;
@@ -237,7 +267,7 @@ div[id^="step4"] {
 	background: url(photos/shakinghandright.png);
 	background-repeat: no-repeat;
 	justify-content: start;
-	transition: 3s;
+	transition: 2.5s;
 }
 
 #lefthand {
@@ -245,7 +275,7 @@ div[id^="step4"] {
 	grid-column: 1;
 	background: url(photos/shakinghandleft.png);
 	background-repeat: no-repeat;
-	transition: 3s;
+	transition: 2.5s;
 }
 
 #righthand.small {
@@ -254,7 +284,7 @@ div[id^="step4"] {
 }
 
 #lefthand.small {
-	transform: rotate(12deg); 
+	transform: rotate(15deg); 
 	transition: 2s;
 	transition delay: 3s;
 

@@ -30,6 +30,7 @@
 
 .materialscontainer {
 	max-width: 700px;
+	height: 1200px;
 	grid-column: 2;
 	grid-row: 1;
 	justify-self: center;
@@ -99,23 +100,23 @@
 .display {
 	position: relative;
 	width:100%;
-	height: 550px;
+	height: 950px;
 	margin:60px auto 0 auto;
 	z-index: 3;
 	overflow: hidden;
 }
 
 .materialnodisplay {
+	display: flex;
 	z-index: -2;
 	font-size: 42px;
 	font-weight: bold;
 	text-align: center;
-	margin:80px;
+	margin:280px 50px;
 	padding:10px 0;
 	opacity: .8;
 	border-bottom: 1px solid maroon;
 	border-top: 1px solid maroon;
-
 }
 
 .material1display,.material2display,.material3display,.material4display {
@@ -216,7 +217,6 @@ div[class$="display"] img {
 	overflow: hidden;
 	font-size: 16px;
 	padding: 10px 5px;
-	background-color: white;
 	z-index: 2;
  }
 

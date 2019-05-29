@@ -56,7 +56,7 @@
 	.linkbar {
 		width: 100px;
 		height: 20px;
-		border-top: 4px solid crimson;
+		border-top: 4px solid var(--acc-color);
 		grid-row: 1;
 		white-space: nowrap;
 		text-align: center;
@@ -144,6 +144,7 @@
 		grid-column: 3;
 		grid-row: 1;
 		opacity: 0;
+		color: var(--alt-txt-color);
 	}
 
 	#slogan.small {
@@ -168,6 +169,7 @@
 
 	#imperialwire a {
 		text-decoration: none;
+		color: var(--alt-txt-color);
 	}
 		
 	#imperialwire.small {
@@ -219,7 +221,7 @@
 	}
 
 	#menuoption1:hover,#menuoption2:hover,#menuoption3:hover,#menuoption4:hover {
-		color: var(--color-5);
+		color: var(--acc-color);
 	}
 
 

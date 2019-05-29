@@ -2,17 +2,17 @@
 	.footertop {
 		display: grid;
 		grid-template-columns: repeat(3,1fr);
-		background-color: var(--color-2);
-		color: white;
-		padding: 0 45px;
-		width: 100vw;
+		background-color: var(--color-1);
+		color: var(--main-txt-color);
+		padding: 0;
+		width: 100%;
 		height: 225px;
 		grid-row: 1;
 	}
 
 	.footertop1, .footertop2, .footertop3 {
 		text-align: center;
-		margin:20px 40px;
+		padding:20px 40px;
 	}
 
 	.footertop1 {
@@ -36,7 +36,7 @@
 	.footerbottom {
 		color: var(--main-txt-color);
 		text-align: center;
-		width: 100vw;
+		width: 100%;
 		height: 25px;
 		padding: 5px;
 		grid-row: 2;
@@ -75,5 +75,5 @@
 	</div>
 </div>
 <div class="footerbottom">
-	© 2019 ImperialWire. All Rights Reserved. - Address - Clients
+	© 2019 ImperialWire. All Rights Reserved.
 </div>
