@@ -13,13 +13,7 @@
 				<?php require('header.php');?>
 			</header>
 			<main>
-				<div id="scrolldiv" class="toggle">
-					<div class="scrolldivbody">
-						What separates us from the other guys is our adaptability and personal touch. All Imperial Wire’s displays are custom made to fit the needs of our customers. 
-					</div>
-					<div class="scrolldivarrows">
-						Scroll
-					</div>
+				<div style="height: 600px">
 				</div>
 				<div class="process">
 					<div class="processheader">
@@ -124,10 +118,22 @@
 
 					$(document).ready(function() {
 						$('.toggle').toggleClass("small")
-						$('.linkbar').mouseleave(function() {
-							$('.linkbar > a').hide()
-						})
 					})
+
+					document.addEventListener('mousemove', logKey);
+					document.addEventListener('wheel', logKey);
+
+					function logKey(e) {
+						if ($(window).scrollTop() < 5) {
+							$('.linkbar').css("height","25px")
+						}
+						else if (event.clientY < (window.innerHeight)/3) {
+							$('.linkbar').css("height","25px")
+						}
+						else if (event.clientY > (window.innerHeight)/3) {
+							$('.linkbar').css("height","0px")
+						}
+					}
 
 					$(window).on("scroll touchmove", function() {
 						$('#scrolldiv').toggleClass("scroll", $(document).scrollTop() > 100);

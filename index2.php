@@ -35,7 +35,7 @@
 				</div>
 			-->
 
-				<div class="sectionbreak" style="margin-top: 300px">
+				<div class="sectionbreak" style="margin-top: 200px">
 					Design 
 					<span style="color: var(--acc-color);padding:0 15px;"> - </span>
 					Create
@@ -80,7 +80,7 @@
 						<div class="line"></div>
 					</div>
 					<div class="section2photo">
-						<img src="photos/team.jpg">
+						<img src="photos/team2.jpg">
 					</div>
 					<div class="section2body">
 						<p>Gravity Design Group was started because the founders saw a need that was not being met within the retail environments world by other design, fixture and graphic organizations.</p>
@@ -213,81 +213,83 @@
 				<script>
 					<?php require("javascript.php");?>
 
+					document.addEventListener('mousemove', logKey);
+					document.addEventListener('wheel', logKey);
+
+					function logKey(e) {
+						if ($(window).scrollTop() < 5) {
+							$('.linkbar').css("height","25px")
+						}
+						else if (event.clientY < (window.innerHeight)/3) {
+							$('.linkbar').css("height","25px")
+						}
+						else if (event.clientY > (window.innerHeight)/3) {
+							$('.linkbar').css("height","0px")
+						}
+
+					}
+
 					$(window).scroll(function() {    
 					    var scroll = $(window).scrollTop();
 
 					    if (scroll > 5) {
 					    	$('.toggle').addClass("small");
-					    	$('.headerlinkcontainer').addClass("small");
-					    }
-
-					    if (scroll >= 80) {
 					        $('#scrolldiv').addClass("scroll");
 					    }
 
-					    else if (scroll <= 2) {
+					    if (scroll <= 5) {
 					    	$('#scrolldiv').removeClass("scroll");
 					    	$('.toggle').removeClass("small");
-					    	$('.headerlinkcontainer').removeClass("small");
 					    }
 					});
 
-					$('#requestquote').mouseover(function() {
-						$('#requestquote').removeClass("small")
-						$('#tellmore').removeClass("small")
-					})
-
-					$('#requestquote').mouseleave(function() {
-						$('#requestquote').addClass("small")
-						$('#tellmore').removeClass("small")
-					})
-
 					$(document).ready(function() {
-					setTimeout(function() {
-						$('.firstimage').animate({width:"0px"}, 200);
-						$('.secondimage').animate({width:"100%"}, 200);
-					}, 4000)
-					setTimeout(function() {
-						$('.secondimage').animate({width:"0px"}, 200);
-						$('.thirdimage').animate({width:"100%"}, 200);
-					}, 8000)
-					setTimeout(function() {
-						$('.thirdimage').animate({width:"0px"}, 200);
-						$('.firstimage').animate({width:"100%"}, 200);
-					}, 12000)
-				})
-				
-				setTimeout(function() {
-					setInterval(function() {
-						$('div [class^="section5bodytop"] img:nth-child(1)').css("opacity","0");
-						setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(1)').css("opacity","1")
-						}, 400)
-					}, 6000)
-				}, 500)
 
-				setTimeout(function() {
-					setInterval(function() {
-						$('div [class^="section5bodytop"] img:nth-child(2)').css("opacity","0");
-						setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(2)').css("opacity","1")
-						}, 400)
-					}, 6000)
-				}, 2500)
+						setTimeout(function() {
+							$('.firstimage').animate({width:"0px"}, 200);
+							$('.secondimage').animate({width:"100%"}, 200);
+						}, 4000)
+						setTimeout(function() {
+							$('.secondimage').animate({width:"0px"}, 200);
+							$('.thirdimage').animate({width:"100%"}, 200);
+						}, 8000)
+						setTimeout(function() {
+							$('.thirdimage').animate({width:"0px"}, 200);
+							$('.firstimage').animate({width:"100%"}, 200);
+						}, 12000)
+					})
+					
+					setTimeout(function() {
+						setInterval(function() {
+							$('div [class^="section5bodytop"] img:nth-child(1)').css("opacity","0");
+							setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(1)').css("opacity","1")
+							}, 400)
+						}, 6000)
+					}, 500)
 
-				setTimeout(function() {
-					setInterval(function() {
-						$('div [class^="section5bodytop"] img:nth-child(3)').css("opacity","0");
-						setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(3)').css("opacity","1")
-						}, 400)
-					}, 6000)
-				}, 4500)
+					setTimeout(function() {
+						setInterval(function() {
+							$('div [class^="section5bodytop"] img:nth-child(2)').css("opacity","0");
+							setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(2)').css("opacity","1")
+							}, 400)
+						}, 6000)
+					}, 2500)
 
-				setTimeout(function() {
-					setInterval(function() {
-						$('div [class^="section5bodytop"] img:nth-child(4)').css("opacity","0");
-						setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(4)').css("opacity","1")
-						}, 400)
-					}, 6000)
-				}, 6500)
+					setTimeout(function() {
+						setInterval(function() {
+							$('div [class^="section5bodytop"] img:nth-child(3)').css("opacity","0");
+							setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(3)').css("opacity","1")
+							}, 400)
+						}, 6000)
+					}, 4500)
+
+					setTimeout(function() {
+						setInterval(function() {
+							$('div [class^="section5bodytop"] img:nth-child(4)').css("opacity","0");
+							setTimeout(function() {$('div [class^="section5bodytop"] img:nth-child(4)').css("opacity","1")
+							}, 400)
+						}, 6000)
+					}, 6500)
 
 
 					$('.posibility').mouseover(function() {
@@ -304,6 +306,10 @@
 
 					$('.section15item').mouseleave(function() {
 						$('.section15itemname', this).css("text-shadow", "1px 1px 5px transparent")
+					})
+
+					$('.scrolldivarrows').click(function() {
+						$(window).scrollTop(225);
 					})
 
 				</script>
