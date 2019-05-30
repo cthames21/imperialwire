@@ -72,39 +72,91 @@ circle:hover {
 	display: flex;
 }
 
+/*
+.class {
+	position relative to others:
+		grid-row:;
+		grid-colummn:;
+
+	self position:
+		display:;
+		position:;
+		width:;
+		height:;
+
+	content formatting:
+		justify-content:;
+
+}
+*/
+
+
+/* width */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--acc-color); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-1); 
+}
+
+::-webkit-scrollbar-track-piece {
+	background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+
+}
+
 #requestquote {
+	grid-column: 4;
 	display: grid;
-	grid-template-columns: 80% 20%;
-	position: fixed;
-	top: 270px;
-	left: 0px;
-	width: 400px;
-	height: 50px;
-	background-color: white;
+	position: absolute;
+	grid-template-columns: 25% 75%;
+	width: 185px;
+	height: 40px;
+	right: -15px;
+	background-color: var(--color-3);
 	border: 1px solid var(--acc-color);
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 	opacity: .8;
-	transition: 2s;
-	text-align: center;
-	font-size: 26px;
+	transition: .5s;
+	font-size: 1.25em;
 	z-index: 5;
+	justify-self: end;
+	text-decoration: none;
+}
+
+#requestquote:hover {
+	transform: translateX(-15px);
+	transition: .5s;
 }
 
 #requestquote.small {
-  display:grid;
-	grid-template-columns: 20% 80%;
-	width: 110px;
+  	display:grid;
+	grid-template-columns: 100% 0%;
+	width: 80px;
 	opacity: .6;
-	transition: 2s;
+	transition: 1s;
 }
 
 #tellmore {
-	grid-column: 1;
+	grid-column: 2;
+	grid-row: 1;
 	opacity: 1;
-	transition: 1s;
 	white-space: nowrap;
-	margin: 0;
 	align-self: center;
 	transition: 1s;
 }
@@ -116,8 +168,9 @@ circle:hover {
 }
 
 #quotearrows {
-	grid-column: 2;
-	margin: 0;
+	grid-column: 1;
+	grid-row: 1;
+	text-align: center;
 	align-self: center;
 }
 
@@ -183,9 +236,9 @@ circle:hover {
 .sectionbreakquote {
 	display: flex;
 	width: 100%;
-	height: 250px;
+	height: 200px;
 	padding: 0 10%;
-	font-size: 1.75em;
+	font-size: 1.5em;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -198,7 +251,7 @@ circle:hover {
 	background-color: var(--color-5);
 	width: 80%;
 	height: 400px;
-	margin:90px auto 130px auto;
+	margin:60px auto 130px auto;
 	box-shadow: 0px 4px 20px 0px #10242F;
 	justify-items: center;
 }
@@ -211,10 +264,11 @@ circle:hover {
 .section15itemname {
 	display: flex;
 	position: absolute;
-	align-items: center;
+	align-self: center;
+	text-align: center;
 	justify-content: center;
 	width: 40%;
-	margin-top: 70px;
+	margin-top: 60px;
 	font-size: 3em;
 	color: var(--main-txt-color);
 	pointer-events: none;
@@ -225,12 +279,14 @@ circle:hover {
 	width: 40%;
 	height: 200px;
 	opacity: .5;
+	filter: blur(1px);
 }
 
 .section15item img:hover {
-	opacity: 1;
+	opacity: .9;
 	box-shadow: -5px 5px 15px 0px var(--alt-shadow), 5px -5px 15px 0px var(--alt-shadow);
 	cursor: pointer;
+	filter: blur(0px);
 }
 
 .section2 {
@@ -272,46 +328,37 @@ circle:hover {
 	line-height: 35px;
 }
 
+.section3 {
+	position: relative;
+	height: 1000px;
+}
+
 .section3left, .section3right {
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: 20% 80%;
-	width: 80%;
+	width: 60%;
 }
 
 .section3left {
-	grid-column: 1;
 	height: 400px;
 	margin-top: 130px;
 }
 
 .section3right {
-	grid-column: 2;
+	position: absolute;
 	height: 450px;
+	right:0;
 	margin-top: 50px;
-	margin-left: 20%;
 }
 
 .section3rightheader, .section3leftheader  {
-	position: absolute;
-	grid-row: 1;
-	font-size: 4em;
-	width: 80vw;
-	height: 35px;
-	text-align: center;
-	background-color: var(--color-1);
-	box-shadow: -8px -8px 15px 0px var(--color-4);
-	text-shadow: 0px 0px 10px var(--color-5);
-}
-
-.section3leftheader {
 	grid-row: 1;
 	grid-column: 1;
-}
-
-.section3rightheader {
-	grid-column: 2;
-	right:0;
+	font-size: 4em;
+	height: 35px;
+	text-align: center;
+	text-shadow: 0px 0px 10px var(--color-5);
 }
 
 .section3leftbody, .section3rightbody {
@@ -320,6 +367,9 @@ circle:hover {
 	width: 100%;
 	grid-row: 2;
 	font-size: 1.5em;
+	border-top: 1px solid var(--acc-color);
+	border-bottom: 1px solid var(--acc-color);
+
 }
 
 .section3leftbody {
@@ -439,7 +489,7 @@ circle:hover {
 
 #scrolldiv {
 	position: relative;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	background-color: var(--color-5);
 	z-index:4;
@@ -454,9 +504,9 @@ circle:hover {
 
 .scrolldivbody {
 	display: flex;
-	width: 90vw;
+	width: 90%;
 	height: 300px;
-	margin: 30vw auto 0 auto;
+	margin: 30vh auto 0 auto;
 	font-size: 2.5em;
 	text-align: center;
 }
@@ -467,6 +517,10 @@ circle:hover {
 	bottom: 0;
 	justify-content: center;
 	height: 100px;
+}
+
+.scrolldivarrows:hover {
+	cursor: pointer;
 }
 
 .scrolldivarrows img {

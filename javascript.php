@@ -1,6 +1,23 @@
 $(document).ready(function() {
-	$('#imperialwire').css("opacity", "1");
+	function logKey(e) {
+		if ($(window).scrollTop() < 5) {
+			$('#requestquote').removeClass("small")
+			$('#tellmore').removeClass("small")
+		}
+	}
 
+	$('#requestquote').mouseover(function() {
+		$('#requestquote').removeClass("small")
+		$('#tellmore').removeClass("small")
+	})
+
+	$('#requestquote').mouseleave(function() {
+		$('#requestquote').addClass("small")
+		$('#tellmore').removeClass("small")
+	})
+
+
+	$('#imperialwire').css("opacity", "1");
 
 	$('#facebook').mouseover(function() {
 		$('#facebook').css("fill","crimson")
@@ -22,11 +39,6 @@ $(document).ready(function() {
 	})
 
 	setTimeout(function() {
-		$('.headerlinkcontainer').show("slow");
-	}, 400)
-
-
-	setTimeout(function() {
 		$('div [id^="externallinks"] svg:nth-child(1)').show("slow");
 	}, 2000)
 	setTimeout(function() {
@@ -36,9 +48,13 @@ $(document).ready(function() {
 		$('div [id^="externallinks"] svg:nth-child(3)').show("slow");
 	}, 3000)
 
+	$('#menucontainer').mouseover(function() {
+		$('#menuoption1').css("opacity","0")
+		$('#menuoption2').css("opacity","0")
+		$('#menuoption3').css("opacity","0")
+		$('#menuoption4').css("opacity","0")
 
-	$('#menuicon').mouseover(function() {
-		/*$('#menucontainer').css("display","block");
+		$('.menudropdown').css("visibility","visible");
 
 		setTimeout(function() {
 			$('#menuoption1').css("opacity","1")
@@ -52,76 +68,13 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('#menuoption4').css("opacity","1")
 		}, 400);
-*/
-/* Menu 1 */
-
-/* Menu 2 */
-/*
-		$('#menuoption2').mouseover(function() {
-			$('#solutionsdropdown').css("display","block");
-			setTimeout(function() {
-				$('#solutionsdropdownitem1')
-					.css("opacity","1")
-					.css("transform","translate(-30px,-30px)")
-			}, 100);
-			setTimeout(function() {
-				$('#solutionsdropdownitem2')
-					.css("opacity","1")
-					.css("transform","translate(-40px,0px)")
-			}, 200);
-			setTimeout(function() {
-				$('#solutionsdropdownitem3')
-					.css("opacity","1")
-					.css("transform","translate(-30px,30px)")
-			}, 300);
-		})
-
-		$('#menuoption2').mouseleave(function() {
-			setTimeout(function() {
-				$('#solutionsdropdownitem1')
-					.css("opacity","0")
-					.css("transform","translate(-30px,-30px)")
-			}, 100);
-			setTimeout(function() {
-				$('#solutionsdropdownitem2')
-					.css("opacity","0")
-					.css("transform","translate(-40px,0px)")
-			}, 200);
-			setTimeout(function() {
-				$('#solutionsdropdownitem3')
-					.css("opacity","0")
-					.css("transform","translate(-30px,30px)")
-			}, 300);
-			setTimeout(function() {
-				$('#solutionsdropdown').css("display","none");
-			}, 600);
-		})
-*/
-/*Menu 3,4*/
 	})
-/*
-	$('#menuicon').mouseleave(function() {
-			setTimeout(function() {
-				$('#menuoption4')
-					.css("opacity","0")
-			}, 100);
-			setTimeout(function() {
-				$('#menuoption3')
-					.css("opacity","0")
-			}, 150);
-			setTimeout(function() {
-				$('#menuoption2')
-					.css("opacity","0")
-			}, 200);
-			setTimeout(function() {
-				$('#menuoption1')
-					.css("opacity","0")
-			}, 250);
-			setTimeout(function() {
-				$('#menucontainer').css("display","none");
-			}, 750);
+
+	$('#menucontainer').mouseleave(function() {
+
 	})
-*/
+
+
 })
 
 
