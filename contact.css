@@ -1,14 +1,29 @@
+.letstalk {
+	width: 100%;
+	min-width: 960px;
+	font-size: 3em;
+	margin: 30px 0;
+	text-align: center;
+}
+
+.letstalkbody {
+	text-align: center;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
 .contactcontainer {
-	display: grid;
+	display: inline-grid;
 	grid-template-columns: 20% 80%;
 	grid-template-rows: 1fr 1fr 1fr 5fr 1fr;
-	width: 700px;
-	height: 700px;
-	margin: 80px 0 120px 0;
+	width: 400px;
+	height: 500px;
 	background: var(--color-4);
 	justify-content: space-around;
-	padding: 150px 0 50px 0;
+	margin: 50px 0 50px 5%;
+
 	align-items: center;
+	jusify-self:center;
 }
 
 .name, .phone, .email, .message {
@@ -18,8 +33,8 @@
 
 .namefield, .phonefield, .emailfield, .messagefield {
 	grid-column: 2;
-	width: 500px;
-	height: 20px;
+	width: 100%;
+	height: 23px;
 	background: var(--color-2);
 	color: var(--main-txt-color);
 	border: 1px solid transparent;
@@ -67,4 +82,34 @@
 	background: var(--color-1);
 	outline-color: var(--acc-color);
 }
+
+.customerquote {
+	display: inline-grid;
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 200px;
+	margin: 100px 5% 0 0;
+	padding: 100px 50px;
+	background: var(--color-3)
+}
+
+.customerquote p {
+	display: flex;
+	margin: -70px 0px;
+	grid-row: 1;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
 

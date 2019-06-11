@@ -4,13 +4,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="howitworks.css">
+		<link rel="stylesheet" type="text/css" href="fonts/helveticaneue.css">
 		<script src="jquery.js"></script>
 		<script src="parallax.js"></script>
 	</head>
 	<body>
 		<div class="page-container">
 			<header class="toggle">
-				<?php require('header.php');?>
+				<?php include('header.php');?>
 			</header>
 			<main>
 				<div style="height: 600px">
@@ -112,9 +113,9 @@
 				</div>
 			</main>
 			<footer>
-				<?php require("footer.php");?>	
+				<?php include("footer.php");?>	
 				<script>
-					<?php require("javascript.php");?>	
+					<?php include("javascript.php");?>	
 
 					$(document).ready(function() {
 						$('.toggle').toggleClass("small")
