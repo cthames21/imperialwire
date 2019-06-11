@@ -4,15 +4,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="services.css">
+		<link rel="stylesheet" type="text/css" href="fonts/helveticaneue.css">
 		<script src="jquery.js"></script>
 		<script src="parallax.js"></script>
 	</head>
 	<body>
 		<div class="page-container">
 			<header class="toggle">
-				<?php require("header.php");?>
+				<?php include("header.php");?>
 			</header>
 			<main>
+				<div class="sectionbreak">
+					Design 
+					<span style="color: var(--acc-color);padding:0 15px;"> - </span>
+					Create
+					<span style="color: var(--acc-color);padding:0 15px;"> - </span>
+					Innovate
+				</div>
 				<div class="servicescapabilities">
 					<div class="servicescapabilities1left">
 						<div class="servicescapabilitiesheaderleft">
@@ -26,27 +34,6 @@
 							<li class="left">Implementation</li>
 							<li class="left">Special packaging and labeling</li>
 							<li class="left">Special shipping requirements</li>
-							<div class="arrowsleft" style="grid-row:1">
-								>>
-							</div>
-							<div class="arrowsleft" style="grid-row:2">
-								>>
-							</div>
-							<div class="arrowsleft" style="grid-row:3">
-								>>
-							</div>
-							<div class="arrowsleft" style="grid-row:4">
-								>>
-							</div>
-							<div class="arrowsleft" style="grid-row:5">
-								>>
-							</div>
-							<div class="arrowsleft" style="grid-row:6">
-								>>
-							</div>
-							<div class="arrowsleft" style="grid-row:7">
-								>>
-							</div>
 						</div>
 					</div>
 					<div class="servicescapabilities1right">
@@ -65,39 +52,6 @@
 							<li class="right">Powder Coating</li>
 							<li class="right">Boxing and Packaging</li>
 							<li class="right">Drop Shipments</li>
-							<span class="arrowsright" style="grid-row:1">
-								<<
-							</span>
-							<div class="arrowsright" style="grid-row:2">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:3">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:4">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:5">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:6">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:7">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:8">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:9">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:10">
-								<<
-							</div>
-							<div class="arrowsright" style="grid-row:11">
-								<<
-							</div>
 						</div>
 					</div>
 					<div class="servicesexpand">
@@ -144,22 +98,22 @@
 								<div id="wood" class="materialname">
 									Wood
 								</div>
-								<img src="photos/wood.png" style="width:80%;height:80%">
+								<img src="photos/log.svg" style="width:80px;height:80px">
 							</div>
 							<div class="material2">
-								<img src="photos/metal.png" style="width:80%;height:80%">
+								<img src="photos/i-beam.svg" style="width:80px;height:80px">
 								<div id="metal" class="materialname">
 									Metal
 								</div>
 							</div>
 							<div class="material3">
-								<img src="photos/wire.png" style="width:80%;height:80%">
+								<img src="photos/509114.svg" style="width:80px;height:80px">
 								<div id="wirematerial" class="materialname">
 									Wire
 								</div>
 							</div>
 							<div class="material4">
-								<img src="photos/tube.svg" style="width:80%;height:80%">
+								<img src="photos/tube.svg" style="width:80px;height:80px">
 								<div id="tubing" class="materialname">
 									Tubing
 								</div>
@@ -170,25 +124,21 @@
 								Let us make a custom fixture for you!
 							</div>					
 							<div class="material1display">
-								<img src="photos/woodbackground.jpg" />
 								<div class="materialdisplayheader">
 									Wood
 								</div>
 							</div>
 							<div class="material2display">
-								<img src="photos/metalbackground.jpg" />
 								<div class="materialdisplayheader">
 									Metal
 								</div>
 							</div>
 							<div class="material3display">
-								<img src="photos/wirebackground.jpeg" />
 								<div class="materialdisplayheader">
 									Wire
 								</div>
 							</div>
 							<div class="material4display">
-								<img src="photos/tubingbackground.webp" />
 								<div class="materialdisplayheader">
 									Tubing
 								</div>
@@ -196,12 +146,109 @@
 						</div>
 					</div>
 				</div>
+
+
+				<div class="process">
+					<div class="processheader">
+						Our Process
+					</div>
+					<div class="steps">
+						<div id="number1" class="number" style="grid-column: 1 / span 2; grid-row: 1;">
+							<img src="numberone.svg">
+						</div>
+						<div id="details1" class="details" style="grid-column: 1 / span 2;">
+							When we engage with our clients on a new project it usually starts like this: "Team Gravity, can you stop by tomorrow for a quick meeting? I've got something I need your help with."  This typical scenario plays out every week at Gravity. Our approach to it, however, is not typical.
+						</div>
+						<div id="step1left">
+						<div id="lefthand" class="toggle"></div>
+						</div>
+						<div id="step1right">
+							<div class="image">
+								<!--<img src="photos/meeting.webp">-->
+							</div>
+							<div id="righthand" class="toggle"></div>
+						</div>
+
+
+						<div id="step2left">
+							<div class="drawing">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="350px" width="350px" viewBox="0 0 490 490"xml:space="preserve">
+									<g>
+										<g>
+											<g>
+												<path stroke-width="8" stroke="var(--bg-color)" fill="var(--acc-color)" d="M429.976,90c-0.001-2.601-0.993-5.159-2.905-7.071l-80-80c-1.912-1.913-4.469-2.904-7.071-2.905V0H70
+													c-5.522,0-10,4.477-10,10v470c0,5.523,4.478,10,10,10h350c5.522,0,10-4.477,10-10V90H429.976z M350,34.142L395.857,80H350V34.142
+													z M410,470H80V20h250v70c0,5.523,4.478,10,10,10h70V470z"/>
+												<path class="path" stroke="var(--acc-color)" fill="transparent" stroke-width="4" stroke-miterlimit="10" d="M260,187.038V190c0,56.349-23.208,96.94-68.979,120.645c-35.059,18.156-70.926,19.349-71.284,19.358L120,340l0.25,9.997
+													c1.624-0.041,40.229-1.225,79.311-21.254C236.257,309.937,280,270.6,280,190v-2.962l23.415,20.488l13.17-15.052l-40-35
+													c-3.77-3.299-9.4-3.299-13.17,0l-40,35l13.17,15.052L260,187.038z"/>
+												<path class="path" stroke="var(--acc-color)" fill="transparent" stroke-width="4" stroke-miterlimit="10"  d="M270,135c22.056,0,40-17.944,40-40c0-22.056-17.944-40-40-40c-22.056,0-40,17.944-40,40C230,117.056,247.944,135,270,135"/>
+												<polygon class="path" stroke="var(--acc-color)" fill="transparent" stroke-width="4" stroke-miterlimit="10" points="147.071,202.929 132.929,217.071 155.857,240 132.929,262.929 147.071,277.071 170,254.143 192.929,277.071 
+													207.071,262.929 184.143,240 207.071,217.071 192.929,202.929 170,225.857 			"/>
+												<polygon class="path" stroke="var(--acc-color)" fill="transparent" stroke-width="4" stroke-miterlimit="10"points="302.071,262.929 287.929,277.071 310.857,300 287.929,322.929 302.071,337.071 325,314.143 347.929,337.071 
+													362.071,322.929 339.143,300 362.071,277.071 347.929,262.929 325,285.857 			"/>
+												<rect fill="transparent" stroke="var(--acc-color)" stroke-width="4" x="105" y="40" width="80" height="20"/>
+												<rect fill="transparent" stroke="var(--acc-color)" stroke-width="4" x="105" y="80" width="50" height="20"/>
+												<rect fill="transparent" stroke="var(--acc-color)" stroke-width="4" x="115" y="380" width="50" height="20"/>
+												<rect fill="transparent" stroke="var(--acc-color)" stroke-width="4" x="115" y="420" width="210" height="20"/>
+												<rect fill="transparent" stroke="var(--acc-color)" stroke-width="4" x="185" y="380" width="50" height="20"/>
+												<rect fill="transparent" stroke="var(--acc-color)" stroke-width="4" x="255" y="380" width="50" height="20"/>
+												<rect fill="transparent" stroke="var(--acc-color)" stroke-width="4" x="325" y="380" width="50" height="20"/>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</div>
+						</div>
+						<div id="step2right">
+							<div id="number2" class="number">
+								<img src="numbertwo.svg">
+							</div>
+							<div id="details2" class="details">
+								Our engineers develop a CAD osfjnoaiuwrjtsf
+							</div>
+						</div>
+
+
+						<div id="number3" class="number">
+							<img src="numberthree.svg">
+						</div>
+						<div id="details3" class="details">
+							Test
+						</div>
+						<div id="step3left">
+							<div class="image">
+								<img src="photos/meeting.webp" style="width=:auto; height:500px; padding-right:180px">
+							</div>
+						</div>
+						<div id="step3right">
+							<div class="image">
+								<img src="photos/collaborating.png">
+								<img src="photos/ipad.jpg">
+							</div>
+						</div>
+
+
+						<div id="step4left">
+							<div class="image">
+							</div>
+						</div>
+						<div id="step4right">
+							<div id="number4" class="number">
+								<img src="numberfour.svg">
+							</div>
+							<div id="details4" class="details">
+								QA and followup
+							</div>
+						</div>
+					</div>
+				</div>
 			</main>
 			<footer>
-				<?php require("footer.php");?>	
+				<?php include("footer.php");?>	
 
 				<script>
-					<?php require("javascript.php");?>	
+					<?php include("javascript.php");?>	
 
 					$(window).on("load", function() {
 						$('div [class^="servicescapabilitiesbody"] li:nth-child(1)').show(100)
@@ -217,18 +264,11 @@
 						$('div [class^="servicescapabilitiesbody"]  li:nth-child(11)').show(2100)
 					})
 
-
 					$(document).ready(function() {
 						$('.toggle').toggleClass("small")
-						$('.headerlinkcontainer').toggleClass("small")
-						
-						setTimeout(function() {
-							$('.arrowsleft').css("display","block")
-							$('.arrowsright').css("display","block")
-						}, 1500);
 
 						$('.material1').click(function() {
-							$('.material1display').animate({height:'toggle'},350)
+							$('.material1display').show()
 							$('.material2display').css("display","none")
 							$('.material3display').css("display","none")
 							$('.material4display').css("display","none")
@@ -236,7 +276,7 @@
 						})
 						$('.material2').click(function() {
 							$('.material1display').css("display","none")
-							$('.material2display').slideDown()
+							$('.material2display').show()
 							$('.material3display').css("display","none")
 							$('.material4display').css("display","none")
 							$('.materialnodisplay').css("display","none")
@@ -244,7 +284,7 @@
 						$('.material3').click(function() {
 							$('.material1display').css("display","none")
 							$('.material2display').css("display","none")
-							$('.material3display').slideDown()
+							$('.material3display').show()
 							$('.material4display').css("display","none")
 							$('.materialnodisplay').css("display","none")
 						})
@@ -252,35 +292,35 @@
 							$('.material1display').css("display","none")
 							$('.material2display').css("display","none")
 							$('.material3display').css("display","none")
-							$('.material4display').slideDown()
+							$('.material4display').show()
 							$('.materialnodisplay').css("display","none")
 						})
 						$('.material1').on("mouseover", function() {
-							$('#wood').fadeIn("fast")
+							$('#wood').show()
 						})
 							$('.material1').on("mouseleave", function() {
-							$('#wood').fadeOut("fast")
+							$('#wood').hide()
 						})
 
 						$('.material2').on("mouseover", function() {
-							$('#metal').fadeIn("fast")
+							$('#metal').show()
 						})
 							$('.material2').on("mouseleave", function() {
-							$('#metal').fadeOut("fast")
+							$('#metal').hide()
 						})
 
 						$('.material3').on("mouseover", function() {
-							$('#wirematerial').fadeIn("fast")
+							$('#wirematerial').show()
 						})
 							$('.material3').on("mouseleave", function() {
-							$('#wirematerial').fadeOut("fast")
+							$('#wirematerial').hide()
 						})
 
 						$('.material4').on("mouseover", function() {
-							$('#tubing').fadeIn("fast")
+							$('#tubing').show()
 						})
 							$('.material4').on("mouseleave", function() {
-							$('#tubing').fadeOut("fast")
+							$('#tubing').hide()
 						})
 
 
@@ -309,8 +349,6 @@
 							$('#tubebending').hide()
 						})
 
-
-
 						$('.servicescapabilitiesbodyleft li:nth-child(1)').on("mouseover", function() {
 							$('.servicesexpand').show()
 							$('#fulldesign').show()
@@ -336,6 +374,27 @@
 							$('#reviewingprints').hide()
 						})
 					})
+
+					$(window).on("scroll touchmove", function() {
+						$('#scrolldiv').toggleClass("scroll", $(document).scrollTop() > 100);
+						$('#step1left').toggleClass("slide", $(document).scrollTop() > 100);
+						$('#step1right').toggleClass("slide", $(document).scrollTop() > 100);
+						$('#number1').toggleClass("show", $(document).scrollTop() > 100)
+						$('#details1').toggleClass("show", $(document).scrollTop() > 100)
+
+						$('#step2left').toggleClass("slide", $(document).scrollTop() > 250);
+						$('#number2').toggleClass("show", $(document).scrollTop() > 250);
+						$('#details2').toggleClass("show", $(document).scrollTop() > 250);
+						$('.drawing').toggleClass("show", $(document).scrollTop() > 250);
+						$('#step2right').toggleClass("slide", $(document).scrollTop() > 350);
+
+						$('#number3').toggleClass("show", $(document).scrollTop() > 600);
+						$('#details3').toggleClass("show", $(document).scrollTop() > 600);
+						$('#step3left').toggleClass("slide", $(document).scrollTop() > 600);
+						$('#step3right').toggleClass("slide", $(document).scrollTop() > 600);
+						$('#step4left').toggleClass("slide", $(document).scrollTop() > 850);
+						$('#step4right').toggleClass("slide", $(document).scrollTop() > 850);
+					});
 
 				</script>
 			</footer>
