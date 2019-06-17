@@ -1,14 +1,16 @@
 <style>
 	.footertop {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3,auto);
+		grid-template-rows: 100%;
 		grid-gap: 20px;
-		background-color: var(--color-3);
-		padding: 20px 60px;
-		width: 100%;
-		height: 200px;
+		background-color: var(--color-0);
+		padding: 20px 0px;
+		width: 90%;
+		margin: 0 5%;
 		grid-row: 1;
 		letter-spacing: .1em;
+		border-top: 1px solid var(--acc-color)
 	}
 
 	.footertop1, .footertop2, .footertop3 {
@@ -21,7 +23,7 @@
 	.footertop1header,.footertop2header,.footertop3header {
 		font-size: 1.15em;
 		padding:20px 0;
-		color: var(--acc-color);
+		color: var(--color-5);
 	}
 
 	.footertop1body,.footertop2body,.footertop3body {
@@ -32,10 +34,12 @@
 
 	.footertop2 {
 		grid-column: 2;
+		text-align: center;
 	}
 
 	.footertop3 {
 		grid-column: 3;
+		text-align: right;
 	}
 
 	.footermid {
@@ -45,9 +49,9 @@
 		grid-template-columns: 90% 10%;
 		grid-template-rows: 100%;
 		grid-row: 2;
-		background: var(--color-2);
+		background: var(--color-1);
 		align-items: center;
-		border-top: 1px solid var(--acc-color);
+		border-bottom: 1px solid var(--acc-color);
 	}
 
 	#footerlinkbarcontainer {
@@ -97,6 +101,55 @@
 		justify-content: center;
 	}
 
+
+@media only screen and (max-width: 620px) {
+	.footertop {
+		grid-template-columns: 100%;
+		grid-template-rows: 1fr 1fr 1fr;
+		padding: 20px 0px;
+		width: 98%;
+		margin: 0 1%;
+		border: none;
+	}
+
+	.footertop1 {
+		grid-row: 1;
+		grid-column: 1;
+		justify-self: center;
+		text-align: center;
+	}
+
+	.footertop2 {
+		grid-row: 2;
+		grid-column: 1;
+		justify-self: center;
+		text-align: center;
+	}
+
+	.footertop3 {
+		grid-row: 3;
+		grid-column: 1;
+		justify-self: center;
+		text-align: center;
+	}
+
+	.footertop1header,.footertop2header,.footertop3header {
+		padding: 10px 0;
+		border-bottom: 1px solid var(--acc-color)
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.footertop {	
+		padding: 20px 0px;
+		width: 94%;
+		margin: 0 3%;
+	}
+
+
+
+}
+
 </style>
 
 <div class="footertop">
@@ -111,36 +164,36 @@
 		</div>
 	</div>
 	<div class="footertop2">
-		<div class="footertop2header" style="text-align: center">
-			Headquarters
+		<div class="footertop2header">
+			Address
 		</div>
-		<div class="footertop2body" style="text-align: center">
+		<div class="footertop2body">
 			21050 Commerce Blvd
 			<br>
 			Rogers, MN 55374
 		</div>
 	</div>
 	<div class="footertop3">
-		<div class="footertop3header" style="text-align: right">
+		<div class="footertop3header">
 			Contact
 		</div>
-		<div class="footertop3body" style="text-align: right">
+		<div class="footertop3body">
 			763-391-7798
 			<br>
-			billybob@impwire.com
+			billybob@iwdisplay.com
 		</div>
 	</div>
 </div>
 <div class="footermid">
 	<div id="footerlinkbarcontainer">
 		<div id="linkbar1" class="linkbar">
-			<a href="index2.php" style="color:var(--acc-color)"> Home </a>
+			<a href="index.php"> Home </a>
 		</div>
 		<div id="linkbar2" class="linkbar">
 			<a href="services.php"> Solutions </a>
 		</div>
 		<div id="linkbar3" class="linkbar">
-			<a href="howitworks.php"> About </a>
+			<a href="about.php"> About </a>
 		</div>
 		<div id="linkbar4" class="linkbar">
 			<a href="gallery.php"> Gallery </a>

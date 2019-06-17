@@ -1,4 +1,20 @@
 :root {
+	--color-0: rgb(254,253,253); /*White equiv*/
+	--color-1: #d2cec9;
+	--color-2: #bcb6af;
+	--color-3: #a79f96;
+	--color-4: #7d7366;
+	--color-5: #3e3a34;	/*Black equiv*/
+	--acc-color: #ad940d;
+	--bg-color: var(--color-0);
+	--main-txt-color: var(--color-4);
+	--alt-txt-color: var(--color-0);
+	--main-shadow: var(--color-2);
+	--alt-shadow: var(--color-0);
+}
+
+/*	
+:root {
 	--color-0: #F2F2F2;
 	--color-1: #a0a0a0;
 	--color-2: #303030;
@@ -11,8 +27,9 @@
 	--alt-txt-color: var(--color-4);
 	--main-shadow: var(--color-2);
 	--alt-shadow: var(--color-0);
-	#2B2A31
 }
+*/
+
 
 * {
 	box-sizing: border-box;
@@ -28,7 +45,9 @@ a {
 main {
 	position: relative;
 	padding-top:95px;
+	min-height: 800px;
 	max-width: 1600px;
+	margin:0 auto;
 }
 
 header {
@@ -36,12 +55,14 @@ header {
 	transition: 1s;
 	left:0;
 	z-index: 5;
-	height: 225px;
 }
 
 header.small {
 	height: 100px;
-	transition: 1s;
+}
+
+#headermain.small {
+	height: 70px;
 }
 
 body {
@@ -50,24 +71,42 @@ body {
 	margin:0;
 }
 
+h1 {
+	width: 40%;
+	text-align: center;
+	margin: 20px auto 20px;
+	font-size: 3.5em;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--acc-color);
+	white-space: nowrap;
+}
+
+.h1body {
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
 p {
 	margin: 0;
 	padding: 0;
 }
 
 footer {
-	position: absolute;
+	position: relative;
 	left:0;
+	bottom: 0;
 	width: 100%;
 }
 
 #home {
-	padding-top:150px;	
+	padding-top:130px;	
 }
 
 .page-container {
 	min-height: 100vh;
 	max-width: 1900px;
+	width: 100%;
 	margin:0 auto;
 }
 
@@ -102,33 +141,31 @@ button {
 */
 
 
-/* width */
-::-webkit-scrollbar {
-	width: 6px;
-}
+/*
+	::-webkit-scrollbar {
+		width: 6px;
+	}
 
-/* Track */
-::-webkit-scrollbar-track {
-	background: transparent; 
-}
+	::-webkit-scrollbar-track {
+		background: transparent; 
+	}
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: var(--acc-color); 
-}
+	::-webkit-scrollbar-thumb {
+		background: var(--acc-color); 
+	}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: var(--color-1); 
-}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--color-1); 
+	}
 
-::-webkit-scrollbar-track-piece {
-	background: transparent;
-}
+	::-webkit-scrollbar-track-piece {
+		background: transparent;
+	}
 
-::-webkit-scrollbar-corner {
+	::-webkit-scrollbar-corner {
 
-}
+	}
+*/
 
 #myVideo {
   min-width: 100%; 
@@ -190,7 +227,7 @@ button {
 	grid-row: 1;
 	font-size: 1.7em;
 	letter-spacing: .09em;
-	padding: 20px 0;
+	padding: 15px 0;
 	text-align: center;
 	align-self: center;
 	z-index: 1;
@@ -207,15 +244,15 @@ button {
 
 .section1 {
 	width: 100%;
-	background: var(--color-4)
+	padding: 25px 0;
+	background: var(--color-0);
 }
 
 .sectionbreakquote {
 	display: flex;
 	width: 100%;
-	height: 140px;
-	padding: 0 10%;
-	margin: 15px 0 25px 0;
+	min-height: 110px;
+	padding: 0 10% 20px;
 	font-size: 1.3em;
 	line-height: 1.5em;
 	text-align: center;
@@ -226,39 +263,62 @@ button {
 
 .section1icons {
 	display: grid;
-	height: 150px;
-	margin: 0 20%;
+	margin: 0 25%;
 	grid-template-columns: repeat(4,1fr);
-	grid-template-rows: 70% 30%;
+	grid-template-rows: 100%;
 	grid-gap: 0 40px;
 	justify-items: center;
+	align-items:center;
+}
+
+.section1icons a {
+	width: 80%;
+	height: 80%;
+}
+
+.icon {
+	display: grid;
+	grid-template-rows: 75% 25%;
+	grid-gap: 20px;
+	width: 100%;
+	height: 100%;
+	grid-row: 1;
 	align-items: center;
 }
 
-.section1icons img {
-	width: 80px;
-	height: 80px;
+.icon:hover {
+	cursor: pointer;
+}
+
+.icon svg {
 	grid-row: 1;
 }
 
-.section1icons p {
+.icon p {
 	grid-row: 2;
-	letter-spacing: .15em;
+	text-align: center;
+}
+
+.icon:hover path {
+	fill: var(--acc-color);
+}
+
+.icon:hover p {
+	color: var(--acc-color);
 }
 
 .section1button, .section2button, .section4button {
 	display: flex;
-	position: relative;
 	width: 245px;
 	height: 45px;
-	font-size: .85em;
+	font-size: 1em;
 	letter-spacing: .2em;
-	margin: 20px auto 40px auto;
+	margin: 0 auto;
 	justify-content: center;
 	align-items: end;
 	padding: 15px;
 	border: 1px solid var(--acc-color);
-	background: var(--color-3);
+	background: var(--color-1);
 	transition: .5s;
 }
 
@@ -314,13 +374,11 @@ button {
 .section2 {
 	display: grid;
 	width: 100%;
-	height: 300px;
 	grid-template-rows: 20% 55% 25%;
 	grid-template-columns: 100%;
 	align-items: center;
-	margin: 80px auto;
 	padding: 15px 0;
-	background: var(--color-2);
+	background: var(--color-1);
 }
 
 .section2photo {
@@ -346,7 +404,7 @@ button {
 }
 
 .section2body p {
-	padding-bottom: 10px;
+	padding-top: 15px;
 	line-height: 1.5em;
 	font-size: .95em;
 	color: var(--main-txt-color);
@@ -354,15 +412,18 @@ button {
 
 .section2button {
 	grid-row: 3;
-	width: 220px;
-	background: var(--color-3);
+	width: 280px;
+	background: var(--color-2);
 	letter-spacing: .14em;
-	margin:0 auto;
-
 }
 
 .section2button:hover {
-	background: var(--color-4);
+	background: var(--color-1);
+}
+
+.section2new {
+	width: 100%;
+	padding: 25px 0;
 }
 
 .section3 {
@@ -434,41 +495,16 @@ button {
 
 .section4 {
 	display: grid;
+	grid-template-rows: repeat(3,auto);
 	width: 100%;
-	height: 400px;
-	margin: 150px 0 130px 0;
-	grid-template-rows: 15% 65% 20%;
-	grid-template-columns: repeat(5,1fr);
-	grid-gap: 20px 0;
-	align-content: center;
+	padding: 25px 0;
+	grid-gap: 10px 0;
 }
 
-.possibility {
-	position: relative;
-	width: calc(100/5);
-	overflow: hidden;
-	grid-row: 2;
-}
-
-.section4 img {
-	width: 100%;
-	height: 100%;
-	opacity: .9;
-	transition: 1s;
-}
-
-.section4 img:hover {
-	opacity: .7;
-	cursor: pointer;
-	transition: 1s;
-}
 
 .section4button {
 	grid-row: 3;
-	grid-column: 1 / span all;
-	margin: 0 auto;
-	width: 120px;
-	align-self: center;
+	width: 150px;
 }
 
 .materialname {
@@ -487,16 +523,15 @@ button {
 .section5 {
 	display: grid;
 	width: 100%;
-	height: 350px;
+	padding: 25px 0;
 	grid-template-rows: 20% 80%;
 	grid-template-columns: 100%;
-	margin-bottom: 50px;
 }
 
 .section5body {
-	width: 100%;
+	width: 80%;
 	height: 100%;
-	padding-bottom: 20px;
+	margin: 0 auto;
 	grid-row: 2;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
@@ -522,11 +557,58 @@ button {
 .section5bodytop img, .section5bodybottom img {
 	width: auto;
 	height: auto;
-	max-width: 130px;
-	max-height: 130px;
+	max-width: 100px;
+	max-height: 100px;
 	opacity: .9;
 	transition: .5s;
 }
+
+@media only screen and (max-width:960px) {
+
+	#headermain {
+		grid-template-columns: 40% 0% 60% !important;
+	}
+
+	#phonenumber {
+		display: none !important;
+	}
+
+	.section1icons {
+		margin: 0 10%;
+	}
+
+	.sectionbreakquote {
+		padding: 0 5% 10px 5%;
+	}
+
+	.section5body {
+		width: 90%;
+	}
+
+	.section5bodytop img, .section5bodybottom img {
+		max-width: 80px;
+		max-height: 80px;
+	}
+
+
+
+}
+
+@media only screen and (max-width:620px) {
+
+	#headermain {
+		grid-template-columns: 70% 0% 30% !important;
+	}
+
+	#linkbarcontainer {
+		display: none !important;
+	}
+
+	.section5 {
+		display: none;
+	}
+}
+
 
 
 

@@ -1,0 +1,214 @@
+.gallery {
+  display: flex;
+  flex-flow: row;
+}
+
+#headermain {
+  height: 70px !important;
+  transition: 0s;
+}
+
+  #imperialwire.small img {
+    transition: 0s;
+  }
+
+main { 
+  padding: .5vw;
+  flex-flow: row wrap; 
+  display: inline-flex;
+}
+
+main div { 
+  flex: auto; 
+  width: 300px; 
+  margin: .5vw; 
+}
+
+main div img { 
+  width: 100%; 
+  height: auto; 
+}
+
+aside {
+  display: inline-flex;
+  position: sticky;
+  top: 10%;
+  height: 500px;
+}
+
+aside ul {
+  list-style: none;
+  font-size: 2em;
+  white-space: nowrap;
+  padding: 0 50px;
+}
+
+aside ul li {
+  border-bottom: 1px solid transparent;
+  margin-top: 25px;
+}
+
+aside ul li:hover {
+  color: var(--acc-color);
+  cursor: pointer;
+}
+
+#category1selector.filter, #category2selector.filter,#category3selector.filter,#category4selector.filter,#category5selector.filter {
+  color: var(--acc-color);
+  border-bottom: 1px solid var(--acc-color);
+
+}
+
+
+/*Slideshow*/
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    margin-top: 60px;
+    padding-top: 160px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    overflow: auto;
+    background-color: black;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+  }
+
+  .mySlides {
+    display: none;
+    background-color: black;
+    justify-items: center;
+  }
+
+  .mySlides img {
+    width: auto;
+    height: auto;
+    max-height:700px;
+    max-width: 80vw;
+  }
+
+  .mySlides img:active {
+    transform: scale(1.5);
+  }
+
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .prev,
+  .next {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 46vw;
+    height:100%;
+    padding:0 16px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    align-items: center;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    justify-content: flex-end;
+  }
+
+  .prev:hover,
+  .next:hover {/*
+    background-color: rgba(0, 0, 0, 0.1);
+    */
+  }
+
+  #slidecountdisplay {
+    font-size: 18px;
+    padding: 8px 12px;
+    bottom: 0;
+    z-index: 3;
+    text-align: center;
+    background-color: black;
+  }
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+
+.hideme {
+  opacity: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .gallery {
+    flex-flow: column;
+  }
+
+  main { 
+    padding: 0;
+    flex-flow: column;
+  }
+
+  main div { 
+    margin: 0;
+    width: 100%;
+  }
+
+  aside ul {
+    display: flex;
+    padding: 0;
+    font-size: 1.3em;
+    line-height: initial;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  aside li {
+    float: left;
+    padding: 2vw;
+  }
+
+  aside li a {
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
