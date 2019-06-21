@@ -18,11 +18,8 @@
 			<header>
 				<?php include("header.php");?>
 			</header>
-
-			<div class="sectiongap" style="height: 75px"></div>
-
-			<h1>
-				Custom
+			<h1 style="padding-top: 95px;">
+				Gallery
 			</h1>
 
 			<div class="h1body">
@@ -40,24 +37,23 @@
 				</aside>
 
 				<main>
-					<div class="hideme category1"><img onclick="openModal();currentSlide(1)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
-					<div class="hideme category5"><img onclick="openModal();currentSlide(2)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
-					<div class="hideme category4"><img onclick="openModal();currentSlide(3)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
-					<div class="hideme category2"><img onclick="openModal();currentSlide(4)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
-					<div class="hideme category3"><img onclick="openModal();currentSlide(5)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
-					<div class="hideme category4"><img onclick="openModal();currentSlide(6)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
-					<div class="hideme category3"><img onclick="openModal();currentSlide(7)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
-					<div class="hideme category1"><img onclick="openModal();currentSlide(8)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
-					<div class="hideme category5"><img onclick="openModal();currentSlide(9)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
-					<div class="hideme category2"><img onclick="openModal();currentSlide(10)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
-					<div class="hideme category3"><img onclick="openModal();currentSlide(11)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
-					<div class="hideme category4"><img onclick="openModal();currentSlide(12)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
-					<div class="hideme category2"><img onclick="openModal();currentSlide(13)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
-					<div class="hideme category1"><img onclick="openModal();currentSlide(14)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
-					<div class="hideme category5"><img onclick="openModal();currentSlide(15)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
-					<div class="hideme category2"><img onclick="openModal();currentSlide(16)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
-					<div class="hideme category3"><img onclick="openModal();currentSlide(17)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
-					<div class="hideme category4"><img onclick="openModal();currentSlide(18)" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
+					<div class="hideme category1"><img onclick="openModal();currentSlide(1)" src="photos/fixture1.jpg" alt></div>
+					<div class="hideme category5"><img onclick="openModal();currentSlide(2)" src="photos/fixture5.jpeg" alt></div>
+					<div class="hideme category4"><img onclick="openModal();currentSlide(3)" src="photos/fixture4.jpeg" alt></div>
+					<div class="hideme category2"><img onclick="openModal();currentSlide(4)" src="photos/fixture2.jpg" alt></div>
+					<div class="hideme category3"><img onclick="openModal();currentSlide(5)" src="photos/fixture3.jpg" alt></div>
+					<div class="hideme category4"><img onclick="openModal();currentSlide(6)" src="photos/fixture4.jpeg" alt></div>
+					<div class="hideme category1"><img onclick="openModal();currentSlide(7)" src="photos/fixture1.jpg" alt></div>
+					<div class="hideme category5"><img onclick="openModal();currentSlide(8)" src="photos/fixture5.jpeg" alt></div>
+					<div class="hideme category2"><img onclick="openModal();currentSlide(9)" src="photos/fixture2.jpg" alt></div>
+					<div class="hideme category3"><img onclick="openModal();currentSlide(10)" src="photos/fixture3.jpg" alt></div>
+					<div class="hideme category4"><img onclick="openModal();currentSlide(11)" src="photos/fixture4.jpeg" alt></div>
+					<div class="hideme category2"><img onclick="openModal();currentSlide(12)" src="photos/fixture2.jpg" alt></div>
+					<div class="hideme category1"><img onclick="openModal();currentSlide(13)" src="photos/fixture1.jpg" alt></div>
+					<div class="hideme category5"><img onclick="openModal();currentSlide(14)" src="photos/fixture5.jpeg" alt></div>
+					<div class="hideme category2"><img onclick="openModal();currentSlide(15)" src="photos/fixture2.jpg" alt></div>
+					<div class="hideme category3"><img onclick="openModal();currentSlide(16)" src="photos/fixture3.jpg" alt></div>
+					<div class="hideme category4"><img onclick="openModal();currentSlide(17)" src="photos/fixture4.jpeg" alt></div>
 				</main>
 
 

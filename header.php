@@ -8,9 +8,7 @@
 		align-items: center;
 		justify-items: center;
 		z-index: 5;
-		box-shadow: 0px -10px 5px 0px var(--bg-color), 0px 0px 5px 0px var(--color-4);
 		transition: height .5s;
-		background-color: var(--color-0);
 	}
 
 	#linkbarcontainer {
@@ -44,7 +42,7 @@
 		grid-column: 4;
 	}
 
-	#linkbar4 {
+	#linkbar5 {
 		grid-column: 5;
 	}
 
@@ -56,7 +54,7 @@
 		color: var(--acc-color);
 	}
 
-	.linkbar > a.active {
+	a.active {
 	   color: var(--acc-color);
 	   border-bottom: 1px solid var(--acc-color);
 	}
@@ -91,12 +89,12 @@
 	.menufade {
 		grid-column: 3;
 		display: none;
+		z-index: 99;
 	}
 
 	#menucontainer {
 		display: flex;
 		position: relative;
-		z-index: 10;
 		justify-content: center;
 		transition: 1s;
 	}
@@ -111,16 +109,17 @@
 	}
 
 	.menudropdown {
+		display: none;
 		position: absolute;
-		right:40px;
-		top:45px;
-		width: 120px;
-		height:150px;
-		z-index: 10;
-		/*visibility: hidden;*/
+		right:4.5%;
+		padding: 10px;
+		top:40px;
+		z-index: 101;
+		background: var(--bg-color);
+		box-shadow: 0 3px 3px 0px var(--color-1);
 	}
 
-	#menuoption1,#menuoption2,#menuoption3,#menuoption4 {
+	#menuoption1,#menuoption2,#menuoption3,#menuoption4,#menuoption5 {
 		display: block;
 		height: 30px;
 		font-weight: bold;
@@ -132,8 +131,38 @@
 		padding: 8px;
 	}
 
-	#menuoption1:hover,#menuoption2:hover,#menuoption3:hover,#menuoption4:hover {
+	#menuoption1:hover,#menuoption2:hover,#menuoption3:hover,#menuoption4:hover,#menuoption5:hover {
 		color: var(--color-1);
+	}
+
+	#solutionsdropdown {
+		display: none;
+		grid-template-rows: repeat(3,auto);
+		position: absolute;
+		height: 120px;
+		padding:5px 10px;
+		align-content: space-around;
+		transition: opacity 1s;
+		opacity: 0;
+		transform: translateX(-90px);
+		background: var(--bg-color);
+		box-shadow: 0 3px 3px 0px var(--color-1);
+	}
+
+	#solutionsdropdown a {
+		font-size: .9em;
+		text-align: right;
+	}
+
+	#solutionsdropdown a:hover {
+		color: var(--acc-color);
+	}
+
+
+	#linkbar2:hover #solutionsdropdown {
+		display: grid;
+		transition: opacity 1s;
+		opacity: 1;
 	}
 
 	#hamburgermenu {
@@ -142,8 +171,9 @@
 
 	@media only screen and (max-width:620px) {
 
-	.menufade {
-		display: block;
+		.menufade {
+			display: block;
+		}
 	}
 
 </style>
@@ -167,10 +197,11 @@
 				<svg id="hamburgermenu" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" ><path class="path"stroke-miterlimit="10" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
 			</g>
 			<div class="menudropdown">
-				<a id="menuoption1" href="index2.php">Home</a>
-				<a id="menuoption2" href="services.php">Solutions</a>
-				<a id="menuoption3" href="howitworks.php">How it Works</a>
+				<a id="menuoption1" href="index.php">Home</a>
+				<a id="menuoption2" href="solutions.php">Solutions</a>
+				<a id="menuoption3" href="about.php">About</a>
 				<a id="menuoption4" href="contact.php">Contact</a>
+				<a id="menuoption5" href="gallery.php">Gallery</a>
 			</div>
 		</div>
 	</div>
@@ -182,6 +213,11 @@
 		</div>
 		<div id="linkbar2" class="linkbar">
 			<a href="solutions.php"> Solutions </a>
+			<div id="solutionsdropdown">
+				<a href="solutions.php#solutionscapabilities"> Capabilities </a>
+				<a href="solutions.php#solutionsdesign"> Design & Engineering </a>
+				<a href="solutions.php#solutionsprogrammanagement"> Program Management </a>
+			</div>
 		</div>
 		<div id="linkbar3" class="linkbar">
 			<a href="about.php"> About </a>
@@ -202,13 +238,16 @@
 		    $("#imperialwire").css("opacity","1");
 		}
 		else {
-			$("#imperialwire").css("transition","opacity 1.5s");
 			$("#imperialwire").css("opacity","1");
 		}
 
 	    $("[href]").each(function() {
 	        if (this.href == window.location.href) {
 	            $(this).addClass("active");
+	        }
+
+	        else if (this.href == "design.php") {
+	            $("#linkbar2").addClass("active");
 	        }
 	    });
 	});
@@ -224,7 +263,7 @@
 	}, 3000)
 
 	$('#menucontainer').mouseover(function() {
-		$('.menudropdown').css("visibility","visible");
+		$('.menudropdown').show();
 
 		setTimeout(function() {
 			$('#menuoption1').css("opacity","1")
@@ -238,12 +277,17 @@
 		setTimeout(function() {
 			$('#menuoption4').css("opacity","1")
 		}, 400);
+		setTimeout(function() {
+			$('#menuoption5').css("opacity","1")
+		}, 500);
 	})
 
 	$('#menucontainer').mouseleave(function() {
-		$('.menudropdown').css("visibility","hidden");
+		$('.menudropdown').hide();
 
 	})
+
+
 </script>
 
 

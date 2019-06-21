@@ -10,7 +10,7 @@
 		margin: 0 5%;
 		grid-row: 1;
 		letter-spacing: .1em;
-		border-top: 1px solid var(--acc-color)
+		border-top: 1px solid var(--acc-color2)
 	}
 
 	.footertop1, .footertop2, .footertop3 {
@@ -46,12 +46,12 @@
 		display: grid;
 		width: 100%;
 		height: 60px;
-		grid-template-columns: 90% 10%;
+		grid-template-columns: 60% 40%;
 		grid-template-rows: 100%;
 		grid-row: 2;
-		background: var(--color-1);
+		background: var(--color-0);
 		align-items: center;
-		border-bottom: 1px solid var(--acc-color);
+		border-bottom: 1px solid var(--acc-color2);
 	}
 
 	#footerlinkbarcontainer {
@@ -60,11 +60,12 @@
 		grid-template-rows: 100%;
 		grid-gap: 20px;
 		width: 100%;
-		margin-left: 30px;
+		margin-left: 5vw;
 		transition: 1s;
 		grid-row: 1;
 		grid-column: 1;
 		justify-content: left;
+		transition: 0s;
 	}
 
 	#externallinks {
@@ -72,7 +73,7 @@
 		grid-template-columns: repeat(3,1fr);
 		grid-gap: 15px;
 		height: 25px;
-		margin-right: 45px;
+		margin-right: 5vw;
 		grid-column: 2;
 		grid-row: 1;
 		justify-self: right;
@@ -80,7 +81,12 @@
 	}
 
 	#externallinks svg {
-		fill: var(--color-1);
+		fill: var(--acc-color2);
+	}
+
+	#externallinks svg:hover {
+		fill: var(--acc-color);
+		cursor: pointer;
 	}
 
 	.footerbottom {
@@ -89,14 +95,14 @@
 		height: 45px;
 		padding: 10px;
 		grid-row: 3;
-		background-color: var(--color-3);
+		background-color: var(--acc-color2-alt);
 	}
 
 	#copyright {
 		display: flex;
 		height: 100%;
 		font-size: .8em;
-		color: var(--color-1);
+		color: var(--color-4);
 		align-items: center;
 		justify-content: center;
 	}
@@ -113,7 +119,7 @@
 	}
 
 	.footertop1 {
-		grid-row: 1;
+		grid-row: 3;
 		grid-column: 1;
 		justify-self: center;
 		text-align: center;
@@ -127,7 +133,7 @@
 	}
 
 	.footertop3 {
-		grid-row: 3;
+		grid-row: 1;
 		grid-column: 1;
 		justify-self: center;
 		text-align: center;
@@ -137,16 +143,53 @@
 		padding: 10px 0;
 		border-bottom: 1px solid var(--acc-color)
 	}
+
+	#footerlinkbarcontainer {
+		grid-template-rows: repeat(2,1fr);
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 10px;
+		font-size: .9em;
+		margin-left: 0;
+	}
+
+	#linkbar1 {
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	#linkbar2 {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	#linkbar3 {
+		grid-row: 1;
+		grid-column: 3;
+	}
+
+	#linkbar4 {
+		grid-row: 2;
+		grid-column: 1 / span 2;
+	}
+
+	#linkbar5 {
+		grid-row: 2;
+		grid-column: 2 / span 2;
+	}
+
+
+	#externallinks {
+		grid-gap: 10px;
+		height: 10px;
+		padding-bottom: 26px;
 }
 
 @media only screen and (max-width: 960px) {
 	.footertop {	
 		padding: 20px 0px;
 		width: 94%;
-		margin: 0 3%;
+		margin: 0 3% 3%;
 	}
-
-
 
 }
 
@@ -190,7 +233,7 @@
 			<a href="index.php"> Home </a>
 		</div>
 		<div id="linkbar2" class="linkbar">
-			<a href="services.php"> Solutions </a>
+			<a href="solutions.php"> Solutions </a>
 		</div>
 		<div id="linkbar3" class="linkbar">
 			<a href="about.php"> About </a>

@@ -25,9 +25,15 @@
 					About Us
 				</h1>
 
-				<div class="h1body">
-					At Imperial, we take our job seriously. 
+				<div class="aboutcontainer">
+					<div class="aboutbody">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<img src="photos/team2.png" />
 				</div>
+
+
 			</main>
 
 			<footer>

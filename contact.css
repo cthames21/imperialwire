@@ -5,13 +5,20 @@
 .contactcontainer {
 	display: inline-grid;
 	grid-template-columns: 20% 80%;
-	grid-template-rows: 1fr 1fr 1fr 5fr 1fr;
+	grid-template-rows: 1.5fr 1fr 1fr 1fr 5fr 1fr;
 	width: 400px;
 	height: 450px;
 	justify-content: space-around;
-	margin: 50px 0 50px 5%;
+	margin: 20px 0 50px 5%;
 	align-items: center;
 	jusify-self:center;
+}
+
+.contactheader {
+	grid-row: 1;
+	grid-column: 2;
+	font-size: 1.5em;
+	text-align: center;
 }
 
 .name, .phone, .email, .message {
@@ -23,53 +30,71 @@
 	grid-column: 2;
 	width: 100%;
 	height: 23px;
-	background: var(--color-1);
+	background: var(--acc-color2-alt);
 	color: var(--main-txt-color);
 	border: 1px solid transparent;
 	font-size: 1em;
 }
 
 .namefield:focus, .phonefield:focus, .emailfield:focus, .messagefield:focus {
-	outline: 1px solid var(--acc-color);
+	outline: 1px solid var(--acc-color2);
 }
 
-.namefield {
-	grid-row: 1;
-}
-
-.phonefield {
+.name {
 	grid-row: 2;
 }
 
-.emailfield {
+.namefield {
+	grid-row: 2;
+}
+
+.phone {
 	grid-row: 3;
 }
 
-.messagefield {
+.phonefield {
+	grid-row: 3;
+}
+
+.email {
 	grid-row: 4;
+}
+
+.emailfield {
+	grid-row: 4;
+}
+
+.message {
+	grid-row: 5;
+}
+
+.messagefield {
+	grid-row: 5;
 	height: 200px;
 }
 
 .send {
-	grid-row: 5;
+	grid-row: 6;
 	grid-column: 2;
 	width: 80px;
 	height: 30px;
+	padding-top: 6px;
 	justify-self: center;
-	background-color: var(--color-1);
-	color: var(--alt-txt-color);
+	/*background-color: var(--color-1);*/
 	font-size: 1em;
 }
 
 .send:hover {
 	border: 1px solid var(--acc-color);
-	color: var(--color-4)
+	color: var(--color-0);
+	background: var(--acc-color2);
+
 }
 
 .send:focus {
 	border: 1px solid var(--acc-color);
-	background: var(--color-1);
-	outline-color: var(--acc-color);
+	background: var(--acc-color2-alt);
+	outline-color: var(--acc-color2);
 }
 
 .customerquote {
@@ -80,7 +105,7 @@
 	height: 200px;
 	margin: 100px 5% 0 0;
 	padding: 100px 50px;
-	background: var(--color-1)
+	background: var(--acc-color2)
 }
 
 .customerquote p {
@@ -89,9 +114,13 @@
 	grid-row: 1;
 	font-size: 1.2em;
 	line-height: 1.5em;
+	color: var(--color-0);
 }
 
 
+.footertop1header,.footertop2header,.footertop3header {
+	text-align: center;
+}
 
 
 
