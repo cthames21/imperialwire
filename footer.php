@@ -1,14 +1,16 @@
 <style>
 	.footertop {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3,auto);
+		grid-template-rows: 100%;
 		grid-gap: 20px;
-		background-color: var(--color-3);
-		padding: 20px 60px;
-		width: 100%;
-		height: 200px;
+		background-color: var(--color-0);
+		padding: 20px 0px;
+		width: 90%;
+		margin: 0 5%;
 		grid-row: 1;
 		letter-spacing: .1em;
+		border-top: 1px solid var(--acc-color2)
 	}
 
 	.footertop1, .footertop2, .footertop3 {
@@ -21,7 +23,7 @@
 	.footertop1header,.footertop2header,.footertop3header {
 		font-size: 1.15em;
 		padding:20px 0;
-		color: var(--acc-color);
+		color: var(--color-5);
 	}
 
 	.footertop1body,.footertop2body,.footertop3body {
@@ -32,22 +34,24 @@
 
 	.footertop2 {
 		grid-column: 2;
+		text-align: center;
 	}
 
 	.footertop3 {
 		grid-column: 3;
+		text-align: right;
 	}
 
 	.footermid {
 		display: grid;
 		width: 100%;
 		height: 60px;
-		grid-template-columns: 90% 10%;
+		grid-template-columns: 60% 40%;
 		grid-template-rows: 100%;
 		grid-row: 2;
-		background: var(--color-2);
+		background: var(--color-0);
 		align-items: center;
-		border-top: 1px solid var(--acc-color);
+		border-bottom: 1px solid var(--acc-color2);
 	}
 
 	#footerlinkbarcontainer {
@@ -56,11 +60,12 @@
 		grid-template-rows: 100%;
 		grid-gap: 20px;
 		width: 100%;
-		margin-left: 30px;
+		margin-left: 5vw;
 		transition: 1s;
 		grid-row: 1;
 		grid-column: 1;
 		justify-content: left;
+		transition: 0s;
 	}
 
 	#externallinks {
@@ -68,7 +73,7 @@
 		grid-template-columns: repeat(3,1fr);
 		grid-gap: 15px;
 		height: 25px;
-		margin-right: 45px;
+		margin-right: 5vw;
 		grid-column: 2;
 		grid-row: 1;
 		justify-self: right;
@@ -76,7 +81,12 @@
 	}
 
 	#externallinks svg {
-		fill: var(--color-1);
+		fill: var(--acc-color2);
+	}
+
+	#externallinks svg:hover {
+		fill: var(--acc-color);
+		cursor: pointer;
 	}
 
 	.footerbottom {
@@ -85,17 +95,103 @@
 		height: 45px;
 		padding: 10px;
 		grid-row: 3;
-		background-color: var(--color-3);
+		background-color: var(--acc-color2-alt);
 	}
 
 	#copyright {
 		display: flex;
 		height: 100%;
 		font-size: .8em;
-		color: var(--color-1);
+		color: var(--color-4);
 		align-items: center;
 		justify-content: center;
 	}
+
+
+@media only screen and (max-width: 620px) {
+	.footertop {
+		grid-template-columns: 100%;
+		grid-template-rows: 1fr 1fr 1fr;
+		padding: 20px 0px;
+		width: 98%;
+		margin: 0 1%;
+		border: none;
+	}
+
+	.footertop1 {
+		grid-row: 3;
+		grid-column: 1;
+		justify-self: center;
+		text-align: center;
+	}
+
+	.footertop2 {
+		grid-row: 2;
+		grid-column: 1;
+		justify-self: center;
+		text-align: center;
+	}
+
+	.footertop3 {
+		grid-row: 1;
+		grid-column: 1;
+		justify-self: center;
+		text-align: center;
+	}
+
+	.footertop1header,.footertop2header,.footertop3header {
+		padding: 10px 0;
+		border-bottom: 1px solid var(--acc-color)
+	}
+
+	#footerlinkbarcontainer {
+		grid-template-rows: repeat(2,1fr);
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 10px;
+		font-size: .9em;
+		margin-left: 0;
+	}
+
+	#linkbar1 {
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	#linkbar2 {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	#linkbar3 {
+		grid-row: 1;
+		grid-column: 3;
+	}
+
+	#linkbar4 {
+		grid-row: 2;
+		grid-column: 1 / span 2;
+	}
+
+	#linkbar5 {
+		grid-row: 2;
+		grid-column: 2 / span 2;
+	}
+
+
+	#externallinks {
+		grid-gap: 10px;
+		height: 10px;
+		padding-bottom: 26px;
+}
+
+@media only screen and (max-width: 960px) {
+	.footertop {	
+		padding: 20px 0px;
+		width: 94%;
+		margin: 0 3% 3%;
+	}
+
+}
 
 </style>
 
@@ -111,36 +207,36 @@
 		</div>
 	</div>
 	<div class="footertop2">
-		<div class="footertop2header" style="text-align: center">
-			Headquarters
+		<div class="footertop2header">
+			Address
 		</div>
-		<div class="footertop2body" style="text-align: center">
+		<div class="footertop2body">
 			21050 Commerce Blvd
 			<br>
 			Rogers, MN 55374
 		</div>
 	</div>
 	<div class="footertop3">
-		<div class="footertop3header" style="text-align: right">
+		<div class="footertop3header">
 			Contact
 		</div>
-		<div class="footertop3body" style="text-align: right">
+		<div class="footertop3body">
 			763-391-7798
 			<br>
-			billybob@impwire.com
+			billybob@iwdisplay.com
 		</div>
 	</div>
 </div>
 <div class="footermid">
 	<div id="footerlinkbarcontainer">
 		<div id="linkbar1" class="linkbar">
-			<a href="index2.php" style="color:var(--acc-color)"> Home </a>
+			<a href="index.php"> Home </a>
 		</div>
 		<div id="linkbar2" class="linkbar">
-			<a href="services.php"> Solutions </a>
+			<a href="solutions.php"> Solutions </a>
 		</div>
 		<div id="linkbar3" class="linkbar">
-			<a href="howitworks.php"> About </a>
+			<a href="about.php"> About </a>
 		</div>
 		<div id="linkbar4" class="linkbar">
 			<a href="gallery.php"> Gallery </a>

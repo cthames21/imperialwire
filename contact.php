@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Imperial Wire - Contact</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="C. S. Thames">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="contact.css">		
@@ -10,50 +15,53 @@
 	</head>
 	<body>
 		<div class="page-container">
-			<header class="toggle">
-				<?php require('header.php');?>
+			<header>
+				<?php include('header.php');?>
 			</header>
 			<main>
-				<div class="letstalk">
+				<h1 style="text-align: center;">
 					Let's Talk
+				</h1>
+				<div class="h1body" style="text-align: center;padding: 0">
+					<p>Questions about our services, how to place an order, or need a quote?<br>
+					Email us today: sales@iwdisplay.com</p>
 				</div>
-				<div class="letstalkbody">
-					<p>Have any questions about our services, how to place an order, or need a quote?<br>
-					Email us today: sales@imperialwire.com</p>
-				</div>
-				<div class="footertop" style="background: none;border-bottom: 1px solid var(--acc-color);margin:0 5%;width: 90%;">
+				<div class="footertop" style="background: none;width: 90%;margin: 50px 5% 0px; height: 90%">
 					<div class="footertop1">
-						<div class="footertop1header">
+						<div class="footertop1header" style="text-align: left;">
 							Hours
 						</div>
 						<div class="footertop1body">
-							​Weekdays / 8AM – 4PM
+							​Weekdays / 7AM – 4PM
 							<br>
 							Saturday & Sunday / Closed
 						</div>
 					</div>
 					<div class="footertop2">
-						<div class="footertop2header" style="text-align: center">
-							Headquarters
+						<div class="footertop2header">
+							Address
 						</div>
-						<div class="footertop2body" style="text-align: center">
+						<div class="footertop2body">
 							21050 Commerce Blvd
 							<br>
 							Rogers, MN 55374
 						</div>
 					</div>
 					<div class="footertop3">
-						<div class="footertop3header" style="text-align: right">
+						<div class="footertop3header" style="text-align: right;">
 							Contact
 						</div>
-						<div class="footertop3body" style="text-align: right">
+						<div class="footertop3body">
 							763-391-7798
 							<br>
-							billybob@impwire.com
+							billybob@iwdisplay.com
 						</div>
 					</div>
 				</div>
 				<div class="contactcontainer">
+					<div class="contactheader">
+						Send us a message
+					</div>
 					<div class="name">
 						Name
 					</div>
@@ -83,38 +91,22 @@
 					</button>
 				</div>
 				<div class="customerquote">
-					<p><span style="color: var(--acc-color);font-size: 1.5em;">"</span>
+					<p><span style="color: var(--acc-color2-alt);font-size: 1.5em;padding:0 10px">"</span>
 					Imperial is super great and awesome and they built the bestest display for my merchandise. I love their impecable eye for detail and ensuring the entire structure is at the highest quality. 100% recommend for all of your fixture needs!
-					<span style="color: var(--acc-color);font-size: 2em;">"</span></p>
-					<p style="position: absolute;bottom: 0;padding: 0;margin:10px 60%"><span style="color: var(--acc-color);font-size: 2em;">-</span>Stacy</p>
+					<span style="color: var(--acc-color2-alt);font-size: 2em;">"</span></p>
+					<p style="position: absolute;bottom: 0;padding: 0;margin:10px 60%"><span style="color: var(--acc-color2-alt);font-size: 2em;">-</span>Stacy</p>
 				</div>
 			</main>
 			<footer>
-				<?php require("footer.php");?>	
+				<?php include("footer.php");?>	
 				<script>
-					<?php require("javascript.php");?>	
+					<?php include("javascript.php");?>	
 
 					$(document).ready(function() {
-						$('.toggle').toggleClass("small")
 						$('.send').click(function() {
 							$('.send').html("Sent!")
 						})
 					})
-
-					document.addEventListener('mousemove', logKey);
-					document.addEventListener('wheel', logKey);
-
-					function logKey(e) {
-						if ($(window).scrollTop() < 5) {
-							$('.linkbar').css("height","25px")
-						}
-						else if (event.clientY < (window.innerHeight)/3) {
-							$('.linkbar').css("height","25px")
-						}
-						else if (event.clientY > (window.innerHeight)/3) {
-							$('.linkbar').css("height","0px")
-						}
-					}
 
 				</script>
 			</footer>
