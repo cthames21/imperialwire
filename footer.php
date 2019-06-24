@@ -1,13 +1,13 @@
 <style>
 	.footertop {
 		display: grid;
-		grid-template-columns: repeat(3,auto);
+		grid-template-columns: repeat(3,1fr);
 		grid-template-rows: 100%;
-		grid-gap: 20px;
-		background-color: var(--color-0);
-		padding: 20px 0px;
-		width: 90%;
-		margin: 0 5%;
+		background-color: var(--acc-color2-alt);
+		padding: 20px 4vw;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1900px;
 		grid-row: 1;
 		letter-spacing: .1em;
 		border-top: 1px solid var(--acc-color2)
@@ -20,18 +20,6 @@
 		grid-column: 1;
 	}
 
-	.footertop1header,.footertop2header,.footertop3header {
-		font-size: 1.15em;
-		padding:20px 0;
-		color: var(--color-5);
-	}
-
-	.footertop1body,.footertop2body,.footertop3body {
-		color: var(--main-txt-color);
-		line-height: 2.25em;
-		font-size: .90em
-;	}
-
 	.footertop2 {
 		grid-column: 2;
 		text-align: center;
@@ -42,14 +30,29 @@
 		text-align: right;
 	}
 
+	.footertop1header,.footertop2header,.footertop3header {
+		font-size: 1.15em;
+		padding:20px 0;
+		color: var(--color-5);
+	}
+
+	.footertop1body,.footertop2body,.footertop3body {
+		color: var(--main-txt-color);
+		line-height: 2.25em;
+		font-size: .90em;
+	}
+
+
 	.footermid {
 		display: grid;
 		width: 100%;
 		height: 60px;
 		grid-template-columns: 60% 40%;
 		grid-template-rows: 100%;
+		margin: 0 auto;
+		max-width: 1900px;
 		grid-row: 2;
-		background: var(--color-0);
+		background: var(--acc-color2-alt);
 		align-items: center;
 		border-bottom: 1px solid var(--acc-color2);
 	}
@@ -95,14 +98,14 @@
 		height: 45px;
 		padding: 10px;
 		grid-row: 3;
-		background-color: var(--acc-color2-alt);
+		background-color: var(--acc-color2);
 	}
 
 	#copyright {
 		display: flex;
 		height: 100%;
 		font-size: .8em;
-		color: var(--color-4);
+		color: var(--alt-txt-color);
 		align-items: center;
 		justify-content: center;
 	}
@@ -201,9 +204,7 @@
 			Hours
 		</div>
 		<div class="footertop1body">
-			​Weekdays / 8AM – 4PM
-			<br>
-			Saturday & Sunday / Closed
+			​
 		</div>
 	</div>
 	<div class="footertop2">

@@ -14,29 +14,33 @@
 		<script src="parallax.js"></script>
 	</head>
 	<body>
-		<div class="page-container">
-			<header>
-				<?php include("header.php");?>
-			</header>
-			<h1 style="padding-top: 95px;">
-				Gallery
-			</h1>
+		<header>
+			<?php include("header.php");?>
+		</header>
+		<main>
+			<div class="pageheader contained">
+				<h1>
+					Home > Gallery
+				</h1>
 
-			<div class="h1body">
-				Get the job done right, with tailor made fixtures that fit your needs. Lorem ipsum boom bot bee tret ten trep pen ferutybopbim
+				<div class="h1body contained">
+					Get the job done right, with tailor made fixtures that fit your needs. Lorem ipsum boom bot bee tret ten trep pen ferutybopbim
+				</div>
+
 			</div>
-			<div class="gallery">
-				<aside>
-					<ul>
-						<li id="category1selector">All</li>
-						<li id="category2selector">Wire displays</li>
-						<li id="category3selector">Stands / Bases</li>
-						<li id="category4selector">Shelving</li>
-						<li id="category5selector">Other</li>
-					</ul>
-				</aside>
 
-				<main>
+			<aside>
+				<ul>
+					<li id="category1selector">All</li>
+					<li id="category2selector">Wire displays</li>
+					<li id="category3selector">Stands / Bases</li>
+					<li id="category4selector">Shelving</li>
+					<li id="category5selector">Other</li>
+				</ul>
+			</aside>
+
+			<div class="gallery">
+				<div class="photoscontainer">
 					<div class="hideme category1"><img onclick="openModal();currentSlide(1)" src="photos/fixture1.jpg" alt></div>
 					<div class="hideme category5"><img onclick="openModal();currentSlide(2)" src="photos/fixture5.jpeg" alt></div>
 					<div class="hideme category4"><img onclick="openModal();currentSlide(3)" src="photos/fixture4.jpeg" alt></div>
@@ -54,7 +58,7 @@
 					<div class="hideme category2"><img onclick="openModal();currentSlide(15)" src="photos/fixture2.jpg" alt></div>
 					<div class="hideme category3"><img onclick="openModal();currentSlide(16)" src="photos/fixture3.jpg" alt></div>
 					<div class="hideme category4"><img onclick="openModal();currentSlide(17)" src="photos/fixture4.jpeg" alt></div>
-				</main>
+				</div>
 
 
 				<div id="myModal" class="modal">
@@ -145,113 +149,133 @@
 			    </div>
 
 			</div>
-			<footer>
-				<?php include("footer.php");?>	
-				<script>
-					<?php include("javascript.php");?>	
+		</main>
+		<footer>
+			<?php include("footer.php");?>	
+			<script>
+				<?php include("javascript.php");?>	
 
-					$(document).ready(function() {
-						$('#category1selector').click(function() {
-							$('.category1').css("display","block")
-							$('.category2').css("display","block")
-							$('.category3').css("display","block")
-							$('.category4').css("display","block")
-							$('.category5').css("display","block")
-							$("#category1selector").addClass('filter')
-							$("#category2selector").removeClass('filter')
-							$("#category3selector").removeClass('filter')
-							$("#category4selector").removeClass('filter')
-							$("#category5selector").removeClass('filter')
-						})
-						$('#category2selector').click(function() {
-							$('.category1').css("display","none")
-							$('.category2').css("display","block")
-							$('.category3').css("display","none")
-							$('.category4').css("display","none")
-							$('.category5').css("display","none")
-							$("#category2selector").addClass('filter')
-							$("#category1selector").removeClass('filter')
-							$("#category3selector").removeClass('filter')
-							$("#category4selector").removeClass('filter')
-							$("#category5selector").removeClass('filter')
-						})
-						$('#category3selector').click(function() {
-							$('.category1').css("display","none")
-							$('.category2').css("display","none")
-							$('.category3').css("display","block")
-							$('.category4').css("display","none")
-							$('.category5').css("display","none")
-							$("#category3selector").addClass('filter')
-							$("#category1selector").removeClass('filter')
-							$("#category2selector").removeClass('filter')
-							$("#category4selector").removeClass('filter')
-							$("#category5selector").removeClass('filter')
-						})
-						$('#category4selector').click(function() {
-							$('.category1').css("display","none")
-							$('.category2').css("display","none")
-							$('.category3').css("display","none")
-							$('.category4').css("display","block")
-							$('.category5').css("display","none")
-							$("#category4selector").addClass('filter')
-							$("#category1selector").removeClass('filter')
-							$("#category2selector").removeClass('filter')
-							$("#category3selector").removeClass('filter')
-							$("#category5selector").removeClass('filter')
-						})
-						$('#category5selector').click(function() {
-							$('.category1').css("display","none")
-							$('.category2').css("display","none")
-							$('.category3').css("display","none")
-							$('.category4').css("display","none")
-							$('.category5').css("display","block")
-							$("#category5selector").addClass('filter')
-							$("#category1selector").removeClass('filter')
-							$("#category2selector").removeClass('filter')
-							$("#category3selector").removeClass('filter')
-							$("#category4selector").removeClass('filter')
-						})
+
+				function shrinkHeader(e) {
+
+					var scroll = $(window).scrollTop();
+
+					if (scroll > 50 && $(window).width() > 620) {
+						$('#headermain').css("box-shadow", "0 0 3px 0 var(--color-4)");
+					}
+
+					if (scroll <= 50) {
+						$('#headermain').css("box-shadow", "none");
+						$('#headermain').css("background", "transparent");
+
+					}
+				}
+
+				function logKey(e) {
+
+				}
+
+
+				$(document).ready(function() {
+					$('#category1selector').click(function() {
+						$('.category1').css("display","block")
+						$('.category2').css("display","block")
+						$('.category3').css("display","block")
+						$('.category4').css("display","block")
+						$('.category5').css("display","block")
+						$("#category1selector").addClass('filter')
+						$("#category2selector").removeClass('filter')
+						$("#category3selector").removeClass('filter')
+						$("#category4selector").removeClass('filter')
+						$("#category5selector").removeClass('filter')
 					})
+					$('#category2selector').click(function() {
+						$('.category1').css("display","none")
+						$('.category2').css("display","block")
+						$('.category3').css("display","none")
+						$('.category4').css("display","none")
+						$('.category5').css("display","none")
+						$("#category2selector").addClass('filter')
+						$("#category1selector").removeClass('filter')
+						$("#category3selector").removeClass('filter')
+						$("#category4selector").removeClass('filter')
+						$("#category5selector").removeClass('filter')
+					})
+					$('#category3selector').click(function() {
+						$('.category1').css("display","none")
+						$('.category2').css("display","none")
+						$('.category3').css("display","block")
+						$('.category4').css("display","none")
+						$('.category5').css("display","none")
+						$("#category3selector").addClass('filter')
+						$("#category1selector").removeClass('filter')
+						$("#category2selector").removeClass('filter')
+						$("#category4selector").removeClass('filter')
+						$("#category5selector").removeClass('filter')
+					})
+					$('#category4selector').click(function() {
+						$('.category1').css("display","none")
+						$('.category2').css("display","none")
+						$('.category3').css("display","none")
+						$('.category4').css("display","block")
+						$('.category5').css("display","none")
+						$("#category4selector").addClass('filter')
+						$("#category1selector").removeClass('filter')
+						$("#category2selector").removeClass('filter')
+						$("#category3selector").removeClass('filter')
+						$("#category5selector").removeClass('filter')
+					})
+					$('#category5selector').click(function() {
+						$('.category1').css("display","none")
+						$('.category2').css("display","none")
+						$('.category3').css("display","none")
+						$('.category4').css("display","none")
+						$('.category5').css("display","block")
+						$("#category5selector").addClass('filter')
+						$("#category1selector").removeClass('filter')
+						$("#category2selector").removeClass('filter')
+						$("#category3selector").removeClass('filter')
+						$("#category4selector").removeClass('filter')
+					})
+				})
 
-					var slideIndex = 1;
-					showSlides(slideIndex);
+				var slideIndex = 1;
+				showSlides(slideIndex);
 
-					function openModal() {
-					  document.getElementById('myModal').style.display = "block";
-					}
+				function openModal() {
+				  document.getElementById('myModal').style.display = "block";
+				}
 
-					function closeModal() {
-					  document.getElementById('myModal').style.display = "none";
-					}
+				function closeModal() {
+				  document.getElementById('myModal').style.display = "none";
+				}
 
-					function plusSlides(n) {
-					  showSlides(slideIndex += n);
-					}
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
 
-					function currentSlide(n) {
-					  showSlides(slideIndex = n);
-					}
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
 
-					function showSlides(n) {
-						var i;
-						var slides = document.getElementsByClassName("mySlides");
-						var captionText = document.getElementById("caption");
-						if (n > slides.length) {slideIndex = 1}
-						if (n < 1) {slideIndex = slides.length}
-						for (i = 0; i < slides.length; i++) {
-					    	slides[i].style.display = "none";
-					  	}
+				function showSlides(n) {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					var captionText = document.getElementById("caption");
+					if (n > slides.length) {slideIndex = 1}
+					if (n < 1) {slideIndex = slides.length}
+					for (i = 0; i < slides.length; i++) {
+				    	slides[i].style.display = "none";
+				  	}
 
-						document.getElementById("slidecountdisplay").innerHTML = slideIndex + '/' +Object.keys(slides).length;
-						slides[slideIndex-1].style.display = "grid";
-						captionText.innerHTML = dots[slideIndex-1].alt;
-					}
+					document.getElementById("slidecountdisplay").innerHTML = slideIndex + '/' +Object.keys(slides).length;
+					slides[slideIndex-1].style.display = "grid";
+					captionText.innerHTML = dots[slideIndex-1].alt;
+				}
 
 
-
-				</script>
-			</footer>
-		</div>
+			</script>
+		</footer>
 	</body>
 </html>
 

@@ -9,6 +9,7 @@
 		justify-items: center;
 		z-index: 5;
 		transition: height .5s;
+
 	}
 
 	#linkbarcontainer {
@@ -137,27 +138,26 @@
 
 	#solutionsdropdown {
 		display: none;
-		grid-template-rows: repeat(3,auto);
+		grid-template-rows: repeat(3,1fr);
 		position: absolute;
-		height: 120px;
-		padding:5px 10px;
-		align-content: space-around;
-		transition: opacity 1s;
-		opacity: 0;
-		transform: translateX(-90px);
+		height: 140px;
+		transform: translateX(-100px);		
 		background: var(--bg-color);
-		box-shadow: 0 3px 3px 0px var(--color-1);
+		box-shadow: 0 2px 3px 0px var(--color-4);
 	}
 
 	#solutionsdropdown a {
-		font-size: .9em;
+		font-size: 1em;
 		text-align: right;
+		padding:15px 10px 10px;
+		border-right: 4px solid transparent;
+		border-left: 4px solid transparent;
 	}
 
 	#solutionsdropdown a:hover {
-		color: var(--acc-color);
+		border-right: 4px solid var(--acc-color);
+		border-left: 4px solid var(--acc-color);
 	}
-
 
 	#linkbar2:hover #solutionsdropdown {
 		display: grid;
@@ -174,12 +174,10 @@
 		.menufade {
 			display: block;
 		}
+
 	}
 
 </style>
-<!--
-<div class="colorbar"></div>
--->
 <div class="toggle" id="headermain">
 	<div class="toggle" id="imperialwire">
 		<img src="photos/headerlogo.png" onclick="window.location.href='index.php'" />
@@ -187,7 +185,7 @@
 
 
 	<div id="phonenumber">
-		763-391-7798
+		763 <span class="symbolcolor"> - </span> 391 <span class="symbolcolor"> - </span> 7798
 	</div>
 
 
@@ -214,8 +212,8 @@
 		<div id="linkbar2" class="linkbar">
 			<a href="solutions.php"> Solutions </a>
 			<div id="solutionsdropdown">
-				<a href="solutions.php#solutionscapabilities"> Capabilities </a>
 				<a href="solutions.php#solutionsdesign"> Design & Engineering </a>
+				<a href="solutions.php#solutionscapabilities"> Capabilities </a>
 				<a href="solutions.php#solutionsprogrammanagement"> Program Management </a>
 			</div>
 		</div>
@@ -242,7 +240,7 @@
 		}
 
 	    $("[href]").each(function() {
-	        if (this.href == window.location.href) {
+	        if (this.href == window.location.href && document.location.href.indexOf('#') === -1) {
 	            $(this).addClass("active");
 	        }
 
@@ -252,15 +250,6 @@
 	    });
 	});
 
-	setTimeout(function() {
-		$('div [id^="externallinks"] svg:nth-child(1)').show("slow");
-	}, 2000)
-	setTimeout(function() {
-		$('div [id^="externallinks"] svg:nth-child(2)').show("slow");
-	}, 2500)
-	setTimeout(function() {
-		$('div [id^="externallinks"] svg:nth-child(3)').show("slow");
-	}, 3000)
 
 	$('#menucontainer').mouseover(function() {
 		$('.menudropdown').show();

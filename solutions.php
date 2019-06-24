@@ -14,87 +14,101 @@
 		<script src="parallax.js"></script>
 	</head>
 	<body>
-		<div class="page-container">
-			<header>
-				<?php include("header.php");?>
-			</header>
-			<main style="background: var(--acc-color2-alt);">
+		<header>
+			<?php include("header.php");?>
+		</header>
+			<main>
+			<div class="pageheader contained">
 				<h1>
-					Solutions
+					<a href="index.php"> Home </a>  <span class="symbolcolor"> > </span> Solutions
 				</h1>
 
-				<ul class="h1bodylinkbar">
-					<a href="solutions.php#solutionscapabilities"><li class="h1bodylink">Capabilities</li></a>
-					<span style="color: var(--acc-color)"> - </span>
-					<a href="solutions.php#solutionsdesign"><li class="h1bodylink">Design & Engineering</li></a>
-					<span style="color: var(--acc-color)"> - </span>
-					<a href="solutions.php#solutionsprogrammanagement"><li class="h1bodylink">Program Management</li></a>
-				</ul>
 
-
-				<div class="sectionbanner">
-					<h2 id="solutionsdesign">Design & Engineering</h2>
-					<div class="divsquare"></div>
-				</div>
-
-				<div class="design">
-					<div class="h2body" style="height: 200px;padding:50px;text-align: center;">
-						We work to overcome our client's display challenges. Sometimes this invloves the entire procress from design to fabrication. No job is beyond the scope of our capabilities.
+				<div class="solutionsh1links">
+					<div id="slanteddiv1">
+						<a href="solutions.php#solutionsdesign">
+							Engineering &
+							<br>Design
+						</a>
 					</div>
-
-					<div class="designcontainer">
-						<div class="designblock">
-							<img src="/photos/collaborating.png" />
-							<div class="designblockcontent">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</div>
-						</div>
-						<div class="designblock">
-							<div class="designblockcontent">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</div>
-							<img src="/photos/collaborating.png" />
-						</div>
-						<div class="designblock">
-							<img src="/photos/collaborating.png" />
-							<div class="designblockcontent">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</div>
-						</div>
-						<div class="designblock">
-							<div class="designblockcontent">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</div>
-							<img src="/photos/collaborating.png" />
-						</div>
+					<div id="slanteddiv2">
+						<a href="solutions.php#solutionscapabilities">
+							Capabilities
+						</a>
+					</div>
+					<div id="slanteddiv3">
+						<a href="solutions.php#solutionsprogrammanagement">
+							Program
+							<br>Management
+						</a>
 					</div>
 				</div>
 
 
 
-				<div class="sectionbanner">
-					<h2 id="solutionscapabilities">Capabilities</h2>
-					<div class="divsquare"></div>
+			</div>
+			
+
+			<div class="sectionbanner">
+				<h2 class="anchor" id="solutionsdesign">Engineering & Design </h2>
+				<div class="divsquare"></div>
+			</div>
+
+			<div class="design contained">
+				<div class="h2body" style="max-width:60%;margin-right:0">
+					We work to overcome our client's display challenges. Sometimes this invloves the entire process from design to fabrication.
 				</div>
 
-				<div class="capabilities">
-					<div class="h2body" style="text-align: center; grid-column: 1 / span all">
-						We don't just take orders. We work with our customers to design and build the perfect products for their needs.
-
+				<div class="designcontainer">
+					<div class="designblock">
+						
+						<div class="designblockcontent"  style="color: var(--acc-color2);">
+							You explain your vision to our design team who 
+						</div>
+						<img src="/photos/collaborating.png" />
 					</div>
+					<div class="designblock">
+						<img src="/photos/collaborating.png" />
+						<div class="designblockcontent"  style="color: var(--acc-color2);">
+							From there, our engineers determine take over to make the vision come to life
+						</div>
+						
+					</div>
+					<div class="designblock">
+						
+						<div class="designblockcontent" style="color: var(--acc-color2);">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						</div>
+						<img src="/photos/collaborating.png" />
+					</div>
+				</div>
+			</div>
 
+
+
+			<div class="sectionbanner">
+				<h2  class="anchor" id="solutionscapabilities">Capabilities</h2>
+				<div class="divsquare"></div>
+			</div>
+
+			<div class="capabilities contained">
+				<div class="h2body" style="grid-column: 1 / span all;">
+					We don't just take orders. We work with our customers to design and build the perfect products for their needs.
+
+				</div>
+				<div class="capabilitiescontainer">
 					<ul class="capabilitieslist">
-						<li id="laseroption">Laser Cutting and Engraving<pre>	></pre></li>
-						<li id="roboticweldingoption">CNC Robotic Welding<pre>	></pre></li>
-						<li id="tubebendingoption">Tube and Wire Bending<pre>	></pre></li>
-						<li id="pressbrakeoption">CNC Press Brake<pre>	></pre></li>
-						<li id="spotweldingoption">CNC Spot Welding<pre>	></pre></li>
-						<li id="migweldingoption">Robotic/TIG/MIG Welding<pre>	></pre></li>
-						<li id="cadoption">3D CAD Solidworks<pre>	></pre></li>
-						<li id="engravingoption">3D Engraving and Etching<pre>	></pre></li>
-						<li id="powdercoatingoption">Powder Coating<pre>	></pre></li>
-						<li id="boxingoption">Boxing and Packaging<pre>	></pre></li>
-						<li id="dropshipmentsoption">Drop Shipments<pre>	></pre></li>
+						<li id="laseroption">Laser Cutting and Engraving<pre>   ></pre></li>
+						<li id="roboticweldingoption">CNC Robotic Welding<pre>   ></pre></li>
+						<li id="tubebendingoption">Tube and Wire Bending<pre>   ></pre></li>
+						<li id="pressbrakeoption">CNC Press Brake<pre>   ></pre></li>
+						<li id="spotweldingoption">CNC Spot Welding<pre>   ></pre></li>
+						<li id="migweldingoption">Robotic/TIG/MIG Welding<pre>   ></pre></li>
+						<li id="cadoption">3D CAD Solidworks<pre>   ></pre></li>
+						<li id="engravingoption">3D Engraving and Etching<pre>   ></pre></li>
+						<li id="powdercoatingoption">Powder Coating<pre>   ></pre></li>
+						<li id="boxingoption">Boxing and Packaging<pre>   ></pre></li>
+						<li id="dropshipmentsoption">Drop Shipments<pre>   ></pre></li>
 					</ul>
 					<div id="laserdisplay">
 						<div class="capabilitiesheader">
@@ -185,7 +199,6 @@
 						</div>
 					</div>
 
-
 					<div class="materialscontainer">
 						<h3 id="materialheader">
 							Materials
@@ -246,63 +259,25 @@
 						</div>
 
 						<a href="gallery.php" style="grid-row: 3; grid-column: 1 / span all">
-							<div class="section4button" style="width:275px;">
+							<div class="gallerybutton" style="width:275px;margin: 0 auto">
 								See what's possible >
 							</div>
 						</a>
-
 					</div>
 				</div>
+			</div>
 
-<!--
 
-				<div class="sectionbanner" data-parallax="scroll" data-image-src="photos/banner-1.jpg">
-					<h2 id="solutionsmaterials">Materials</h2>
+			<div class="sectionbanner">
+				<h2 id="solutionsprogrammanagement">Program Management</h2>
+				<div class="divsquare"></div>
+			</div>
+
+			<div class="programmanagement contained">
+				<div class="h2body">
+					Let us take some work off your hands. Our program management team will take over planning and excecution, for one location or many.
 				</div>
-
-				<div class="materials">
-					<div class="h2body" style="position: absolute;z-index: 2;text-align:center;pointer-events: none;">
-						Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Viverra vitae congue eu consequat ac felis donec. Fames ac turpis egestas sed tempus urna et. Et tortor consequat id porta nibh.
-
-					</div>
-
-
-
-
-
-					<div class="materialcard">
-						 <img src="photos/woodbackground2.jpg">
-					</div>
-					<div class="materialcard">
-						 <img src="photos/tubingbackground.webp">
-					</div>
-					<div class="materialcard">
-						 <img src="photos/wirebackground.jpeg">
-					</div>
-					<div class="materialcard">
-						 <img src="photos/metalbackground.jpg">
-					</div>
-					<div class="materialcard">
-						 <img src="photos/acrylicbackground2.webp">
-					</div>
-
-				</div>
--->
-
-
-
-
-
-				<div class="sectionbanner">
-					<h2 id="solutionsprogrammanagement">Program Management</h2>
-					<div class="divsquare"></div>
-				</div>
-
-				<div class="programmanagement">
-					<div class="h2body" style="padding:50px;text-align: center;">
-						We get it, you're busy. Let us take some work off your hands. Our program management team will take over planning and excecution, for one location or many.
-					</div>
-
+				<div class="programmanagementcontainer">
 					<div class="pmcards">
 						<div class="card">
 							<div class="pmheaders">
@@ -331,186 +306,162 @@
 						</div>
 					</div>
 
+					<div class="contactbutton" style="width:275px;grid-row: 2;">
+						Let's get started >
+					</div>
 				</div>
+			</div>
 
 
-			</main>
-			<footer>
-				<?php include("footer.php");?>	
+		</main>
+		<footer>
+			<?php include("footer.php");?>	
 
-				<script>
-					<?php include("javascript.php");?>	
+			<script>
+				<?php include("javascript.php");?>	
 
-					$(document).ready(function() {
-						setTimeout(function() {
-							$('capabilitieslist:nth-child(1) pre').show("slow");
-						}, 250)
+				function shrinkHeader(e) {
 
+					var scroll = $(window).scrollTop();
 
-					})
-	/*setTimeout(function() {
-							$('div [id$="option"] pre:nth-child(2)').show("show")
-						},400)
+					if (scroll > 50 && $(window).width() > 620) {
+						$('#headermain').css("box-shadow", "0 0 3px 0 var(--color-4)");
+					}
 
-							
-							#tubebendingoption
-							
-							#pressbrakeoption
-							
-							#spotweldingoption
-							
-							#migweldingoption
-							
-							#cadoption
-							
-							#engravingoption
-							
-							#powdercoatingoption
-							
-							#boxingoption
-							
-							#dropshipmentsoption*/
-					
-					$('#laseroption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#laserdisplay').css("display","grid");
-					})
-					$('#laseroption').mouseleave(function() {
-						$('#laserdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-					})
+					if (scroll <= 50) {
+						$('#headermain').css("box-shadow", "none");
+						$('#headermain').css("background", "transparent");
+					}
+				}
+
+				function logKey(e) {
+
+				}
+
+				$('.h1bodylink').click(function() {
+					shrinkHeader()
+				})
 
 
-					$('#roboticweldingoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#roboticweldingdisplay').css("display","grid");
-					})
-					$('#roboticweldingoption').mouseleave(function() {
-						$('#roboticweldingdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
+				$(document).ready(function() {
+					setTimeout(function() {
+						$('capabilitieslist:nth-child(1) pre').show("slow");
+					}, 250)
+				})
+
+				
+				$('#laseroption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#laserdisplay').css("display","grid");
+				})
+				$('#laseroption').mouseleave(function() {
+					$('#laserdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					})
+				$('#roboticweldingoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#roboticweldingdisplay').css("display","grid");
+				})
+				$('#roboticweldingoption').mouseleave(function() {
+					$('#roboticweldingdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#tubebendingoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#tubebendingdisplay').css("display","grid");
-
-					})
-					$('#tubebendingoption').mouseleave(function() {
-						$('#tubebendingdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-
-
-					})
+				$('#tubebendingoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#tubebendingdisplay').css("display","grid");
+				})
+				$('#tubebendingoption').mouseleave(function() {
+					$('#tubebendingdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#pressbrakeoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#pressbrakedisplay').css("display","grid");
-
-					})
-					$('#pressbrakeoption').mouseleave(function() {
-						$('#pressbrakedisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-
-
-					})
+				$('#pressbrakeoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#pressbrakedisplay').css("display","grid");
+				})
+				$('#pressbrakeoption').mouseleave(function() {
+					$('#pressbrakedisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#spotweldingoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#spotweldingdisplay').css("display","grid");
+				$('#spotweldingoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#spotweldingdisplay').css("display","grid");
+				})
 
-					})
-
-					$('#spotweldingoption').mouseleave(function() {
-						$('#spotweldingdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-
-
-					})
+				$('#spotweldingoption').mouseleave(function() {
+					$('#spotweldingdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#migweldingoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#migweldingdisplay').css("display","grid");
-
-					})
-					$('#migweldingoption').mouseleave(function() {
-						$('#migweldingdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-
-
-					})
+				$('#migweldingoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#migweldingdisplay').css("display","grid");
+				})
+				$('#migweldingoption').mouseleave(function() {
+					$('#migweldingdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#cadoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#caddisplay').css("display","grid");
-
-					})
-					$('#cadoption').mouseleave(function() {
-						$('#caddisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-
-
-					})
+				$('#cadoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#caddisplay').css("display","grid");
+				})
+				$('#cadoption').mouseleave(function() {
+					$('#caddisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#engravingoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#engravingdisplay').css("display","grid");
-
-					})
-					$('#engravingoption').mouseleave(function() {
-						$('#engravingdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-
-
-					})
+				$('#engravingoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#engravingdisplay').css("display","grid");
+				})
+				$('#engravingoption').mouseleave(function() {
+					$('#engravingdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#powdercoatingoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#powerdercoatingdisplay').css("display","grid");
-
-					})
-					$('#powdercoatingoption').mouseleave(function() {
-						$('#powerdercoatingdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-
-
-					})
+				$('#powdercoatingoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#powerdercoatingdisplay').css("display","grid");
+				})
+				$('#powdercoatingoption').mouseleave(function() {
+					$('#powerdercoatingdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					$('#boxingoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#boxingdisplay').css("display","grid");
-
-					})
-					$('#boxingoption').mouseleave(function() {
-						$('#boxingdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
-					})
-
-
-					$('#dropshipmentsoption').mouseover(function() {
-						$('.materialscontainer').css("display","none");
-						$('#dropshipmentsdisplay').css("display","grid");
-					})
-					$('#dropshipmentsoption').mouseleave(function() {
-						$('#dropshipmentsdisplay').css("display","none");
-						$('.materialscontainer').css("display","grid");
+				$('#boxingoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#boxingdisplay').css("display","grid");
+				})
+				$('#boxingoption').mouseleave(function() {
+					$('#boxingdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
 
-					})
+				$('#dropshipmentsoption').mouseover(function() {
+					$('.materialscontainer').css("display","none");
+					$('#dropshipmentsdisplay').css("display","grid");
+				})
+				$('#dropshipmentsoption').mouseleave(function() {
+					$('#dropshipmentsdisplay').css("display","none");
+					$('.materialscontainer').css("display","grid");
+				})
 
-
-				</script>
-			</footer>
-		</div>
+			</script>
+		</footer>
 	</body>
 </html>
 

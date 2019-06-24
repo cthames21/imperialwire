@@ -1,5 +1,5 @@
 #headermain {
-	height: 70px !important;
+ 	height: 70px !important;
 }
 
 .contactcontainer {
@@ -118,7 +118,7 @@
 }
 
 
-.footertop1header,.footertop2header,.footertop3header {
+.footertop2header{
 	text-align: center;
 }
 

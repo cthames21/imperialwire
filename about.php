@@ -14,37 +14,54 @@
 		<script src="parallax.js"></script>
 	</head>
 	<body>
-		<div class="page-container">
-			<header>
-				<?php include("header.php");?>
-			</header>
-
-			<main>
-
+		<header>
+			<?php include("header.php");?>
+		</header>
+		<main class="contained">
+			<div class="pageheader">
 				<h1>
-					About Us
+					Home > About
 				</h1>
+			</div>
 
-				<div class="aboutcontainer">
-					<div class="aboutbody">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</div>
-					<img src="photos/team2.png" />
+			<div class="aboutcontainer">
+				<div class="aboutbody">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</div>
 
+				<img id="aboutvideo" src="photos/youtube.gif" />
 
-			</main>
+				<img id="teamphoto" src="photos/team2.png" />
 
-			<footer>
+			</div>
+		</main>
+		<footer>
+			<?php require("footer.php");?>
 
-				<?php require("footer.php");?>
+			<script>
+				<?php require("javascript.php");?>
 
-				<script>
 
-					<?php require("javascript.php");?>
-				</script>
-			</footer>
-		</div>
+				function shrinkHeader(e) {
+
+					var scroll = $(window).scrollTop();
+
+					if (scroll > 50 && $(window).width() > 620) {
+						$('#headermain').css("box-shadow", "0 0 3px 0 var(--color-4)");
+					}
+
+					if (scroll <= 50) {
+						$('#headermain').css("box-shadow", "none");
+						$('#headermain').css("background", "transparent");
+
+					}
+				}
+
+				function logKey(e) {
+
+				}
+			</script>
+		</footer>
 	</body>
 </html>

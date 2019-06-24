@@ -1,38 +1,37 @@
 .gallery {
-  display: flex;
+  display: inline-flex;
   flex-flow: row;
+  width: 70%;
 }
 
 #headermain {
   height: 70px !important;
-  transition: 0s;
 }
 
-#imperialwire.small img {
-  transition: 0s;
-}
-
-main { 
+.photoscontainer {
+  width: 100%;
   padding: 0 .5vw;
   flex-flow: row wrap; 
   display: inline-flex;
 }
 
-main div { 
+.photoscontainer div { 
   flex: auto; 
-  width: 300px; 
-  margin: .5vw; 
+  width: 330px; 
+  text-align: center;
+
 }
 
-main div img { 
-  width: 100%; 
-  height: auto; 
+.photoscontainer div img { 
+  width: 375px; 
+  height: 285px; 
 }
 
 aside {
   display: inline-flex;
   position: sticky;
-  top: 10%;
+  top: 100px;
+  width: 25%;
   height: 500px;
 }
 
@@ -173,11 +172,11 @@ aside ul li:hover {
     flex-flow: column;
   }
 
-  main { 
+  .photoscontainer { 
     flex-flow: column;
   }
 
-  main div { 
+  .photoscontainer div { 
     margin: 0;
     width: 100%;
   }
@@ -199,11 +198,6 @@ aside ul li:hover {
     float: left;
     padding: 2vw;
   }
-
-  aside li a {
-
-  }
-
 
 }
 
